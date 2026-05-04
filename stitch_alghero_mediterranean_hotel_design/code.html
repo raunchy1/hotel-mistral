@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#747878",
+                        "secondary-fixed": "#e9e1d5",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#1e1b14",
+                        "on-secondary-fixed-variant": "#4b463e",
+                        "surface-bright": "#fef9f1",
+                        "outline-variant": "#c4c7c7",
+                        "on-tertiary-fixed-variant": "#55442e",
+                        "background": "#fef9f1",
+                        "surface-dim": "#ded9d2",
+                        "surface-container-high": "#ece8e0",
+                        "on-surface": "#1d1c17",
+                        "inverse-primary": "#c8c6c5",
+                        "on-tertiary-fixed": "#261907",
+                        "primary-fixed": "#e4e2e1",
+                        "surface-tint": "#5f5e5e",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "inverse-surface": "#32302b",
+                        "on-primary-fixed": "#1b1c1c",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#474747",
+                        "primary": "#171818",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#cdc6ba",
+                        "on-surface-variant": "#444748",
+                        "surface-container": "#f2ede5",
+                        "surface": "#fef9f1",
+                        "surface-container-highest": "#e7e2da",
+                        "on-background": "#1d1c17",
+                        "primary-container": "#2c2c2c",
+                        "tertiary-container": "#382916",
+                        "secondary-container": "#e7dfd3",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#a58f76",
+                        "on-secondary-container": "#676259",
+                        "on-primary-container": "#949393",
+                        "tertiary-fixed-dim": "#dbc3a6",
+                        "surface-container-low": "#f8f3eb",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e7e2da",
+                        "secondary": "#635e54",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#f8dec1",
+                        "tertiary": "#211504",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f5f0e8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "section-gap": "80px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"],
+                        "body-lg": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "headline-sm": ["Noto Serif"],
+                        "trust-signal": ["Manrope"],
+                        "functional-data": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "trust-signal": ["14px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "functional-data": ["20px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fef9f1;
+            color: #1d1c17;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden font-body-md text-body-md">
+<!-- TopAppBar -->
+<header class="bg-[#F5F0E8] dark:bg-stone-950 border-b border-[#E8E0D4] dark:border-stone-800 sticky top-0 z-50">
+<div class="flex justify-between items-center h-24 px-16 max-w-[1440px] mx-auto w-full">
+<div class="text-2xl font-serif tracking-[0.2em] text-[#2C2C2C] dark:text-stone-100">
+                L'ESSENZA ALGHERO
+            </div>
+<nav class="hidden md:flex gap-10 font-serif tracking-tight text-sm uppercase items-center">
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#2C2C2C] dark:hover:text-stone-100 transition-all duration-300" href="#">Suites</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#2C2C2C] dark:hover:text-stone-100 transition-all duration-300" href="#">Experience</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#2C2C2C] dark:hover:text-stone-100 transition-all duration-300" href="#">Wellness</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#2C2C2C] dark:hover:text-stone-100 transition-all duration-300" href="#">Offers</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#2C2C2C] dark:hover:text-stone-100 transition-all duration-300" href="#">Location</a>
+</nav>
+<button class="bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps rounded-lg active:scale-95 transition-transform hover:opacity-90">
+                Check Availability
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[921px] w-full overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A cinematic, high-resolution view of the Mediterranean coastline near Alghero, Sardinia. The scene captures the crystal-clear azure waters of the sea gently lapping against sun-bleached rocks under a warm, golden afternoon sun. The lighting is soft and ethereal, reflecting a light-mode editorial aesthetic with natural textures. The mood is one of quiet luxury and serene isolation, echoing the slow-living philosophy of a boutique hotel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrU3cOX-atUQ14cw6CGvYnBtVWdXPyI7HQCCtqMFat3Ip1bw300l2fkAhvEuKmdAfe7sTH7v46uEEgcS7PQVOlzRUWeG8DyOnJfB_1jGHiN-PbbZ2WG5mZQyuP3VvKRiRQdWzQCPciLaSckZNxf7_qR2BDKdA0dkGHmHH-5xVJKsrMvyS6mZDzMVvflWjwl53dm4-EAn3n6yBBQVKRgPGnKMaqMopM69Nnd8GSpYN2R3GpHTNnaHOdm23-3BX_SQa3DBWlQVMYUJs"/>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-6">
+<h1 class="font-headline-lg text-headline-lg max-w-4xl mb-6">Experience the Art of Mediterranean Living</h1>
+<p class="font-body-lg text-body-lg max-w-2xl mb-8 opacity-90">A boutique sanctuary where history meets modern coastal elegance in the heart of Sardinia.</p>
+<div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl flex flex-col md:flex-row gap-12 items-center">
+<div class="flex flex-col gap-1 items-start">
+<span class="font-label-caps text-label-caps uppercase opacity-70">Starting From</span>
+<span class="font-functional-data text-functional-data">€175 / night</span>
+</div>
+<div class="hidden md:block w-px h-12 bg-white/30"></div>
+<div class="flex flex-col gap-3 items-start">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">beach_access</span>
+<span class="font-trust-signal text-trust-signal">700m from beach</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">wifi</span>
+<span class="font-trust-signal text-trust-signal">Free WiFi &amp; Parking</span>
+</div>
+</div>
+<button class="bg-[#2C2C2C] text-white px-12 py-5 rounded-lg font-label-caps text-label-caps tracking-widest hover:bg-black transition-colors uppercase">
+                        Check Availability
+                    </button>
+</div>
+</div>
+</section>
+<!-- Room Selection -->
+<section class="py-section-gap px-margin-desktop max-w-[1440px] mx-auto">
+<div class="mb-12">
+<span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block">Our Sanctuary</span>
+<h2 class="font-headline-md text-headline-md text-primary">Private Retreats</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Room Card 1 -->
+<div class="group border border-[#E8E0D4] bg-surface-container-low p-6 rounded-lg transition-all duration-300 hover:shadow-lg">
+<div class="aspect-[4/5] overflow-hidden mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A sophisticated boutique hotel suite in Alghero, featuring high ceilings, limewashed walls, and minimalist Mediterranean decor. The room is bathed in soft, natural light coming through sheer linen curtains. Textiles are in shades of off-white and warm beige, with charcoal accents in the furniture. The atmosphere is calm, airy, and exemplifies high-end interior design in a bright light-mode setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdRlXB9TfJWTvw7wcINkDuL7vrLzvUTYsJ-4doUst4ASwoNwVv2pBIneXpJHLRUk3KFo5KDpIhBGCLS5-Y-GiBCAxy8rOvLmQrh3u-fxhBdVZGkKwwR1-irqbidain2cKuSvlKFJ2SCSbb9dZaP2sAmXv0YCX68skPAPORycAMuFnDpSQQCJDr1hoDqLcD2FAFIOnyjdtMCQKq1kUKdyMc3rtDlZ2x7ATN342_K3aPAJCOOLKGqgANidwLRZdJqvbRAVEZ3hgNMNc"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-1">Superior Suite</h3>
+<span class="font-trust-signal text-trust-signal text-secondary">Sea View</span>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-[10px] block opacity-60">FROM</span>
+<span class="font-functional-data text-functional-data">€195</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-y-3 mb-6 border-y border-[#E8E0D4] py-4 text-secondary">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">group</span><span class="text-xs">2 Adults</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">square_foot</span><span class="text-xs">35 m²</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">king_bed</span><span class="text-xs">King Bed</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">visibility</span><span class="text-xs">Ocean Front</span></div>
+</div>
+<div class="flex gap-4 mb-6">
+<span class="material-symbols-outlined text-outline" title="WiFi">wifi</span>
+<span class="material-symbols-outlined text-outline" title="AC">ac_unit</span>
+<span class="material-symbols-outlined text-outline" title="Breakfast">coffee</span>
+<span class="material-symbols-outlined text-outline" title="View">landscape</span>
+</div>
+<button class="w-full border border-primary py-3 font-label-caps text-label-caps hover:bg-primary hover:text-white transition-colors">VIEW ROOM</button>
+</div>
+<!-- Room Card 2 -->
+<div class="group border border-[#E8E0D4] bg-surface-container-low p-6 rounded-lg transition-all duration-300 hover:shadow-lg">
+<div class="aspect-[4/5] overflow-hidden mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A bright and airy bedroom in a Sardinian boutique hotel, showcasing artisanal craftsmanship and organic materials. The lighting is warm and golden, highlighting the texture of the stone walls and wooden beams. The bed is dressed in high-quality white linens, and the room opens onto a small balcony with a glimpse of greenery. The palette is dominated by soft creams and warm beiges, creating a serene editorial look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnA6j-5b74N826SwPW0b3-WGnLp29QC5rKlFup-YPTPYJ9a_HnjlrGcN8mCLvK6GelP9dCP5oCtqJDJI8Lzs35je6lIhDCDgxfULRqELS2J8ORLQ4jZLSMt6Y_7wv7HfS7KMw-kVAqYWWUmeowxVjndOyZx6ZQZLn7wEdSa17xiGlqZE1jEzrFeB24owWKkSEUp-FBLcrYb6JhsUEVCIfkG-AsTXGOLFCBMiCb3XQU7U3nf7D5kaJeUNqwux9PF_ubTclzhw-4rhg"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-1">Garden Deluxe</h3>
+<span class="font-trust-signal text-trust-signal text-secondary">Private Patio</span>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-[10px] block opacity-60">FROM</span>
+<span class="font-functional-data text-functional-data">€175</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-y-3 mb-6 border-y border-[#E8E0D4] py-4 text-secondary">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">group</span><span class="text-xs">2 Adults</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">square_foot</span><span class="text-xs">28 m²</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">single_bed</span><span class="text-xs">Queen Bed</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">nature</span><span class="text-xs">Secret Garden</span></div>
+</div>
+<div class="flex gap-4 mb-6">
+<span class="material-symbols-outlined text-outline">wifi</span>
+<span class="material-symbols-outlined text-outline">ac_unit</span>
+<span class="material-symbols-outlined text-outline">coffee</span>
+<span class="material-symbols-outlined text-outline">park</span>
+</div>
+<button class="w-full border border-primary py-3 font-label-caps text-label-caps hover:bg-primary hover:text-white transition-colors">VIEW ROOM</button>
+</div>
+<!-- Room Card 3 -->
+<div class="group border border-[#E8E0D4] bg-surface-container-low p-6 rounded-lg transition-all duration-300 hover:shadow-lg">
+<div class="aspect-[4/5] overflow-hidden mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A luxury junior suite in Alghero with a contemporary Mediterranean aesthetic. The space features large windows overlooking the old town, with a mix of modern designer furniture and traditional Sardinian textiles. High-key lighting creates a bright, welcoming environment. The color scheme is a sophisticated blend of charcoal grey and sand beige, evoking a sense of refined coastal living in a prestigious editorial layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcQfhTP818qxzAiDMwVRmzRI-WZGlR-2EnNLIvp9XAO_bHav8TogkAioz666siiYuNfTC6iYShYesdmA5tB7Qz7P7ND8WniLv-g6oqY_2jvmV9duma_di5QpsqWg3GaXIQH_0c-X0MhVMRFu8LDTpCueX9N7nT_GL1n1q9X6Jlq5oqBTwRizGehBYKHGkhwdfOSwnizY68kKRdbo69sGpUEFYmLY-y5KCJJ_HRV1zhSjOD47ptVVOh4RwS9JvMadwPezPSE8PNFMM"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-1">Junior Executive</h3>
+<span class="font-trust-signal text-trust-signal text-secondary">Old Town View</span>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-[10px] block opacity-60">FROM</span>
+<span class="font-functional-data text-functional-data">€220</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-y-3 mb-6 border-y border-[#E8E0D4] py-4 text-secondary">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">group</span><span class="text-xs">2 Adults</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">square_foot</span><span class="text-xs">42 m²</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">king_bed</span><span class="text-xs">Super King</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">location_city</span><span class="text-xs">City Scape</span></div>
+</div>
+<div class="flex gap-4 mb-6">
+<span class="material-symbols-outlined text-outline">wifi</span>
+<span class="material-symbols-outlined text-outline">ac_unit</span>
+<span class="material-symbols-outlined text-outline">coffee</span>
+<span class="material-symbols-outlined text-outline">wine_bar</span>
+</div>
+<button class="w-full border border-primary py-3 font-label-caps text-label-caps hover:bg-primary hover:text-white transition-colors">VIEW ROOM</button>
+</div>
+</div>
+</section>
+<!-- Trust Block -->
+<section class="bg-[#E8E0D4] py-section-gap">
+<div class="max-w-[1440px] mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-24">
+<div class="flex flex-col justify-center">
+<div class="flex items-baseline gap-4 mb-8">
+<span class="text-7xl font-headline-lg text-primary">8.2</span>
+<div class="flex flex-col">
+<span class="font-functional-data text-functional-data">Exceptional</span>
+<span class="font-trust-signal text-trust-signal opacity-60">Based on 450+ verified guest reviews</span>
+</div>
+</div>
+<div class="space-y-6 mb-12">
+<div class="space-y-2">
+<div class="flex justify-between font-label-caps text-label-caps"><span>Cleanliness</span><span>9.0</span></div>
+<div class="h-1 bg-white/30 w-full rounded-full overflow-hidden"><div class="h-full bg-primary w-[90%]"></div></div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-label-caps text-label-caps"><span>Staff</span><span>8.8</span></div>
+<div class="h-1 bg-white/30 w-full rounded-full overflow-hidden"><div class="h-full bg-primary w-[88%]"></div></div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-label-caps text-label-caps"><span>Location</span><span>8.2</span></div>
+<div class="h-1 bg-white/30 w-full rounded-full overflow-hidden"><div class="h-full bg-primary w-[82%]"></div></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg">
+<h4 class="font-label-caps text-label-caps mb-4 text-tertiary-container">GUESTS LOVED</h4>
+<ul class="grid grid-cols-2 gap-4">
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-tertiary-container">check_circle</span> Homemade breakfast terrace</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-tertiary-container">check_circle</span> Proximity to beaches</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-tertiary-container">check_circle</span> Minimalist aesthetics</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-tertiary-container">check_circle</span> Helpful local tips</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col gap-8 justify-center">
+<div class="bg-white p-10 rounded-lg shadow-sm relative italic font-notoSerif text-lg leading-relaxed">
+<span class="material-symbols-outlined absolute -top-4 -left-4 text-4xl text-tertiary-container opacity-20">format_quote</span>
+                        "A truly serene experience. The attention to detail in the suite design and the proximity to the beach made our stay unforgettable. The morning coffee in the garden is a must."
+                        <div class="mt-6 not-italic font-label-caps text-label-caps text-primary">— ELENA &amp; MARC, GERMANY</div>
+</div>
+<div class="bg-white p-10 rounded-lg shadow-sm relative italic font-notoSerif text-lg leading-relaxed">
+<span class="material-symbols-outlined absolute -top-4 -left-4 text-4xl text-tertiary-container opacity-20">format_quote</span>
+                        "The perfect blend of luxury and authenticity. Walking to the beach in 8 minutes and then having the quietest nights in a comfortable bed. Highly recommend."
+                        <div class="mt-6 not-italic font-label-caps text-label-caps text-primary">— SARAH T., UNITED KINGDOM</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience -->
+<section class="py-section-gap">
+<div class="max-w-[1440px] mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="group overflow-hidden">
+<div class="aspect-video overflow-hidden mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A beautifully prepared Mediterranean breakfast table set on a sun-drenched stone terrace. Fresh seasonal fruits, artisanal breads, and steaming coffee are presented on minimalist ceramic dishes. The soft morning light filters through the leaves of a nearby olive tree, casting delicate shadows across the table. The style is bright and editorial, capturing the essence of a peaceful morning ritual at a boutique Sardinian hotel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsfJSN8KYtkBm5F0Ei-I3-BsbW0U1ZBIg8sDiAKY1-LHE_X5bBJl_xFx-tE56bRRYitfgAzCVO6wlabmne68AZM36sZADAYYIHjJuNyd2ZKbIlfHMBlDn-rfk2g27amSaDMGjwIl9vhj0Cb0vIBnEjjgjyvGubc4wX1NGGrXO144ae-zN9d70KinjtszuSZ1GAoO_rrPWH-nWD3CX0xFvaBgOiP7jRpP43dAaeBPpO-4rf7IVEPGhgVl4Cuyy70Xw8IYh9zPDU0RM"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-2">Morning Ritual</h3>
+<p class="font-body-md text-body-md text-secondary max-w-md">Begin each day with a curated selection of Sardinian flavors on our panoramic terrace. Simple, fresh, and local.</p>
+</div>
+<div class="group overflow-hidden">
+<div class="aspect-video overflow-hidden mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A hidden Mediterranean garden at dusk, illuminated by soft string lights and ambient floor lamps. The garden features lush native plants, gravel paths, and a few comfortable lounge chairs crafted from wood and linen. The atmosphere is quiet and intimate, representing a secret oasis within the boutique hotel. The lighting is low and warm, creating a sophisticated nighttime editorial feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK8-wZZ7TvsisRC36K7Rp4DOL62aqUdQRf8d-NMZnpIwPsnJJG4pHi0T5T3-zFaxHqVI50lExwYfzIsCXAPU40Ioh2b05ZJf7YfHofwcc2HKCIUerzMgosBtP65v6_QcgppHxDKNt2zQgci2533SX7oB8u_Lx6jiVOa5lvQvqzj4qdgcpOPn73BbaTJnTg6RmYCGpvZiHtxWITYPUHftCkryJkN0mcO8aErTCHfFsklEYEyalThdqSw_dPfHEyxOKctGP0-Ae53bs"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-2">Secret Garden</h3>
+<p class="font-body-md text-body-md text-secondary max-w-md">An intimate escape sheltered from the world. Perfect for an evening glass of Cannonau under the stars.</p>
+</div>
+</div>
+</section>
+<!-- Location -->
+<section class="bg-surface-container py-section-gap">
+<div class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row gap-24 items-center">
+<div class="w-full md:w-1/3 space-y-12">
+<div>
+<span class="font-label-caps text-label-caps text-tertiary-container uppercase mb-2 block">The Setting</span>
+<h2 class="font-headline-md text-headline-md text-primary">Coastal Proximity</h2>
+</div>
+<div class="space-y-8">
+<div class="flex items-start gap-6">
+<div class="bg-[#2C2C2C] text-white p-3 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">beach_access</span>
+</div>
+<div>
+<h4 class="font-functional-data text-functional-data text-lg">700m from beach</h4>
+<p class="text-secondary text-sm">An easy 8-minute walk to Alghero's crystal shores.</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="bg-[#2C2C2C] text-white p-3 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">location_city</span>
+</div>
+<div>
+<h4 class="font-functional-data text-functional-data text-lg">2.5km from Old Town</h4>
+<p class="text-secondary text-sm">Discover the historic cobbled streets and dining.</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="bg-[#2C2C2C] text-white p-3 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">flight</span>
+</div>
+<div>
+<h4 class="font-functional-data text-functional-data text-lg">6km from Airport</h4>
+<p class="text-secondary text-sm">Alghero Fertilia Airport is just a 10-minute drive.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-2/3 aspect-video bg-surface-dim rounded-lg overflow-hidden grayscale border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A stylized, high-contrast map view of Alghero, Italy, focusing on the coastline and the location of the boutique hotel. The map uses a minimalist editorial design with charcoal and light beige tones. Important landmarks like the Maria Pia Beach and the historic Old Town are subtly highlighted. The aesthetic is clean and functional, integrating seamlessly into the hotel's sophisticated visual identity." data-location="Alghero" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5pz0C8OqNBdCqTm4avp0tqx_QeMT593R5JlTl-uiZoeNozJl8bkfeE2tlLQyL3F8TSllDfgN7pzbgloof6OxOQKJURzWaab3cz2xxJI8Znn7weKmrDOrXm9CohL79wofVqH-x8GBiNUTA-XTcBk-V5NELg-rjGHS3O13gFzVcj4Rs6TZJFgK2RADC4gB0n9C3TBoaAs8l3zi852khGiW0GCIr5EDkp0ScPjNzRimqpVEhbLJeT-t0uzomUjinOtfikI2pZ-eaWJU"/>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-margin-desktop bg-[#2C2C2C] text-white text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline-md text-headline-md mb-4">Your Mediterranean escape starts here</h2>
+<p class="font-body-lg text-body-lg opacity-70 mb-12">Immerse yourself in the art of slow living and Sardinian hospitality.</p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-12 mb-12">
+<div class="text-center">
+<span class="block font-functional-data text-2xl">From €175</span>
+<span class="text-xs font-label-caps opacity-60">BEST PRICE GUARANTEED</span>
+</div>
+<div class="flex gap-8 text-xs font-label-caps uppercase tracking-widest border-x border-white/20 px-12">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">local_parking</span> Free Parking</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">event_busy</span> No prepayment</span>
+</div>
+</div>
+<button class="bg-white text-primary px-16 py-6 rounded-lg font-label-caps text-label-caps tracking-widest hover:bg-[#F5F0E8] transition-all transform hover:scale-105 active:scale-95 uppercase font-bold">
+                    Book Your Stay Now
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#E8E0D4] dark:bg-stone-900 border-t border-[#D9CFC1] dark:border-stone-800 w-full py-12">
+<div class="max-w-7xl mx-auto px-16 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-lg font-serif tracking-widest text-[#2C2C2C] dark:text-stone-100 uppercase">
+                L'Essenza Alghero
+            </div>
+<nav class="flex flex-wrap justify-center gap-8 font-serif text-xs tracking-widest uppercase">
+<a class="text-stone-500 hover:text-[#2C2C2C] dark:text-stone-400 dark:hover:text-stone-100 transition-colors duration-200 hover:underline underline-offset-4 decoration-stone-300" href="#">Sustainability</a>
+<a class="text-stone-500 hover:text-[#2C2C2C] dark:text-stone-400 dark:hover:text-stone-100 transition-colors duration-200 hover:underline underline-offset-4 decoration-stone-300" href="#">Privacy Policy</a>
+<a class="text-stone-500 hover:text-[#2C2C2C] dark:text-stone-400 dark:hover:text-stone-100 transition-colors duration-200 hover:underline underline-offset-4 decoration-stone-300" href="#">Terms of Service</a>
+<a class="text-stone-500 hover:text-[#2C2C2C] dark:text-stone-400 dark:hover:text-stone-100 transition-colors duration-200 hover:underline underline-offset-4 decoration-stone-300" href="#">Press Kit</a>
+<a class="text-stone-500 hover:text-[#2C2C2C] dark:text-stone-400 dark:hover:text-stone-100 transition-colors duration-200 hover:underline underline-offset-4 decoration-stone-300" href="#">Contact</a>
+</nav>
+<div class="font-serif text-[10px] text-stone-500 dark:text-stone-400 max-w-xs text-center md:text-right">
+                © 2024 L'Essenza Alghero Boutique Hotel. Designed for the art of slow living.
+            </div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "total_images": 20,
+    "mapping_date": "2026-05-02",
+    "source": "visual_inspection",
+    "accuracy_note": "Every image was inspected before assignment. No guessing."
+  },
+  "rooms": {
+    "double": {
+      "primary": "861583205.jpg",
+      "secondary": "861583212.jpg",
+      "description": "Double room with balcony. Terracotta floors, private balcony with morning sun, quiet street-facing side.",
+      "verified_features": ["double_bed", "balcony_door", "terracotta_floor", "wicker_wall_decor", "desk", "tv", "kettle", "mini_fridge"]
+    },
+    "twin": {
+      "primary": "861583258.jpg",
+      "secondary": null,
+      "description": "Twin room with two single beds. Garden or quiet side view. Desk, TV, terracotta floors.",
+      "verified_features": ["two_single_beds", "terracotta_floor", "desk", "tv", "wicker_wall_decor"]
+    },
+    "single": {
+      "primary": "861584336.jpg",
+      "secondary": null,
+      "description": "Single room with balcony. Compact, wooden headboard, single bed, balcony.",
+      "verified_features": ["single_bed", "wooden_headboard", "balcony_window", "terracotta_floor", "wicker_wall_decor"]
+    },
+    "standard": {
+      "primary": null,
+      "secondary": null,
+      "description": "Standard double room — no dedicated photograph available. Uses double room imagery as representative.",
+      "verified_features": []
+    }
+  },
+  "bathrooms": {
+    "all_rooms": [
+      {
+        "file": "861583220.jpg",
+        "description": "Narrow bathroom with vessel sink, toilet, glass shower enclosure, wood-look floor tiles."
+      },
+      {
+        "file": "861583274.jpg",
+        "description": "Spacious bathroom with vessel sink on wooden stand, toilet, bidet, glass shower, folded white towels."
+      },
+      {
+        "file": "861584520.jpg",
+        "description": "Compact bathroom with vessel sink, toilet, glass shower enclosure, wall mirror."
+      }
+    ],
+    "note": "All rooms have private bathrooms. These three images represent the bathroom style across room categories."
+  },
+  "common": {
+    "exterior": {
+      "file": "111886637.jpg",
+      "description": "Hotel Mistral exterior at dusk. Three-storey building with balconies, palm trees, illuminated signage."
+    },
+    "bar": {
+      "file": "554112343.jpg",
+      "description": "Hotel bar interior. Counter with ribbed wood front, pendant lights, bottle shelves, coffee machine."
+    },
+    "billiard": {
+      "files": ["554112353.jpg", "554113145.jpg"],
+      "description": "Billiard room with green pool table, armchairs, wall-mounted TV."
+    },
+    "terrace": {
+      "file": "554112384.jpg",
+      "description": "Outdoor terrace with wicker seating, parasol, terracotta tiles, Hotel Mistral sign visible."
+    },
+    "reception": {
+      "file": "554112387.jpg",
+      "description": "Reception desk with ribbed wood front, tropical wallpaper panels, potted plants."
+    },
+    "dining_room": {
+      "file": "554112398.jpg",
+      "description": "Indoor breakfast veranda with wooden tables, glass walls overlooking garden."
+    },
+    "patio": {
+      "file": "554113139.jpg",
+      "description": "Front patio with metal cafe tables and chairs, stone paving, Hotel Mistral entrance."
+    }
+  },
+  "breakfast": {
+    "buffet_images": [
+      {
+        "file": "565534573.jpg",
+        "description": "Cold cuts and cheese buffet station. 'Forchette' sign, glass shelving."
+      },
+      {
+        "file": "565534660.jpg",
+        "description": "Cereal and muesli station. Glass jars with corn flakes and muesli, stacked bowls."
+      },
+      {
+        "file": "565534690.jpg",
+        "description": "Pastry display. Croissants, bombolotti, chocolate cakes, powdered cakes on tiered stands."
+      },
+      {
+        "file": "565534715.jpg",
+        "description": "Ring cake (ciambellone), bombolotti alla crema, sliced bread. Handwritten chalk labels."
+      },
+      {
+        "file": "565534742.jpg",
+        "description": "Wide pastry buffet. Multiple tiers of croissants, chocolate-filled pastries, sliced bread."
+      }
+    ],
+    "note": "Breakfast is served in the veranda (554112398.jpg) or garden. Buffet images show the food offering."
+  }
+}

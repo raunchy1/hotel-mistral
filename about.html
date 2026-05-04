@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="meta.site_name">About — Hotel Mistral, Alghero</title>
+  <meta name="description" content="Hotel Mistral is a family-run hotel in Alghero since 1990. 25 rooms, a garden, and the belief that hospitality is personal."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="css/styles.css" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#171818',
+            'primary-container': '#2c2c2c',
+            'secondary': '#635e54',
+            'secondary-container': '#e7dfd3',
+            'tertiary': '#211504',
+            'tertiary-container': '#382916',
+            'on-tertiary-container': '#a58f76',
+            'background': '#fef9f1',
+            'on-background': '#1d1c17',
+            'surface': '#fef9f1',
+            'surface-container': '#f2ede5',
+            'surface-container-low': '#f8f3eb',
+            'surface-dim': '#ded9d2',
+            'surface-variant': '#e7e2da',
+            'outline': '#747878',
+            'outline-variant': '#c4c7c7',
+            'sand': '#F5F0E8',
+            'beige': '#E8E0D4',
+            'warm-gray': '#8A8279',
+            'stone': '#6B6560',
+            'charcoal': '#2C2C2C',
+            'muted-green': '#7A8B6E',
+          },
+          fontFamily: {
+            'serif': ['Noto Serif', 'Georgia', 'serif'],
+            'sans': ['Manrope', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            'headline-md': ['Noto Serif'],
+            'headline-lg': ['Noto Serif'],
+            'body-lg': ['Manrope'],
+            'label-caps': ['Manrope'],
+            'headline-sm': ['Noto Serif'],
+            'trust-signal': ['Manrope'],
+            'functional-data': ['Manrope'],
+            'body-md': ['Manrope'],
+          },
+          fontSize: {
+            'headline-lg': ['48px', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '400' }],
+            'headline-md': ['32px', { lineHeight: '1.3', fontWeight: '400' }],
+            'headline-sm': ['24px', { lineHeight: '1.4', fontWeight: '500' }],
+            'body-lg': ['18px', { lineHeight: '1.6', fontWeight: '400' }],
+            'body-md': ['16px', { lineHeight: '1.5', fontWeight: '400' }],
+            'label-caps': ['12px', { lineHeight: '1', letterSpacing: '0.08em', fontWeight: '600' }],
+            'trust-signal': ['14px', { lineHeight: '1.2', fontWeight: '500' }],
+            'functional-data': ['20px', { lineHeight: '1.2', letterSpacing: '0.01em', fontWeight: '700' }],
+          },
+          spacing: {
+            'section-gap': '80px',
+            'gutter': '24px',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background font-body-md text-body-md overflow-x-hidden" data-page="about">
+
+  <!-- Header -->
+  <header class="nav-main bg-[#F5F0E8] border-b border-[#E8E0D4] sticky top-0 z-50">
+    <div class="flex justify-between items-center h-24 px-6 md:px-16 max-w-[1440px] mx-auto w-full">
+      <a href="index.html" class="text-lg md:text-2xl font-serif tracking-[0.15em] text-[#2C2C2C] uppercase" data-i18n="location.address_name">Hotel Mistral</a>
+      <nav class="hidden md:flex gap-10 font-serif tracking-tight text-sm uppercase items-center">
+        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="rooms.html" data-i18n="nav.rooms">Rooms</a>
+        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="experience.html" data-i18n="nav.experience">Experience</a>
+        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="about.html" data-i18n="nav.about">About</a>
+        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="location.html" data-i18n="nav.location">Location</a>
+        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <div class="hidden md:flex items-center gap-2 lang-switcher">
+          <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="it" onclick="setLanguage('it')">IT</button>
+          <span class="text-charcoal/30 text-xs">/</span>
+          <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="en" onclick="setLanguage('en')">EN</button>
+          <span class="text-charcoal/30 text-xs">/</span>
+          <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="de" onclick="setLanguage('de')">DE</button>
+          <span class="text-charcoal/30 text-xs">/</span>
+          <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="es" onclick="setLanguage('es')">ES</button>
+        </div>
+        <a class="hidden md:inline-flex bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps rounded-lg active:scale-95 transition-transform hover:opacity-90" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
+        <button class="md:hidden text-charcoal" data-i18n-aria-label="nav.menu_open" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.add('active'); document.body.style.overflow='hidden';">
+          <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
+            <line x1="4" y1="6" x2="20" y2="6"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="18" x2="20" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <button class="absolute top-6 right-6 text-charcoal" data-i18n-aria-label="nav.menu_close" aria-label="Close menu" onclick="document.querySelector('.mobile-menu').classList.remove('active'); document.body.style.overflow='';">
+      <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
+        <line x1="4" y1="4" x2="20" y2="20"/>
+        <line x1="20" y1="4" x2="4" y2="20"/>
+      </svg>
+    </button>
+    <a href="rooms.html" data-i18n="nav.rooms">Rooms</a>
+    <a href="experience.html" data-i18n="nav.experience">Experience</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="location.html" data-i18n="nav.location">Location</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <div class="flex items-center justify-center gap-3 mt-6 lang-switcher">
+      <button class="lang-btn text-sm font-semibold tracking-wider uppercase px-3 py-1 rounded transition-colors" data-lang="it" onclick="setLanguage('it')">IT</button>
+      <span class="text-charcoal/30 text-sm">/</span>
+      <button class="lang-btn text-sm font-semibold tracking-wider uppercase px-3 py-1 rounded transition-colors" data-lang="en" onclick="setLanguage('en')">EN</button>
+      <span class="text-charcoal/30 text-sm">/</span>
+      <button class="lang-btn text-sm font-semibold tracking-wider uppercase px-3 py-1 rounded transition-colors" data-lang="de" onclick="setLanguage('de')">DE</button>
+      <span class="text-charcoal/30 text-sm">/</span>
+      <button class="lang-btn text-sm font-semibold tracking-wider uppercase px-3 py-1 rounded transition-colors" data-lang="es" onclick="setLanguage('es')">ES</button>
+    </div>
+    <a class="bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps rounded-lg active:scale-95 transition-transform hover:opacity-90 mt-4" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
+  </div>
+
+  <!-- Page Header -->
+  <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-surface-container-low">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
+      <div class="max-w-3xl reveal">
+        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block" data-i18n="about.header_label">Our Story</span>
+        <h1 class="font-headline-lg text-headline-lg text-primary">
+          A family, a hotel,<br/>and thirty years<br/>of welcomes
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="py-24 md:py-32 bg-white">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+        <div class="reveal h-[500px]">
+          <img class="w-full h-full object-cover rounded-lg" src="images/554112387.jpg" alt=""/>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <h2 class="font-headline-md text-headline-md text-primary mb-6" data-i18n="about.story_title">How it started</h2>
+          <div class="divider divider-dark mb-8"></div>
+          <p class="text-secondary leading-relaxed mb-6" data-i18n="about.story_p1">
+            Hotel Mistral opened in 1990, when Alghero was still a quiet fishing town with a small airport and a reputation for clear water. Our family had lived in the area for generations. We converted a residential building into a small hotel — 25 rooms, a garden, a bar, and a belief that hospitality is something you do in person.
+          </p>
+          <p class="text-secondary leading-relaxed mb-6" data-i18n="about.story_p2">
+            The first guests were mostly Italian families on summer holiday. Over the years, word spread. Irish couples started coming. Then Belgians, British, Canadians. We have had guests who return every August, who bring their children, who send postcards from home.
+          </p>
+          <p class="text-secondary leading-relaxed" data-i18n="about.story_p3">
+            The hotel has been refreshed over the decades — new bathrooms, air conditioning, WiFi — but the essence has not changed. We are still here every morning. We still know most guests by name.
+          </p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <h2 class="font-headline-md text-headline-md text-primary mb-6" data-i18n="about.philosophy_title">What we believe</h2>
+          <div class="divider divider-dark mb-8"></div>
+          <p class="text-secondary leading-relaxed mb-6" data-i18n="about.philosophy_p1">
+            We are not a luxury hotel, and we do not try to be. We are a 3-star property that takes its three stars seriously. The room will be clean. The bed will be comfortable. The shower will be hot. The staff will be kind.
+          </p>
+          <p class="text-secondary leading-relaxed mb-6" data-i18n="about.philosophy_p2">
+            We believe that the best hospitality is invisible. You should notice it only when something goes wrong — and here, things rarely do. The garden is tended. The bar is stocked. The key works. Someone is at the desk when you need them.
+          </p>
+          <p class="text-secondary leading-relaxed" data-i18n="about.philosophy_p3">
+            Alghero sells itself. Our job is to give you a quiet, cool, comfortable place to return to after a day at the beach or in the old town. Nothing more. Nothing less.
+          </p>
+        </div>
+        <div class="reveal reveal-delay-2 h-[500px]">
+          <img class="w-full h-full object-cover rounded-lg" src="images/554112384.jpg" alt=""/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="py-24 md:py-32 bg-surface-container-low">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
+      <div class="mb-12 reveal">
+        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block" data-i18n="about.values_label">Philosophy</span>
+        <h2 class="font-headline-md text-headline-md text-primary" data-i18n="about.values_title">Three principles</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-gutter">
+        <div class="reveal">
+          <span class="text-5xl font-serif text-beige block mb-4" data-i18n="about.value_01_num">01</span>
+          <h3 class="font-headline-sm text-headline-sm mb-3" data-i18n="about.value_01_title">Simplicity</h3>
+          <p class="text-secondary leading-relaxed" data-i18n="about.value_01_desc">
+            We do not overcomplicate. Our rooms are furnished with what you need: a good bed, a clean bathroom, a place to work, a place to store your things. The rest is up to Alghero.
+          </p>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <span class="text-5xl font-serif text-beige block mb-4" data-i18n="about.value_02_num">02</span>
+          <h3 class="font-headline-sm text-headline-sm mb-3" data-i18n="about.value_02_title">Consistency</h3>
+          <p class="text-secondary leading-relaxed" data-i18n="about.value_02_desc">
+            Guests return because they know what to expect. The room will look like the photos. The breakfast will be good. The garden will be there. Trust is built on reliability.
+          </p>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <span class="text-5xl font-serif text-beige block mb-4" data-i18n="about.value_03_num">03</span>
+          <h3 class="font-headline-sm text-headline-sm mb-3" data-i18n="about.value_03_title">Warmth</h3>
+          <p class="text-secondary leading-relaxed" data-i18n="about.value_03_desc">
+            We are a family business, not a corporation. When you check in, you are talking to someone who owns the place. That changes everything — the advice, the care, the small kindnesses.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="py-24 md:py-32 bg-white">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
+      <div class="mb-12 reveal">
+        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block" data-i18n="about.team_label">People</span>
+        <h2 class="font-headline-md text-headline-md text-primary" data-i18n="about.team_title">The people behind the desk</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-gutter">
+        <div class="reveal">
+          <div class="aspect-[3/4] overflow-hidden mb-4 rounded-lg">
+            <img class="w-full h-full object-cover" src="images/554112387.jpg" alt=""/>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm mb-1" data-i18n="about.team_family_name">The Family</h3>
+          <p class="text-sm text-secondary mb-2" data-i18n="about.team_family_role">Owners since 1990</p>
+          <p class="text-sm text-secondary leading-relaxed" data-i18n="about.team_family_desc">Present every day, overseeing the details that keep the hotel running smoothly. They still greet most guests personally.</p>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="aspect-[3/4] overflow-hidden mb-4 rounded-lg">
+            <img class="w-full h-full object-cover" src="images/554112387.jpg" alt=""/>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm mb-1" data-i18n="about.team_front_name">Front Desk Team</h3>
+          <p class="text-sm text-secondary mb-2" data-i18n="about.team_front_role">Reception &amp; concierge</p>
+          <p class="text-sm text-secondary leading-relaxed" data-i18n="about.team_front_desc">Multilingual, knowledgeable, and genuinely helpful. They know Alghero inside out and love sharing recommendations.</p>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="aspect-[3/4] overflow-hidden mb-4 rounded-lg">
+            <img class="w-full h-full object-cover" src="images/861583220.jpg" alt=""/>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm mb-1" data-i18n="about.team_house_name">Housekeeping</h3>
+          <p class="text-sm text-secondary mb-2" data-i18n="about.team_house_role">The quiet heroes</p>
+          <p class="text-sm text-secondary leading-relaxed" data-i18n="about.team_house_desc">Guests consistently praise our spotless rooms. That reputation is earned before dawn, every single day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-24 px-6 md:px-16 bg-[#2C2C2C] text-white text-center">
+    <div class="max-w-3xl mx-auto reveal">
+      <span class="font-label-caps text-label-caps uppercase opacity-60 mb-2 block" data-i18n="about.cta_label">Visit Us</span>
+      <h2 class="font-headline-md text-headline-md mb-4">
+        Come as a guest.<br/>Leave as a regular.
+      </h2>
+      <p class="text-body-lg opacity-70 mb-12" data-i18n="about.cta_p">
+        Many of our guests have been returning for years. We would love to welcome you for the first time.
+      </p>
+      <a class="bg-white text-primary px-16 py-6 rounded-lg font-label-caps text-label-caps tracking-widest hover:bg-[#F5F0E8] transition-all transform hover:scale-105 active:scale-95 uppercase font-bold inline-block" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="rooms.cta_final_book">Book Your Stay</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#E8E0D4] border-t border-[#D9CFC1] w-full py-12 md:py-16">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <div class="text-lg font-serif tracking-widest text-[#2C2C2C] uppercase mb-4" data-i18n="location.address_name">Hotel Mistral</div>
+          <p class="text-sm text-secondary leading-relaxed mb-4" data-i18n="footer.desc">
+            A family-run 3-star hotel in Alghero, Sardinia. 25 rooms, a garden, and a five-minute walk to Maria Pia Beach.
+          </p>
+          <address class="text-sm text-secondary not-italic leading-relaxed" data-i18n="location.address_street" data-i18n-html="">
+            Via Liguria 41<br/>
+            07041 Alghero SS<br/>
+            Sardinia, Italy
+          </address>
+        </div>
+        <div>
+          <h4 class="font-label-caps text-label-caps text-secondary mb-6" data-i18n="footer.explore">Explore</h4>
+          <ul class="space-y-3">
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="rooms.html" data-i18n="nav.rooms">Rooms</a></li>
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="experience.html" data-i18n="nav.experience">Experience</a></li>
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="location.html" data-i18n="nav.location">Location</a></li>
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="contact.html" data-i18n="footer.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-label-caps text-label-caps text-secondary mb-6" data-i18n="footer.contact">Contact</h4>
+          <ul class="space-y-3">
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="tel:+39079792028">+39 079 792 028</a></li>
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="mailto:info@hotelmistral.it">info@hotelmistral.it</a></li>
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="footer.book">Book on Booking.com →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#D9CFC1] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-secondary" data-i18n="footer.copyright">© 2024 Hotel Mistral. All rights reserved.</p>
+        <p class="text-xs text-secondary" data-i18n="footer.tagline">A family-run hotel since 1990.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

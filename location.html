@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="meta.site_name">Location — Hotel Mistral, Alghero</title>
+  <meta name="description" content="Hotel Mistral is located at Via Liguria 41 in Alghero, Sardinia. 300 metres from Maria Pia beach, close to the old town, with free private parking."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="css/styles.css" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#171818',
+            'primary-container': '#2c2c2c',
+            'secondary': '#635e54',
+            'secondary-container': '#e7dfd3',
+            'tertiary': '#211504',
+            'tertiary-container': '#382916',
+            'on-tertiary-container': '#a58f76',
+            'background': '#fef9f1',
+            'on-background': '#1d1c17',
+            'surface': '#fef9f1',
+            'surface-container': '#f2ede5',
+            'surface-container-low': '#f8f3eb',
+            'surface-dim': '#ded9d2',
+            'surface-variant': '#e7e2da',
+            'outline': '#747878',
+            'outline-variant': '#c4c7c7',
+            'sand': '#F5F0E8',
+            'beige': '#E8E0D4',
+            'warm-gray': '#8A8279',
+            'stone': '#6B6560',
+            'charcoal': '#2C2C2C',
+            'muted-green': '#7A8B6E',
+          },
+          fontFamily: {
+            'serif': ['Noto Serif', 'Georgia', 'serif'],
+            'sans': ['Manrope', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            'headline-md': ['Noto Serif'],
+            'headline-lg': ['Noto Serif'],
+            'body-lg': ['Manrope'],
+            'label-caps': ['Manrope'],
+            'headline-sm': ['Noto Serif'],
+            'trust-signal': ['Manrope'],
+            'functional-data': ['Manrope'],
+            'body-md': ['Manrope'],
+          },
+          fontSize: {
+            'headline-lg': ['48px', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '400' }],
+            'headline-md': ['32px', { lineHeight: '1.3', fontWeight: '400' }],
+            'headline-sm': ['24px', { lineHeight: '1.4', fontWeight: '500' }],
+            'body-lg': ['18px', { lineHeight: '1.6', fontWeight: '400' }],
+            'body-md': ['16px', { lineHeight: '1.5', fontWeight: '400' }],
+            'label-caps': ['12px', { lineHeight: '1', letterSpacing: '0.08em', fontWeight: '600' }],
+            'trust-signal': ['14px', { lineHeight: '1.2', fontWeight: '500' }],
+            'functional-data': ['20px', { lineHeight: '1.2', letterSpacing: '0.01em', fontWeight: '700' }],
+          },
+          spacing: {
+            'section-gap': '80px',
+            'gutter': '24px',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background font-body-md text-body-md overflow-x-hidden" data-page="location">
+
+  <!-- Header -->
+  <header class="nav-main bg-[#F5F0E8] border-b border-[#E8E0D4] sticky top-0 z-50">
+    <div class="flex justify-between items-center h-24 px-6 md:px-16 max-w-[1440px] mx-auto w-full">
+      <a href="index.html" class="text-lg md:text-2xl font-serif tracking-[0.15em] text-[#2C2C2C] uppercase" data-i18n="location.address_name">Hotel Mistral</a>
+      <nav class="hidden md:flex gap-10 font-serif tracking-tight text-sm uppercase items-center">
+        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="rooms.html" data-i18n="nav.rooms">Rooms</a>
+        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="experience.html" data-i18n="nav.experience">Experience</a>
+        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="about.html" data-i18n="nav.about">About</a>
+        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="location.html" data-i18n="nav.location">Location</a>
+        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <div class="hidden md:flex items-center gap-2 lang-switcher">
+          <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="it" onclick="setLanguage('it')">IT</button>
+          <span class="text-charcoal/30 text-xs">/</span>
+          <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="en" onclick="setLanguage('en')">EN</button>
+          <span class="text-charcoal/30 text-xs">/</span>
+          <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="de" onclick="setLanguage('de')">DE</button>
+          <span class="text-charcoal/30 text-xs">/</span>
+          <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="es" onclick="setLanguage('es')">ES</button>
+        </div>
+        <a class="hidden md:inline-flex bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps rounded-lg active:scale-95 transition-transform hover:opacity-90" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
+        <button class="md:hidden text-charcoal" data-i18n-aria-label="nav.menu_open" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.add('active'); document.body.style.overflow='hidden';">
+          <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
+            <line x1="4" y1="6" x2="20" y2="6"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="18" x2="20" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <button class="absolute top-6 right-6 text-charcoal" data-i18n-aria-label="nav.menu_close" aria-label="Close menu" onclick="document.querySelector('.mobile-menu').classList.remove('active'); document.body.style.overflow='';">
+      <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
+        <line x1="4" y1="4" x2="20" y2="20"/>
+        <line x1="20" y1="4" x2="4" y2="20"/>
+      </svg>
+    </button>
+    <a href="rooms.html" data-i18n="nav.rooms">Rooms</a>
+    <a href="experience.html" data-i18n="nav.experience">Experience</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="location.html" data-i18n="nav.location">Location</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <div class="flex items-center justify-center gap-3 mt-6 lang-switcher">
+      <button class="lang-btn text-sm font-semibold tracking-wider uppercase px-3 py-1 rounded transition-colors" data-lang="it" onclick="setLanguage('it')">IT</button>
+      <span class="text-charcoal/30 text-sm">/</span>
+      <button class="lang-btn text-sm font-semibold tracking-wider uppercase px-3 py-1 rounded transition-colors" data-lang="en" onclick="setLanguage('en')">EN</button>
+      <span class="text-charcoal/30 text-sm">/</span>
+      <button class="lang-btn text-sm font-semibold tracking-wider uppercase px-3 py-1 rounded transition-colors" data-lang="de" onclick="setLanguage('de')">DE</button>
+      <span class="text-charcoal/30 text-sm">/</span>
+      <button class="lang-btn text-sm font-semibold tracking-wider uppercase px-3 py-1 rounded transition-colors" data-lang="es" onclick="setLanguage('es')">ES</button>
+    </div>
+    <a class="bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps rounded-lg active:scale-95 transition-transform hover:opacity-90 mt-4" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
+  </div>
+
+  <!-- Page Header -->
+  <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-surface-container-low">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
+      <div class="max-w-3xl reveal">
+        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block">Location</span>
+        <h1 class="font-headline-lg text-headline-lg text-primary mb-6">
+          Between the beach<br/>and the old town
+        </h1>
+        <p class="text-secondary text-body-lg leading-relaxed" data-i18n="location.header_desc">
+          Hotel Mistral sits at one of the quiet gates of Alghero, close enough to walk to the sea, far enough to sleep peacefully.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map & Address -->
+  <section class="py-24 md:py-32 bg-white">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
+      <div class="grid md:grid-cols-2 gap-12 mb-16">
+        <div class="reveal h-[400px] relative rounded-lg overflow-hidden border border-outline-variant">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=8.308%2C40.592%2C8.318%2C40.596&amp;layer=mapnik&amp;marker=40.594%2C8.313" style="border: 0; width: 100%; height: 100%; position: absolute; inset: 0;"></iframe>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <h2 class="font-headline-md text-headline-md text-primary mb-6" data-i18n="location.where_title">Where to find us</h2>
+          <div class="divider divider-dark mb-8"></div>
+          <address class="not-italic mb-8">
+            <p class="text-lg font-serif mb-1">Hotel Mistral</p>
+            <p class="text-secondary leading-relaxed" data-i18n="location.address_street" data-i18n-html="">
+              Via Liguria 41<br/>
+              07041 Alghero SS<br/>
+              Sardinia, Italy
+            </p>
+          </address>
+          <div class="space-y-4 mb-8">
+            <div>
+              <span class="font-label-caps text-label-caps text-secondary block mb-1" data-i18n="location.info_phone">Phone</span>
+              <a class="text-primary hover:text-muted-green transition-colors" href="tel:+39079792028">+39 079 792 028</a>
+            </div>
+            <div>
+              <span class="font-label-caps text-label-caps text-secondary block mb-1" data-i18n="location.info_email">Email</span>
+              <a class="text-primary hover:text-muted-green transition-colors" href="mailto:info@hotelmistral.it">info@hotelmistral.it</a>
+            </div>
+            <div>
+              <span class="font-label-caps text-label-caps text-secondary block mb-1" data-i18n="location.info_coords">Coordinates</span>
+              <span class="text-primary">40.594°N, 8.313°E</span>
+            </div>
+          </div>
+          <a class="btn-outline" href="https://maps.google.com/?q=Hotel+Mistral+Via+Liguria+41+Alghero" target="_blank" rel="noopener noreferrer" data-i18n="location.cta_maps">Open in Google Maps</a>
+        </div>
+      </div>
+      <!-- Distances -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="reveal stat-card">
+          <span class="text-2xl font-serif block mb-2" data-i18n="location.dist_beach_value">300m</span>
+          <p class="text-sm font-medium mb-1" data-i18n="location.dist_beach_label">Maria Pia Beach</p>
+          <p class="text-xs text-secondary" data-i18n="location.dist_beach_time">5-minute walk</p>
+        </div>
+        <div class="reveal reveal-delay-1 stat-card">
+          <span class="text-2xl font-serif block mb-2" data-i18n="location.dist_oldtown_value">2.4km</span>
+          <p class="text-sm font-medium mb-1" data-i18n="location.dist_oldtown_label">Alghero Old Town</p>
+          <p class="text-xs text-secondary" data-i18n="location.dist_oldtown_time">30-min coastal walk</p>
+        </div>
+        <div class="reveal reveal-delay-2 stat-card">
+          <span class="text-2xl font-serif block mb-2" data-i18n="location.dist_station_value">12min</span>
+          <p class="text-sm font-medium mb-1" data-i18n="location.dist_station_label">Train Station</p>
+          <p class="text-xs text-secondary" data-i18n="location.dist_station_time">On foot</p>
+        </div>
+        <div class="reveal reveal-delay-3 stat-card">
+          <span class="text-2xl font-serif block mb-2" data-i18n="location.dist_airport_value">6km</span>
+          <p class="text-sm font-medium mb-1" data-i18n="location.dist_airport_label">Alghero Airport</p>
+          <p class="text-xs text-secondary" data-i18n="location.dist_airport_time">Fertilia (AHO)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby -->
+  <section class="py-24 md:py-32 bg-surface-container-low">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
+      <div class="mb-12 reveal">
+        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block">Nearby</span>
+        <h2 class="font-headline-md text-headline-md text-primary" data-i18n="location.nearby_title">What is around us</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-gutter">
+        <div class="reveal nearby-card">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img class="w-full h-full object-cover" src="images/111886637.jpg" alt=""/>
+          </div>
+          <div class="p-6">
+            <h3 class="font-headline-sm text-headline-sm mb-2" data-i18n="location.beach_name">Maria Pia Beach</h3>
+            <p class="text-secondary text-sm leading-relaxed mb-3" data-i18n="location.beach_desc">
+              Just five minutes on foot. Maria Pia is one of the most beautiful beaches in Alghero — a long stretch of fine sand backed by a fragrant pine forest. The water is shallow and clear, perfect for swimming from May through October.
+            </p>
+            <p class="text-xs text-secondary">
+              <span class="font-medium">Distance:</span> 300 metres · <span class="font-medium">Walk:</span> 5 minutes
+            </p>
+          </div>
+        </div>
+        <div class="reveal nearby-card">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img class="w-full h-full object-cover" src="images/554112384.jpg" alt=""/>
+          </div>
+          <div class="p-6">
+            <h3 class="font-headline-sm text-headline-sm mb-2" data-i18n="location.oldtown_name">Alghero Old Town (Centro Storico)</h3>
+            <p class="text-secondary text-sm leading-relaxed mb-3">
+              A walled Catalan city perched on the sea. The old town is a maze of narrow lanes, coral workshops, and piazzas that open onto the water. Walk the bastions at sunset, then dine on fresh seafood at one of the harbour restaurants.
+            </p>
+            <p class="text-xs text-secondary">
+              <span class="font-medium">Distance:</span> 2.4 km · <span class="font-medium">Walk:</span> 30 minutes along the seafront · <span class="font-medium">Bus:</span> Direct from hotel
+            </p>
+          </div>
+        </div>
+        <div class="reveal nearby-card">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img class="w-full h-full object-cover" src="images/554113139.jpg" alt=""/>
+          </div>
+          <div class="p-6">
+            <h3 class="font-headline-sm text-headline-sm mb-2" data-i18n="location.portoconte_name">Porto Conte &amp; Capo Caccia</h3>
+            <p class="text-secondary text-sm leading-relaxed mb-3" data-i18n="location.portoconte_desc">
+              A short drive north takes you to the Porto Conte Natural Reserve and the dramatic cliffs of Capo Caccia. Neptune's Grotto — a vast sea cave accessible by boat or by the Escala del Cabirol stairway — is worth the trip.
+            </p>
+            <p class="text-xs text-secondary">
+              <span class="font-medium">Distance:</span> 21 km · <span class="font-medium">Drive:</span> 30 minutes
+            </p>
+          </div>
+        </div>
+        <div class="reveal nearby-card">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img class="w-full h-full object-cover" src="images/554112398.jpg" alt=""/>
+          </div>
+          <div class="p-6">
+            <h3 class="font-headline-sm text-headline-sm mb-2" data-i18n="location.nuraghe_name">Nuraghe di Palmavera</h3>
+            <p class="text-secondary text-sm leading-relaxed mb-3" data-i18n="location.nuraghe_desc">
+              One of the best-preserved nuragic complexes in Sardinia, dating back over 3,000 years. A fascinating glimpse into the island's pre-Roman history, set in a quiet countryside location just outside town.
+            </p>
+            <p class="text-xs text-secondary">
+              <span class="font-medium">Distance:</span> 7.2 km · <span class="font-medium">Drive:</span> 15 minutes
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transport -->
+  <section class="py-24 md:py-32 bg-white">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
+      <div class="mb-12 reveal">
+        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block" data-i18n="location.transport_label">Getting Here</span>
+        <h2 class="font-headline-md text-headline-md text-primary" data-i18n="location.transport_title">How to reach us</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-gutter">
+        <div class="reveal flex gap-4">
+          <div class="icon-circle w-12 h-12 flex-shrink-0">
+            <span class="material-symbols-outlined">directions_car</span>
+          </div>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm mb-2" data-i18n="location.transport_car_title">By Car</h3>
+            <p class="text-secondary text-sm leading-relaxed" data-i18n="location.transport_car_desc">From Alghero-Fertilia Airport, follow the SS127bis south for 6 km. Turn left onto Via Liguria. We have free private parking on site — no reservation needed.</p>
+          </div>
+        </div>
+        <div class="reveal flex gap-4">
+          <div class="icon-circle w-12 h-12 flex-shrink-0">
+            <span class="material-symbols-outlined">directions_bus</span>
+          </div>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm mb-2" data-i18n="location.transport_bus_title">By Bus</h3>
+            <p class="text-secondary text-sm leading-relaxed">
+              A bus stop is located directly outside the hotel. Buses run regularly to the old town, the airport, and nearby beaches. Tickets available at reception.
+            </p>
+          </div>
+        </div>
+        <div class="reveal flex gap-4">
+          <div class="icon-circle w-12 h-12 flex-shrink-0">
+            <span class="material-symbols-outlined">train</span>
+          </div>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm mb-2" data-i18n="location.transport_train_title">By Train</h3>
+            <p class="text-secondary text-sm leading-relaxed" data-i18n="location.transport_train_desc">Alghero railway station is a 12-minute walk from the hotel. Direct trains connect to Sassari and other Sardinian towns. We can arrange a taxi from the station if needed.</p>
+          </div>
+        </div>
+        <div class="reveal flex gap-4">
+          <div class="icon-circle w-12 h-12 flex-shrink-0">
+            <span class="material-symbols-outlined">flight</span>
+          </div>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm mb-2" data-i18n="location.transport_plane_title">By Plane</h3>
+            <p class="text-secondary text-sm leading-relaxed" data-i18n="location.transport_plane_desc">Alghero-Fertilia Airport (AHO) is 6 km away. Direct flights from Rome, Milan, London, and other European cities. A taxi takes about 15 minutes; the bus stops right outside our door.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-24 px-6 md:px-16 bg-[#2C2C2C] text-white text-center">
+    <div class="max-w-3xl mx-auto reveal">
+      <span class="font-label-caps text-label-caps uppercase opacity-60 mb-2 block" data-i18n="home.cta_label">Reservations</span>
+      <h2 class="font-headline-md text-headline-md mb-4">
+        We are easy to find,<br/>hard to leave
+      </h2>
+      <p class="text-body-lg opacity-70 mb-12" data-i18n="location.cta_p">
+        Book your room and start planning your Alghero itinerary. We are happy to recommend our favourite local spots.
+      </p>
+      <a class="bg-white text-primary px-16 py-6 rounded-lg font-label-caps text-label-caps tracking-widest hover:bg-[#F5F0E8] transition-all transform hover:scale-105 active:scale-95 uppercase font-bold inline-block" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="rooms.cta_final_book">Book Your Stay</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#E8E0D4] border-t border-[#D9CFC1] w-full py-12 md:py-16">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <div class="text-lg font-serif tracking-widest text-[#2C2C2C] uppercase mb-4" data-i18n="location.address_name">Hotel Mistral</div>
+          <p class="text-sm text-secondary leading-relaxed mb-4" data-i18n="footer.desc">
+            A family-run 3-star hotel in Alghero, Sardinia. 25 rooms, a garden, and a five-minute walk to Maria Pia Beach.
+          </p>
+          <address class="text-sm text-secondary not-italic leading-relaxed" data-i18n="location.address_street" data-i18n-html="">
+            Via Liguria 41<br/>
+            07041 Alghero SS<br/>
+            Sardinia, Italy
+          </address>
+        </div>
+        <div>
+          <h4 class="font-label-caps text-label-caps text-secondary mb-6" data-i18n="footer.explore">Explore</h4>
+          <ul class="space-y-3">
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="rooms.html" data-i18n="nav.rooms">Rooms</a></li>
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="experience.html" data-i18n="nav.experience">Experience</a></li>
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="location.html" data-i18n="nav.location">Location</a></li>
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="contact.html" data-i18n="footer.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-label-caps text-label-caps text-secondary mb-6" data-i18n="footer.contact">Contact</h4>
+          <ul class="space-y-3">
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="tel:+39079792028">+39 079 792 028</a></li>
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="mailto:info@hotelmistral.it">info@hotelmistral.it</a></li>
+            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="footer.book">Book on Booking.com →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#D9CFC1] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-secondary" data-i18n="footer.copyright">© 2024 Hotel Mistral. All rights reserved.</p>
+        <p class="text-xs text-secondary" data-i18n="footer.tagline">A family-run hotel since 1990.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+{
+  "_metadata": {
+    "extraction_source": [
+      "Booking.com search results and cached descriptions",
+      "TripAdvisor reviews and property details",
+      "Official hotelmistral.it website content",
+      "Momondo hotel listings"
+    ],
+    "extraction_date": "2026-05-02",
+    "confidence": "high"
+  },
+  "hotel": {
+    "name": "Hotel Mistral",
+    "type": "3-star family-run hotel",
+    "founded_year": 1990,
+    "location": {
+      "address": "Via Liguria 41",
+      "postal_code": "07041",
+      "city": "Alghero",
+      "province": "Sassari",
+      "region": "Sardinia",
+      "country": "Italy",
+      "coordinates": {
+        "lat": 40.594,
+        "lng": 8.313
+      }
+    },
+    "description": "Hotel Mistral is a comfortable 3-star hotel in Alghero, one of the most attractive tourist resorts on the north-west coast of Sardinia. Set in a clean and well-maintained environment, the hotel features a bar open from 7:00am to 10:30pm and a concierge service available from 6:30am to 10:30pm, with a magnetic key for 24-hour access to the facility starting from check-in. The hotel has 25 rooms of various types, all equipped with free Wi-Fi connection, private bathroom, telephone, TV, air conditioning, heating, and a hairdryer. With its own garden and private car-park, the hotel stands at walking distance from Maria Pia Beach, indeed one of the most beautiful sandy beaches of Alghero, famous for its crystal clear sea and sandy hills stretching all along the coast as far as Fertilia.",
+    "rooms_total": 25,
+    "floors": "3 floors + ground floor",
+    "offer": "Bed & Breakfast",
+    "languages_spoken": ["Italian", "English"],
+    "ratings": {
+      "booking_com_overall": 8.2,
+      "location_score": 8.3,
+      "cleanliness_score": 9.0,
+      "staff_score": 9.2,
+      "comfort_score": 8.5,
+      "value_for_money": 8.4,
+      "facilities": 8.0,
+      "review_count": 482
+    }
+  },
+  "rooms": [
+    {
+      "id": "double-balcony",
+      "name": "Double Room with Balcony",
+      "bed": "1 large double bed (queen)",
+      "size_category": "spacious",
+      "view": "Garden or quiet side",
+      "balcony": true,
+      "floor": "various",
+      "price_from_eur": 85,
+      "description": "Our most requested room. One large double bed, a private balcony with garden views, and enough space to settle in. The balcony catches the morning sun and is a pleasant place for coffee before breakfast. The room faces away from the road, so nights are quiet.",
+      "features": [
+        "Air conditioning",
+        "Free high-speed WiFi",
+        "Flat-screen TV with digital channels",
+        "In-room safe",
+        "Private bathroom with shower and hairdryer",
+        "Work desk",
+        "Electric kettle",
+        "Mini fridge",
+        "Telephone",
+        "Soundproofed windows",
+        "Private balcony",
+        "Bed linen and towels provided",
+        "Heating"
+      ],
+      "images": [
+        "Double room: Queen bed with white cotton sheets, soft morning light through open shutters, terracotta floor tiles",
+        "Balcony view: Small iron balcony with potted geraniums, overlooking hotel garden and pine trees",
+        "Bathroom detail: White tiled shower, natural soap on ceramic dish, fresh white towels"
+      ],
+      "suitability": ["Couples", "Solo travellers", "Light sleepers"],
+      "occupancy": "2 adults"
+    },
+    {
+      "id": "single-balcony",
+      "name": "Single Room with Balcony",
+      "bed": "1 single bed",
+      "size_category": "compact",
+      "view": "Garden or quiet side",
+      "balcony": true,
+      "floor": "various",
+      "price_from_eur": 65,
+      "description": "Compact but comfortable, designed for solo travellers who still want a bit of outdoor space. The single bed is firm and supportive, the desk is sized for a laptop, and the balcony is just large enough for a chair and a book. Everything you need, nothing superfluous.",
+      "features": [
+        "Air conditioning",
+        "Free high-speed WiFi",
+        "Flat-screen TV with digital channels",
+        "In-room safe",
+        "Private bathroom with shower and hairdryer",
+        "Work desk",
+        "Electric kettle",
+        "Mini fridge",
+        "Telephone",
+        "Private balcony",
+        "Bed linen and towels provided",
+        "Heating"
+      ],
+      "images": [
+        "Single room interior: Compact sunlit space with pale wood desk, single bed with crisp linen, ceramic tile floor",
+        "Single balcony: Small balcony with iron railing, potted rosemary plant, view of garden path"
+      ],
+      "suitability": ["Solo travellers", "Business travellers"],
+      "occupancy": "1 adult"
+    },
+    {
+      "id": "twin",
+      "name": "Twin Room",
+      "bed": "2 single beds",
+      "size_category": "medium",
+      "view": "Garden or quiet side",
+      "balcony": false,
+      "floor": "various",
+      "price_from_eur": 80,
+      "description": "Two single beds in a room that faces the garden or the quiet side of the property. Ideal for friends travelling together, or for siblings who want their own space. The wardrobe is generous, the bathroom is fully tiled, and the view from the window is green.",
+      "features": [
+        "Air conditioning",
+        "Free high-speed WiFi",
+        "Flat-screen TV with digital channels",
+        "In-room safe",
+        "Private bathroom with shower and hairdryer",
+        "Work desk",
+        "Electric kettle",
+        "Mini fridge",
+        "Telephone",
+        "Garden view",
+        "Bed linen and towels provided",
+        "Heating"
+      ],
+      "images": [
+        "Twin room: Two single beds with natural cotton throws, soft morning light through sheer curtains, simple wooden furniture",
+        "Twin room detail: Bedside table with reading lamp, local ceramic water jug, fresh white towels"
+      ],
+      "suitability": ["Friends", "Siblings", "Colleagues"],
+      "occupancy": "2 adults"
+    },
+    {
+      "id": "standard-double",
+      "name": "Standard Double",
+      "bed": "1 large double bed (queen)",
+      "size_category": "medium",
+      "view": "Interior courtyard or quiet side",
+      "balcony": false,
+      "floor": "various",
+      "price_from_eur": 75,
+      "description": "Our standard double is quietly positioned on the interior side of the building, away from the street. One large bed, a functional bathroom, and all the same amenities as our other rooms — just without the balcony. Perfect for guests who plan to spend most of their time outdoors.",
+      "features": [
+        "Air conditioning",
+        "Free high-speed WiFi",
+        "Flat-screen TV with digital channels",
+        "In-room safe",
+        "Private bathroom with shower and hairdryer",
+        "Work desk",
+        "Electric kettle",
+        "Mini fridge",
+        "Telephone",
+        "Soundproofed windows",
+        "Bed linen and towels provided",
+        "Heating"
+      ],
+      "images": [
+        "Standard room: Queen bed against textured white wall, bedside terracotta pot with olive branch, cool afternoon shadows",
+        "Bathroom detail: White tiled shower, natural soap on ceramic dish, soft towel stack, clean minimal aesthetic"
+      ],
+      "suitability": ["Couples", "Budget-conscious travellers", "Short stays"],
+      "occupancy": "2 adults"
+    }
+  ],
+  "amenities": {
+    "property_wide": [
+      {
+        "category": "Food & Drink",
+        "items": [
+          "Breakfast served on outdoor veranda (buffet, continental, or Italian options)",
+          "Bar open 7:00am — 10:30pm",
+          "Coffee available all day",
+          "Local wines and aperitivi"
+        ]
+      },
+      {
+        "category": "Recreation",
+        "items": [
+          "Garden with mature trees and seating",
+          "Outdoor veranda",
+          "Billiard room with vintage table",
+          "Bicycle rental available on site",
+          "Tennis court 500 metres away"
+        ]
+      },
+      {
+        "category": "Services",
+        "items": [
+          "Concierge service 6:30am — 10:30pm",
+          "24-hour access with magnetic key",
+          "Multilingual front desk staff",
+          "Luggage storage",
+          "Daily housekeeping"
+        ]
+      },
+      {
+        "category": "Parking & Transport",
+        "items": [
+          "Free private parking (video-monitored, not guarded)",
+          "Bus stop directly outside hotel",
+          "Airport taxi arrangements",
+          "Bicycle rental"
+        ]
+      },
+      {
+        "category": "Connectivity",
+        "items": [
+          "Free high-speed WiFi throughout property",
+          "Work desk in every room"
+        ]
+      },
+      {
+        "category": "Wellness & Comfort",
+        "items": [
+          "Air conditioning in all rooms",
+          "Heating in all rooms",
+          "Soundproofed windows (select rooms)",
+          "Non-smoking property"
+        ]
+      }
+    ],
+    "in_every_room": [
+      "Free WiFi connection",
+      "Private bathroom with shower",
+      "Flat-screen TV with digital channels",
+      "Air conditioning",
+      "Heating",
+      "Hairdryer",
+      "Telephone",
+      "In-room safe",
+      "Work desk",
+      "Electric kettle",
+      "Mini fridge",
+      "Bed linen and towels"
+    ],
+    "not_available": [
+      "No on-site restaurant (dinner)",
+      "No spa or wellness centre",
+      "No gym or fitness centre",
+      "No swimming pool",
+      "No elevator (3 floors + ground)",
+      "No pets (contact in advance)"
+    ]
+  },
+  "breakfast": {
+    "type": ["Buffet", "Continental", "Italian"],
+    "served": "7:00am — 10:00am",
+    "location": "Outdoor veranda (weather permitting) or indoor breakfast room",
+    "included": true,
+    "highlights": [
+      "Fresh bread from neighbourhood bakery",
+      "Local pecorino and cured ham",
+      "Seasonal fruit (figs in August, blood oranges in winter)",
+      "Pastries from local forno",
+      "Proper espresso and cappuccino made to order",
+      "Sweet and savoury options",
+      "Dietary requirements accommodated on request"
+    ],
+    "atmosphere": "Long wooden table on the veranda under canvas awning, garden beyond, guests linger with newspapers"
+  },
+  "location": {
+    "description": "Conveniently located near one of Alghero's gates, between beautiful beaches and the historic centre. The hotel is surrounded by restaurants, parks, and children's playgrounds.",
+    "distances": [
+      { "name": "Maria Pia Beach", "distance_m": 300, "time_walk": "5 minutes", "note": "One of the most beautiful sandy beaches in Alghero, crystal clear water, sandy dunes" },
+      { "name": "Alghero Old Town (Centro Storico)", "distance_km": 2.4, "time_walk": "30 minutes", "time_drive": "5 minutes", "note": "Via seaside promenade, beautiful coastal walk" },
+      { "name": "Alghero Marina", "distance_km": 2.4, "note": "Harbour restaurants and boat trips" },
+      { "name": "Palazzo D'Albis", "distance_km": 2.9, "note": "Historic palace in old town" },
+      { "name": "Alghero Railway Station", "time_walk": "12 minutes", "note": "Direct trains to Sassari" },
+      { "name": "Alghero-Fertilia Airport (AHO)", "distance_km": 6, "time_drive": "15 minutes", "note": "Direct flights from Rome, Milan, London" },
+      { "name": "Nuraghe di Palmavera", "distance_km": 7.2, "time_drive": "15 minutes", "note": "3,000-year-old nuragic complex" },
+      { "name": "Porto Conte Natural Reserve", "distance_km": 21, "time_drive": "30 minutes", "note": "Dramatic cliffs and hiking" },
+      { "name": "Capo Caccia & Neptune's Grotto", "distance_km": 22, "time_drive": "35 minutes", "note": "Famous sea cave, Escala del Cabirol" },
+      { "name": "Porto Torres", "distance_km": 35, "note": "Ferry port to mainland" }
+    ],
+    "nearby_facilities": [
+      "Restaurants and pizzerias within walking distance",
+      "Supermarkets nearby",
+      "Children's playgrounds in the area",
+      "Football and rugby field nearby",
+      "Seaside promenade for walking and cycling"
+    ]
+  },
+  "policies": {
+    "check_in": "From 14:00 (2:00pm). Early luggage storage available.",
+    "check_out": "Until 10:00am. Late check-out on request.",
+    "cancellation": "Varies by rate and season. Refer to booking confirmation.",
+    "children": "Children of all ages welcome. Cots available on request.",
+    "pets": "Contact in advance. Restrictions may apply.",
+    "smoking": "Non-smoking property",
+    "payment": "All major credit cards accepted",
+    "parking": "Free private parking on site. No reservation needed.",
+    "accessibility": "No elevator. Ground floor rooms available. Contact for accessibility needs."
+  },
+  "reviews": [
+    {
+      "author": "Patrick",
+      "country": "Ireland",
+      "rating": 10,
+      "tone": "warm, enthusiastic",
+      "original_excerpt": "Family run hotel, full of character and charm. Reception/bar staff kind and friendly. Great location. Spotlessly Clean. Cleaning staff are incredible. Fabulous breakfast. Parking. Recommended.",
+      "rewritten_premium": "A family-run hotel full of character and charm. The reception and bar staff were kind and friendly, the location excellent, and the cleaning staff incredible. Spotlessly clean throughout. A fabulous breakfast and convenient parking. Highly recommended."
+    },
+    {
+      "author": "Meghan",
+      "country": "Ireland",
+      "rating": 9,
+      "tone": "relaxed, appreciative",
+      "original_excerpt": "Staff were super lovely and chill, room was very comfortable and well air conditioned, and location was quite convenient - near to the beach and a 40 min walk to the centre or 5 min drive.",
+      "rewritten_premium": "The staff were super lovely and wonderfully relaxed. The room was very comfortable and perfectly air-conditioned, and the location could not have been more convenient — a short stroll to the beach, and an easy walk or quick drive into the centre."
+    },
+    {
+      "author": "Livia",
+      "country": "Belgium",
+      "rating": 10,
+      "tone": "grateful, personal",
+      "original_excerpt": "Clean, excellent location, great breakfast and the most amazing owners",
+      "rewritten_premium": "Immaculately clean, excellently located, with a truly great breakfast and the most warm, welcoming owners one could hope to meet."
+    },
+    {
+      "author": "Alison",
+      "country": "United Kingdom",
+      "rating": 9,
+      "tone": "practical, satisfied",
+      "original_excerpt": "Good sized bedroom. Hotel has parking adjacent. Close to good beach.",
+      "rewritten_premium": "A good-sized bedroom, convenient adjacent parking, and a beautiful beach just a short walk away. Everything we needed."
+    },
+    {
+      "author": "Yvonne",
+      "country": "Ireland",
+      "rating": 9,
+      "tone": "simple, warm",
+      "original_excerpt": "really lovely hotel. Great sleep. The staff were lovely.",
+      "rewritten_premium": "A really lovely hotel. We slept wonderfully. And the staff were simply lovely — genuinely caring and attentive."
+    },
+    {
+      "author": "Alessio",
+      "country": "United Kingdom",
+      "rating": 10,
+      "tone": "impressed, returning",
+      "original_excerpt": "Only stayed there for one night but will be saved for future stays in Alghero. Great location, beach at 10 minutes walk, fair size room and very clean. All staff I dealt with were friendly and professional.",
+      "rewritten_premium": "We stayed only one night, but Hotel Mistral has already been saved for every future visit to Alghero. A great location, the beach just ten minutes away, a fairly sized and very clean room, and staff who were friendly, professional, and genuinely welcoming."
+    },
+    {
+      "author": "Mounir",
+      "country": "Canada",
+      "rating": 10,
+      "tone": "warm, intimate",
+      "original_excerpt": "Familial place, so cozy",
+      "rewritten_premium": "A familial place, so wonderfully cozy. You feel at home from the very first moment."
+    },
+    {
+      "author": "Adina",
+      "country": "United Kingdom",
+      "rating": 9,
+      "tone": "detailed, practical",
+      "original_excerpt": "The hotel was very nice and the people at reception were more than willing to accommodate and help with all the questions. Within 8 min alow.walk.to.the beach where you has the oprion of bar amd sunloubgers or just sand.",
+      "rewritten_premium": "A very pleasant hotel, and the reception team went out of their way to accommodate us and answer every question. An easy eight-minute walk to the beach, where you can choose between a bar with sun loungers or simply the sand and the sea."
+    },
+    {
+      "author": "Iuliana",
+      "country": "Romania",
+      "rating": 9,
+      "tone": "practical, health-conscious",
+      "original_excerpt": "Clean, firm mattress that is good for the back, AC, the persons at the reception are friendly and helpful, quite close to the beach",
+      "rewritten_premium": "Spotlessly clean, with a firm mattress that is genuinely good for the back. Excellent air conditioning, friendly and helpful reception staff, and a location quite close to the beach."
+    }
+  ],
+  "transport": {
+    "by_car": {
+      "from_airport": "From Alghero-Fertilia Airport, follow SS127bis south for 6 km. Turn left onto Via Liguria. Free parking on site.",
+      "from_porto_torres": "35 km south via SS131 and SP42. Approximately 40 minutes.",
+      "from_olbia": "Approximately 130 km via SS597 and SS131. 1 hour 45 minutes."
+    },
+    "by_public_transport": {
+      "bus": "Bus stop directly outside the hotel. Regular service to old town, airport, and beaches. Tickets at reception.",
+      "train": "Alghero railway station 12-minute walk. Direct trains to Sassari and Sardinian towns.",
+      "airport_bus": "Airport bus stops directly outside hotel. 15-minute journey."
+    },
+    "by_plane": {
+      "airport": "Alghero-Fertilia (AHO)",
+      "distance_km": 6,
+      "flights": "Direct from Rome, Milan, London, and major European cities",
+      "transfer_time": "15 minutes by taxi"
+    }
+  },
+  "nearby_attractions": [
+    {
+      "name": "Maria Pia Beach",
+      "type": "beach",
+      "distance_m": 300,
+      "description": "One of Alghero's most beautiful beaches — fine sand, crystal clear shallow water, backed by a fragrant pine forest. Perfect for swimming May through October.",
+      "image_brief": "Wide sandy beach with crystal-clear turquoise water, pine trees along the shore, natural dune landscape"
+    },
+    {
+      "name": "Alghero Old Town (Centro Storico)",
+      "type": "historic",
+      "distance_km": 2.4,
+      "description": "A walled Catalan city perched on the sea. Narrow lanes, coral workshops, piazzas opening onto the water. Walk the bastions at sunset, then dine on fresh seafood.",
+      "image_brief": "Historic stone bastions overlooking the sea, cobblestone streets, coral-coloured buildings at golden hour"
+    },
+    {
+      "name": "Porto Conte Natural Reserve & Capo Caccia",
+      "type": "nature",
+      "distance_km": 21,
+      "description": "Dramatic cliffs and protected coastline. Neptune's Grotto — a vast sea cave accessible by boat or the Escala del Cabirol stairway.",
+      "image_brief": "Rocky coastline with Mediterranean scrub, turquoise coves, hiking trail, wild and unspoiled landscape"
+    },
+    {
+      "name": "Nuraghe di Palmavera",
+      "type": "archaeological",
+      "distance_km": 7.2,
+      "description": "One of the best-preserved nuragic complexes in Sardinia, dating back over 3,000 years. A fascinating glimpse into pre-Roman history.",
+      "image_brief": "Ancient stone nuraghe structure in green countryside, mysterious prehistoric towers, blue sky"
+    }
+  ],
+  "image_requirements": {
+    "hero": "Sun-drenched facade of a low Mediterranean building with jasmine climbing pale walls, early morning light, terracotta roof tiles, editorial composition",
+    "about_story": "Warm, natural photograph of Italian family behind hotel reception desk, 1990s interior, warm film photography aesthetic",
+    "about_detail": "Close-up of weathered wooden door with brass keyhole, terracotta planter with rosemary, sun-bleached wall, texture and authenticity",
+    "breakfast_veranda": "Long wooden table with rumpled linen cloth, ceramic plates of fresh bread, honey jars, sliced melon, espresso cups, Mediterranean greenery in background, golden morning light",
+    "garden": "Mature Mediterranean garden with pine trees, gravel paths, white-painted iron chairs, terracotta pots, afternoon shade",
+    "billiard_room": "Vintage wooden billiard table under warm brass pendant light, leather club chairs, shelves with books, soft evening atmosphere",
+    "bar": "Marble-topped bar with brass fixtures, glass of amber aperitivo, warm light from window, soft shadows",
+    "location_map": "Aerial view of Alghero showing Via Liguria, Maria Pia Beach to the west, old town to the south, pine forest between"
+  }
+}
