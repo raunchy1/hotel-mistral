@@ -4,9 +4,9 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title data-i18n="meta.site_name">Location — Hotel Mistral, Alghero</title>
-  <meta name="description" content="Hotel Mistral is located at Via Liguria 41 in Alghero, Sardinia. 300 metres from Maria Pia beach, close to the old town, with free private parking."/>
+  <meta name="description" data-i18n="meta.location_desc" content="Hotel Mistral is located at Via Liguria 41 in Alghero, Sardinia. 300 metres from Maria Pia beach, close to the old town, with free private parking."/>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
   <link href="css/styles.css" rel="stylesheet"/>
   <script>
@@ -38,16 +38,16 @@
             'muted-green': '#7A8B6E',
           },
           fontFamily: {
-            'serif': ['Noto Serif', 'Georgia', 'serif'],
-            'sans': ['Manrope', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            'headline-md': ['Noto Serif'],
-            'headline-lg': ['Noto Serif'],
-            'body-lg': ['Manrope'],
-            'label-caps': ['Manrope'],
-            'headline-sm': ['Noto Serif'],
-            'trust-signal': ['Manrope'],
-            'functional-data': ['Manrope'],
-            'body-md': ['Manrope'],
+            'serif': ['Cormorant Garamond', 'Cormorant', 'Georgia', 'serif'],
+            'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            'headline-md': ['Cormorant Garamond', 'serif'],
+            'headline-lg': ['Cormorant Garamond', 'serif'],
+            'body-lg': ['Inter', 'sans-serif'],
+            'label-caps': ['Inter', 'sans-serif'],
+            'headline-sm': ['Cormorant Garamond', 'serif'],
+            'trust-signal': ['Inter', 'sans-serif'],
+            'functional-data': ['Inter', 'sans-serif'],
+            'body-md': ['Inter', 'sans-serif'],
           },
           fontSize: {
             'headline-lg': ['48px', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '400' }],
@@ -91,7 +91,7 @@
           <span class="text-charcoal/30 text-xs">/</span>
           <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="es" onclick="setLanguage('es')">ES</button>
         </div>
-        <a class="hidden md:inline-flex bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps rounded-lg active:scale-95 transition-transform hover:opacity-90" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
+        <a class="hidden md:inline-flex bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps active:scale-95 transition-transform hover:opacity-90" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
         <button class="md:hidden text-charcoal" data-i18n-aria-label="nav.menu_open" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.add('active'); document.body.style.overflow='hidden';">
           <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
             <line x1="4" y1="6" x2="20" y2="6"/>
@@ -132,8 +132,8 @@
   <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-surface-container-low">
     <div class="max-w-[1440px] mx-auto px-6 md:px-16">
       <div class="max-w-3xl reveal">
-        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block">Location</span>
-        <h1 class="font-headline-lg text-headline-lg text-primary mb-6">
+        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block" data-i18n="location.header_label">Location</span>
+        <h1 class="font-headline-lg text-headline-lg text-primary mb-6" data-i18n="location.header_title" data-i18n-html="">
           Between the beach<br/>and the old town
         </h1>
         <p class="text-secondary text-body-lg leading-relaxed" data-i18n="location.header_desc">
@@ -208,7 +208,7 @@
   <section class="py-24 md:py-32 bg-surface-container-low">
     <div class="max-w-[1440px] mx-auto px-6 md:px-16">
       <div class="mb-12 reveal">
-        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block">Nearby</span>
+        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block" data-i18n="location.nearby_label">Nearby</span>
         <h2 class="font-headline-md text-headline-md text-primary" data-i18n="location.nearby_title">What is around us</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-gutter">
@@ -221,8 +221,8 @@
             <p class="text-secondary text-sm leading-relaxed mb-3" data-i18n="location.beach_desc">
               Just five minutes on foot. Maria Pia is one of the most beautiful beaches in Alghero — a long stretch of fine sand backed by a fragrant pine forest. The water is shallow and clear, perfect for swimming from May through October.
             </p>
-            <p class="text-xs text-secondary">
-              <span class="font-medium">Distance:</span> 300 metres · <span class="font-medium">Walk:</span> 5 minutes
+            <p class="text-xs text-secondary" data-i18n="location.beach_meta">
+              Distance: 300 metres · Walk: 5 minutes
             </p>
           </div>
         </div>
@@ -232,11 +232,11 @@
           </div>
           <div class="p-6">
             <h3 class="font-headline-sm text-headline-sm mb-2" data-i18n="location.oldtown_name">Alghero Old Town (Centro Storico)</h3>
-            <p class="text-secondary text-sm leading-relaxed mb-3">
+            <p class="text-secondary text-sm leading-relaxed mb-3" data-i18n="location.oldtown_desc">
               A walled Catalan city perched on the sea. The old town is a maze of narrow lanes, coral workshops, and piazzas that open onto the water. Walk the bastions at sunset, then dine on fresh seafood at one of the harbour restaurants.
             </p>
-            <p class="text-xs text-secondary">
-              <span class="font-medium">Distance:</span> 2.4 km · <span class="font-medium">Walk:</span> 30 minutes along the seafront · <span class="font-medium">Bus:</span> Direct from hotel
+            <p class="text-xs text-secondary" data-i18n="location.oldtown_meta">
+              Distance: 2.4 km · Walk: 30 minutes along the seafront · Bus: Direct from hotel
             </p>
           </div>
         </div>
@@ -249,8 +249,8 @@
             <p class="text-secondary text-sm leading-relaxed mb-3" data-i18n="location.portoconte_desc">
               A short drive north takes you to the Porto Conte Natural Reserve and the dramatic cliffs of Capo Caccia. Neptune's Grotto — a vast sea cave accessible by boat or by the Escala del Cabirol stairway — is worth the trip.
             </p>
-            <p class="text-xs text-secondary">
-              <span class="font-medium">Distance:</span> 21 km · <span class="font-medium">Drive:</span> 30 minutes
+            <p class="text-xs text-secondary" data-i18n="location.portoconte_meta">
+              Distance: 21 km · Drive: 30 minutes
             </p>
           </div>
         </div>
@@ -263,8 +263,8 @@
             <p class="text-secondary text-sm leading-relaxed mb-3" data-i18n="location.nuraghe_desc">
               One of the best-preserved nuragic complexes in Sardinia, dating back over 3,000 years. A fascinating glimpse into the island's pre-Roman history, set in a quiet countryside location just outside town.
             </p>
-            <p class="text-xs text-secondary">
-              <span class="font-medium">Distance:</span> 7.2 km · <span class="font-medium">Drive:</span> 15 minutes
+            <p class="text-xs text-secondary" data-i18n="location.nuraghe_meta">
+              Distance: 7.2 km · Drive: 15 minutes
             </p>
           </div>
         </div>
@@ -332,7 +332,7 @@
       <p class="text-body-lg opacity-70 mb-12" data-i18n="location.cta_p">
         Book your room and start planning your Alghero itinerary. We are happy to recommend our favourite local spots.
       </p>
-      <a class="bg-white text-primary px-16 py-6 rounded-lg font-label-caps text-label-caps tracking-widest hover:bg-[#F5F0E8] transition-all transform hover:scale-105 active:scale-95 uppercase font-bold inline-block" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="rooms.cta_final_book">Book Your Stay</a>
+      <a class="bg-white text-primary px-16 py-6 font-label-caps text-label-caps tracking-widest hover:bg-[#F5F0E8] transition-all transform hover:scale-105 active:scale-95 uppercase font-bold inline-block" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="rooms.cta_final_book">Book Your Stay</a>
     </div>
   </section>
 

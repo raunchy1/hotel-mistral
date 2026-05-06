@@ -4,9 +4,9 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title data-i18n="meta.site_name">Contact — Hotel Mistral, Alghero</title>
-  <meta name="description" content="Contact Hotel Mistral in Alghero, Sardinia. Via Liguria 41. Phone +39 079 792 028. Email info@hotelmistral.it. Book on Booking.com."/>
+  <meta name="description" data-i18n="meta.contact_desc" content="Contact Hotel Mistral in Alghero, Sardinia. Via Liguria 41. Phone +39 079 792 028. Email info@hotelmistral.it. Book on Booking.com."/>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
   <link href="css/styles.css" rel="stylesheet"/>
   <script>
@@ -38,16 +38,16 @@
             'muted-green': '#7A8B6E',
           },
           fontFamily: {
-            'serif': ['Noto Serif', 'Georgia', 'serif'],
-            'sans': ['Manrope', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            'headline-md': ['Noto Serif'],
-            'headline-lg': ['Noto Serif'],
-            'body-lg': ['Manrope'],
-            'label-caps': ['Manrope'],
-            'headline-sm': ['Noto Serif'],
-            'trust-signal': ['Manrope'],
-            'functional-data': ['Manrope'],
-            'body-md': ['Manrope'],
+            'serif': ['Cormorant Garamond', 'Cormorant', 'Georgia', 'serif'],
+            'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            'headline-md': ['Cormorant Garamond', 'serif'],
+            'headline-lg': ['Cormorant Garamond', 'serif'],
+            'body-lg': ['Inter', 'sans-serif'],
+            'label-caps': ['Inter', 'sans-serif'],
+            'headline-sm': ['Cormorant Garamond', 'serif'],
+            'trust-signal': ['Inter', 'sans-serif'],
+            'functional-data': ['Inter', 'sans-serif'],
+            'body-md': ['Inter', 'sans-serif'],
           },
           fontSize: {
             'headline-lg': ['48px', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '400' }],
@@ -91,7 +91,7 @@
           <span class="text-charcoal/30 text-xs">/</span>
           <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="es" onclick="setLanguage('es')">ES</button>
         </div>
-        <a class="hidden md:inline-flex bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps rounded-lg active:scale-95 transition-transform hover:opacity-90" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
+        <a class="hidden md:inline-flex bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps active:scale-95 transition-transform hover:opacity-90" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
         <button class="md:hidden text-charcoal" data-i18n-aria-label="nav.menu_open" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.add('active'); document.body.style.overflow='hidden';">
           <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
             <line x1="4" y1="6" x2="20" y2="6"/>
@@ -132,8 +132,8 @@
   <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-surface-container-low">
     <div class="max-w-[1440px] mx-auto px-6 md:px-16">
       <div class="max-w-3xl reveal">
-        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block">Contact</span>
-        <h1 class="font-headline-lg text-headline-lg text-primary mb-6">
+        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block" data-i18n="contact.header_label">Contact</span>
+        <h1 class="font-headline-lg text-headline-lg text-primary mb-6" data-i18n="contact.header_title" data-i18n-html="">
           We would love<br/>to hear from you
         </h1>
         <p class="text-secondary text-body-lg leading-relaxed" data-i18n="contact.header_desc">
@@ -164,11 +164,11 @@
             <div>
               <label class="block font-label-caps text-label-caps text-secondary mb-2" for="subject" data-i18n="contact.form_subject">Subject</label>
               <select name="subject" required="">
-                <option disabled="" selected="" value="">Select a subject</option>
-                <option value="booking">Booking Enquiry</option>
-                <option value="rooms">Room Information</option>
-                <option value="special">Special Request</option>
-                <option value="other">Other</option>
+                <option disabled="" selected="" value="" data-i18n="contact.form_select_subject">Select a subject</option>
+                <option value="booking" data-i18n="contact.form_subject_booking">Booking Enquiry</option>
+                <option value="rooms" data-i18n="contact.form_subject_rooms">Room Information</option>
+                <option value="special" data-i18n="contact.form_subject_special">Special Request</option>
+                <option value="other" data-i18n="contact.form_subject_other">Other</option>
               </select>
             </div>
             <div>
@@ -201,10 +201,10 @@
             <div>
               <p class="font-label-caps text-label-caps text-secondary mb-2" data-i18n="contact.info_hours_label">Reception Hours</p>
               <div class="space-y-1 text-secondary">
-                <p>Concierge: 6:30am — 10:30pm</p>
-                <p>24-hour access with magnetic key</p>
-                <p>Check-in: from 2:00pm</p>
-                <p>Check-out: until 10:00am</p>
+                <p data-i18n="contact.info_hours_concierge">Concierge: 6:30am — 10:30pm</p>
+                <p data-i18n="contact.info_hours_24h">24-hour access with magnetic key</p>
+                <p data-i18n="contact.info_hours_checkin">Check-in: from 2:00pm</p>
+                <p data-i18n="contact.info_hours_checkout">Check-out: until 10:00am</p>
               </div>
             </div>
             <div>
@@ -277,7 +277,7 @@
         Secure your room in Alghero with instant confirmation on Booking.com. Or send us a message — we reply within a few hours.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a class="bg-white text-primary px-16 py-6 rounded-lg font-label-caps text-label-caps tracking-widest hover:bg-[#F5F0E8] transition-all transform hover:scale-105 active:scale-95 uppercase font-bold inline-block" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="contact.info_book_cta">Book on Booking.com</a>
+        <a class="bg-white text-primary px-16 py-6 font-label-caps text-label-caps tracking-widest hover:bg-[#F5F0E8] transition-all transform hover:scale-105 active:scale-95 uppercase font-bold inline-block" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="contact.info_book_cta">Book on Booking.com</a>
         <a class="border border-white text-white px-16 py-6 rounded-lg font-label-caps text-label-caps tracking-widest hover:bg-white hover:text-primary transition-all uppercase font-bold inline-block" href="mailto:info@hotelmistral.it" data-i18n="contact.cta_email">Email Us</a>
       </div>
     </div>

@@ -1,13 +1,30 @@
 /* ============================================
-   HOTEL MISTRAL — Mediterranean Editorial Design System
+   HOTEL MISTRAL — Stitch Editorial Design System
+   Merged: existing structure + Stitch visual layer
    ============================================ */
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap');
+/* Google Fonts — Stitch editorial fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
-/* CSS Variables */
+/* CSS Variables — Stitch palette + existing tokens */
 :root {
+  /* Stitch editorial palette */
+  --bianco: #F5F0E8;
+  --beige: #E8E0D4;
+  --beige-scuro: #D9CFBF;
+  --grigio: #8A8279;
+  --grigio-chiaro: #B8B0A6;
+  --antracite: #2C2C2C;
+  --inchiostro: #1A1A1A;
+  --mare: #4A6B7A;
+  --terracotta: #B85C3A;
+
+  /* Typography — Stitch editorial */
+  --serif: "Cormorant Garamond", "Cormorant", Georgia, serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Existing tokens (preserved for compatibility) */
   --color-white: #FFFFFF;
   --color-sand: #F5F0E8;
   --color-beige: #E8E0D4;
@@ -24,10 +41,17 @@
   --color-surface-dim: #ded9d2;
   --color-outline: #747878;
   --color-outline-variant: #c4c7c7;
-  --font-serif: 'Noto Serif', Georgia, serif;
-  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-  --transition-base: 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-  --transition-slow: 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --font-serif: var(--serif);
+  --font-sans: var(--sans);
+
+  /* Layout */
+  --max: 1440px;
+  --gutter: clamp(20px, 4vw, 56px);
+
+  /* Transitions */
+  --transition-base: 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --transition-slow: 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --transition-gentle: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Material Symbols */
@@ -47,29 +71,81 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--sans);
+  font-size: 16px;
   font-weight: 400;
-  color: var(--color-on-surface);
-  background-color: var(--color-surface);
+  color: var(--antracite);
+  background-color: var(--bianco);
   line-height: 1.65;
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "liga", "calt";
 }
 
-/* Typography */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ============================================
+   TYPOGRAPHY — Stitch Editorial System
+   ============================================ */
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
+  font-family: var(--serif);
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: -0.02em;
-  color: var(--color-charcoal);
+  color: var(--antracite);
 }
 
-.text-serif {
-  font-family: var(--font-serif);
+.text-serif,
+.serif {
+  font-family: var(--serif);
 }
 
 .text-sans {
-  font-family: var(--font-sans);
+  font-family: var(--sans);
+}
+
+/* Stitch editorial typography scale */
+.h-display {
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+}
+
+.h-large {
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.02;
+}
+
+.h-medium {
+  font-size: clamp(28px, 3.5vw, 44px);
+}
+
+.h-small {
+  font-size: clamp(22px, 2.4vw, 30px);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--grigio);
+  font-weight: 500;
+}
+
+.section-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--grigio);
 }
 
 .tracking-tight {
@@ -107,12 +183,12 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-sans);
+  font-family: var(--sans);
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-warm-gray);
+  color: var(--grigio);
   padding: 2rem;
   text-align: center;
   line-height: 1.5;
@@ -123,50 +199,60 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .img-placeholder-dark::after {
-  color: var(--color-beige);
+  color: var(--beige);
 }
 
-/* Navigation */
+/* ============================================
+   NAVIGATION — Stitch glass morphism
+   ============================================ */
+
 .nav-main {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 50;
-  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+  background: rgba(245, 240, 232, 0.85);
+  backdrop-filter: saturate(140%) blur(12px);
+  -webkit-backdrop-filter: saturate(140%) blur(12px);
+  transition: background-color var(--transition-base),
+              box-shadow var(--transition-base),
+              border-color var(--transition-base);
+  border-bottom: 1px solid transparent;
 }
 
 .nav-main.scrolled {
   background-color: rgba(245, 240, 232, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  border-bottom-color: var(--beige-scuro);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
 }
 
 .nav-main.scrolled .nav-link {
-  color: var(--color-charcoal);
+  color: var(--antracite);
 }
 
 .nav-main.scrolled .nav-logo {
-  color: var(--color-charcoal);
+  color: var(--antracite);
 }
 
 .nav-link {
   position: relative;
-  font-family: var(--font-serif);
-  font-size: 0.8125rem;
+  font-family: var(--sans);
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--color-white);
+  color: var(--antracite);
   transition: color var(--transition-base);
-  padding: 0.5rem 0;
+  padding: 4px 0;
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   width: 0;
   height: 1px;
@@ -178,13 +264,16 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.nav-link:hover {
+  color: var(--mare);
+}
+
 .nav-logo {
-  font-family: var(--font-serif);
+  font-family: var(--serif);
   font-size: 1.25rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-white);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--antracite);
   transition: color var(--transition-base);
 }
 
@@ -192,8 +281,8 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-menu {
   position: fixed;
   inset: 0;
-  z-index: 40;
-  background: var(--color-white);
+  z-index: 60;
+  background: var(--bianco);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,90 +299,127 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-menu a {
-  font-family: var(--font-serif);
+  font-family: var(--serif);
   font-size: 1.75rem;
-  color: var(--color-charcoal);
+  color: var(--antracite);
   transition: color var(--transition-base);
 }
 
 .mobile-menu a:hover {
-  color: var(--color-clay);
+  color: var(--mare);
 }
 
-/* Buttons */
+/* ============================================
+   BUTTONS — Stitch editorial style
+   ============================================ */
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  padding: 0.75rem 2rem;
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  gap: 12px;
+  padding: 16px 28px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-white);
-  background-color: var(--color-charcoal);
-  border: 1px solid var(--color-charcoal);
-  border-radius: 0.5rem;
-  transition: all var(--transition-base);
+  color: var(--bianco);
+  background-color: var(--antracite);
+  border: 1px solid var(--antracite);
+  border-radius: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .btn-primary:hover {
-  background-color: transparent;
-  color: var(--color-charcoal);
+  background-color: var(--inchiostro);
+  transform: translateY(-1px);
 }
 
 .btn-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  padding: 0.75rem 2rem;
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  gap: 12px;
+  padding: 14px 24px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-charcoal);
+  color: var(--antracite);
   background-color: transparent;
-  border: 1px solid var(--color-charcoal);
-  border-radius: 0.5rem;
-  transition: all var(--transition-base);
+  border: 1px solid var(--antracite);
+  border-radius: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .btn-outline:hover {
-  background-color: var(--color-charcoal);
-  color: var(--color-white);
+  background-color: var(--antracite);
+  color: var(--bianco);
 }
 
 .btn-outline-light {
   color: var(--color-white);
-  border-color: var(--color-white);
+  border-color: rgba(255,255,255,0.6);
 }
 
 .btn-outline-light:hover {
   background-color: var(--color-white);
-  color: var(--color-charcoal);
+  color: var(--antracite);
+}
+
+/* Ghost button — Stitch */
+.btn-ghost {
+  background: transparent;
+  color: var(--antracite);
+  border-bottom: 1px solid var(--antracite);
+  padding: 8px 0;
+  font-family: var(--sans);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-ghost:hover {
+  color: var(--mare);
+  border-color: var(--mare);
+}
+
+/* Arrow suffix */
+.btn-arrow::after {
+  content: " →";
+  transition: transform 200ms ease;
+}
+
+.btn:hover .btn-arrow::after,
+.btn-arrow:hover::after {
+  transform: translateX(4px);
 }
 
 /* Section labels */
 .section-label {
-  font-family: var(--font-sans);
-  font-size: 0.6875rem;
-  font-weight: 600;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-clay);
+  color: var(--grigio);
 }
 
-/* Animations */
+/* ============================================
+   ANIMATIONS — Stitch cinematic reveals
+   ============================================ */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -306,19 +432,25 @@ h1, h2, h3, h4, h5, h6 {
   to { opacity: 1; }
 }
 
+@keyframes heroZoom {
+  from { transform: scale(1.0); }
+  to { transform: scale(1.06); }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 .animate-fade-in {
-  animation: fadeIn 1.2s ease forwards;
+  animation: fadeIn 1.4s ease forwards;
 }
 
-/* Scroll-triggered reveals */
+/* Scroll-triggered reveals — slower, smoother */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transform: translateY(24px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.visible {
@@ -326,48 +458,57 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-1 { transition-delay: 0.12s; }
+.reveal-delay-2 { transition-delay: 0.24s; }
+.reveal-delay-3 { transition-delay: 0.36s; }
+.reveal-delay-4 { transition-delay: 0.48s; }
 
-/* Divider */
+/* Hero parallax image */
+.parallax-img {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* Hero slow zoom animation */
+.hero-zoom-active {
+  animation: heroZoom 8s ease-out forwards;
+}
+
+/* ============================================
+   DIVIDER — Stitch editorial
+   ============================================ */
+
 .divider {
   width: 48px;
   height: 1px;
-  background-color: var(--color-beige);
+  background-color: var(--beige-scuro);
 }
 
 .divider-dark {
-  background-color: var(--color-charcoal);
+  background-color: var(--antracite);
 }
 
-/* Quote styling */
-.quote-mark {
-  font-family: var(--font-serif);
-  font-size: 6rem;
-  line-height: 0;
-  color: var(--color-beige);
-  user-select: none;
-}
+/* ============================================
+   ROOM CARDS — Stitch editorial hover
+   ============================================ */
 
-/* Room cards */
 .room-card {
   position: relative;
   overflow: hidden;
   background: var(--color-surface-container-low);
-  border: 1px solid var(--color-beige);
-  border-radius: 0.5rem;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  border: 1px solid var(--beige);
+  transition: transform var(--transition-gentle),
+              box-shadow var(--transition-gentle),
+              opacity 0.3s ease;
 }
 
 .room-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.06);
 }
 
 .room-card .room-image {
-  transition: transform var(--transition-slow);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .room-card:hover .room-image {
@@ -387,26 +528,35 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.02);
 }
 
-/* Form styling */
+/* Global image hover zoom — subtle */
+.group:hover img,
+.group:hover .room-image {
+  transform: scale(1.03);
+}
+
+/* ============================================
+   FORMS — Stitch editorial
+   ============================================ */
+
 input, textarea, select {
-  font-family: var(--font-sans);
-  font-size: 0.9375rem;
-  color: var(--color-charcoal);
-  background: var(--color-surface-container-low);
-  border: 1px solid var(--color-beige);
-  border-radius: 0.5rem;
-  padding: 1rem 1.25rem;
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--antracite);
+  background: var(--bianco);
+  border: 1px solid var(--beige-scuro);
+  border-radius: 0;
+  padding: 14px 16px;
   width: 100%;
-  transition: border-color var(--transition-base);
+  transition: border-color 0.2s ease;
   outline: none;
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: var(--color-charcoal);
+  border-color: var(--antracite);
 }
 
 input::placeholder, textarea::placeholder {
-  color: var(--color-warm-gray);
+  color: var(--grigio);
 }
 
 /* Map placeholder */
@@ -422,50 +572,169 @@ input::placeholder, textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-sans);
+  font-family: var(--sans);
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-warm-gray);
+  color: var(--grigio);
 }
 
-/* Footer */
+/* ============================================
+   QUOTE — Stitch editorial italic
+   ============================================ */
+
+.quote-mark {
+  font-family: var(--serif);
+  font-size: 6rem;
+  line-height: 0;
+  color: var(--beige);
+  user-select: none;
+}
+
+/* ============================================
+   FOOTER — Stitch editorial
+   ============================================ */
+
 .footer-link {
-  font-size: 0.875rem;
-  color: var(--color-warm-gray);
+  font-size: 14px;
+  color: var(--grigio);
   transition: color var(--transition-base);
 }
 
 .footer-link:hover {
-  color: var(--color-charcoal);
+  color: var(--antracite);
 }
 
-/* Custom scrollbar */
+/* ============================================
+   TRUST BAR & COMPONENTS
+   ============================================ */
+
+.trust-bar {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.progress-track {
+  height: 4px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--antracite);
+  border-radius: 9999px;
+}
+
+.testimonial-card {
+  background: var(--color-white);
+  padding: 2.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.icon-circle {
+  background: var(--antracite);
+  color: var(--bianco);
+  padding: 0.75rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-card {
+  background: var(--color-surface-container-low);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.nearby-card {
+  background: var(--color-white);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: box-shadow var(--transition-base);
+}
+
+.nearby-card:hover {
+  box-shadow: 0 8px 24px -8px rgba(0,0,0,0.08);
+}
+
+.transport-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.quick-info-card {
+  background: var(--color-surface-container-low);
+  padding: 1.5rem;
+  border: 1px solid var(--beige);
+}
+
+/* ============================================
+   HEADER — non-home pages
+   ============================================ */
+
+body:not([data-page="home"]) .nav-main {
+  background-color: rgba(245, 240, 232, 0.95);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  border-bottom: 1px solid var(--beige-scuro);
+}
+
+body:not([data-page="home"]) .nav-main .nav-link,
+body:not([data-page="home"]) .nav-main .nav-logo {
+  color: var(--antracite);
+}
+
+/* ============================================
+   HEADING COLOR OVERRIDE in dark containers
+   ============================================ */
+
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6 {
+  color: #ffffff;
+}
+
+/* ============================================
+   SCROLLBAR — Stitch refined
+   ============================================ */
+
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-sand);
+  background: var(--bianco);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-beige);
+  background: var(--beige-scuro);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-warm-gray);
+  background: var(--grigio);
 }
 
 /* Selection */
 ::selection {
-  background: var(--color-clay);
-  color: var(--color-white);
+  background: var(--mare);
+  color: var(--bianco);
 }
 
-/* Responsive typography */
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
+
 @media (min-width: 768px) {
   .display-hero {
     font-size: clamp(3rem, 6vw, 5.5rem);
@@ -478,7 +747,10 @@ input::placeholder, textarea::placeholder {
   }
 }
 
-/* Reduce motion */
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -490,7 +762,7 @@ input::placeholder, textarea::placeholder {
 }
 
 /* ============================================
-   Language Switcher
+   LANGUAGE SWITCHER
    ============================================ */
 
 .lang-switcher {
@@ -504,7 +776,7 @@ input::placeholder, textarea::placeholder {
   border: none;
   cursor: pointer;
   color: inherit;
-  font-family: var(--font-sans);
+  font-family: var(--sans);
   opacity: 0.5;
   transition: opacity 0.3s ease;
 }
@@ -518,111 +790,125 @@ input::placeholder, textarea::placeholder {
   font-weight: 600;
 }
 
-/* In scrolled / light nav */
 .nav-main.scrolled .lang-btn,
 .nav-main.scrolled .lang-switcher span {
-  color: var(--color-charcoal);
+  color: var(--antracite);
 }
 
-/* Mobile menu language switcher */
 .mobile-menu .lang-switcher {
   margin-top: 1.5rem;
 }
 
 .mobile-menu .lang-btn {
-  color: var(--color-charcoal);
+  color: var(--antracite);
 }
 
 /* ============================================
-   Stitch Design Components
+   PAGE TRANSITION — Stitch editorial
    ============================================ */
 
-/* Trust bar */
-.trust-bar {
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.2);
+.page-enter {
+  animation: pageIn 500ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* Progress bars */
-.progress-track {
-  height: 4px;
-  background: rgba(255,255,255,0.3);
-  border-radius: 9999px;
-  overflow: hidden;
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.progress-fill {
-  height: 100%;
-  background: var(--color-charcoal);
-  border-radius: 9999px;
+/* ============================================
+   PREMIUM MICRO-INTERACTIONS
+   ============================================ */
+
+/* Subtle button press */
+.btn-primary:active,
+.btn-outline:active,
+[class*="bg-[#2C2C2C]"]:active {
+  transform: scale(0.98);
 }
 
-/* Testimonial card */
-.testimonial-card {
-  background: var(--color-white);
-  padding: 2.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+/* Image overflow containers — smooth zoom */
+.aspect-video img,
+.aspect-\[4\/5\] img,
+.aspect-\[3\/4\] img,
+[class*="overflow-hidden"] > img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Link underline animation for text links */
+a[class*="underline"] {
+  text-underline-offset: 4px;
+  transition: text-underline-offset 0.3s ease;
+}
+
+a[class*="underline"]:hover {
+  text-underline-offset: 6px;
+}
+
+/* Stitch editorial section spacing override */
+section {
   position: relative;
 }
 
-/* Icon circle */
-.icon-circle {
-  background: var(--color-charcoal);
-  color: var(--color-white);
-  padding: 0.75rem;
-  border-radius: 9999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ============================================
+   HERO SECTION — cinematic treatment
+   ============================================ */
+
+/* Hero image Ken Burns effect */
+section:first-of-type .parallax-img img {
+  animation: heroZoom 10s ease-out forwards;
 }
 
-/* Stat card */
-.stat-card {
-  background: var(--color-surface-container-low);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  text-align: center;
+/* Hero text stagger */
+section:first-of-type .animate-fade-in {
+  animation-duration: 1.4s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Nearby card */
-.nearby-card {
-  background: var(--color-white);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  transition: box-shadow var(--transition-base);
+section:first-of-type .animate-fade-in-up {
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.nearby-card:hover {
-  box-shadow: 0 8px 24px -8px rgba(0,0,0,0.08);
+/* ============================================
+   STITCH EDITORIAL REFINEMENTS
+   ============================================ */
+
+/* Price display */
+.price-from {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--grigio);
+  font-style: italic;
 }
 
-/* Transport item */
-.transport-item {
-  display: flex;
-  gap: 1rem;
+.price-num {
+  font-family: var(--serif);
+  font-size: 32px;
+  color: var(--antracite);
 }
 
-/* Quick info card */
-.quick-info-card {
-  background: var(--color-surface-container-low);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--color-beige);
+/* Utility classes */
+.muted { color: var(--grigio); }
+.small { font-size: 13px; }
+.tiny {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-/* Header override for non-home pages */
-body:not([data-page="home"]) .nav-main {
-  background-color: rgba(245, 240, 232, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-beige);
+/* Rounded corners removal for Stitch editorial feel */
+.rounded-lg {
+  border-radius: 4px !important;
 }
 
-body:not([data-page="home"]) .nav-main .nav-link,
-body:not([data-page="home"]) .nav-main .nav-logo {
-  color: var(--color-charcoal);
+/* Review/testimonial cards — editorial refinement */
+.bg-white.relative.italic {
+  border-radius: 2px;
 }

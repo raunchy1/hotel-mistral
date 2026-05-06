@@ -4,9 +4,9 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title data-i18n="meta.site_name">Experience — Hotel Mistral, Alghero</title>
-  <meta name="description" content="Breakfast in the garden, sunset drinks, billiard games and the slow rhythm of Alghero. Experience Hotel Mistral."/>
+  <meta name="description" data-i18n="meta.experience_desc" content="Breakfast in the garden, sunset drinks, billiard games and the slow rhythm of Alghero. Experience Hotel Mistral."/>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
   <link href="css/styles.css" rel="stylesheet"/>
   <script>
@@ -38,16 +38,16 @@
             'muted-green': '#7A8B6E',
           },
           fontFamily: {
-            'serif': ['Noto Serif', 'Georgia', 'serif'],
-            'sans': ['Manrope', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            'headline-md': ['Noto Serif'],
-            'headline-lg': ['Noto Serif'],
-            'body-lg': ['Manrope'],
-            'label-caps': ['Manrope'],
-            'headline-sm': ['Noto Serif'],
-            'trust-signal': ['Manrope'],
-            'functional-data': ['Manrope'],
-            'body-md': ['Manrope'],
+            'serif': ['Cormorant Garamond', 'Cormorant', 'Georgia', 'serif'],
+            'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            'headline-md': ['Cormorant Garamond', 'serif'],
+            'headline-lg': ['Cormorant Garamond', 'serif'],
+            'body-lg': ['Inter', 'sans-serif'],
+            'label-caps': ['Inter', 'sans-serif'],
+            'headline-sm': ['Cormorant Garamond', 'serif'],
+            'trust-signal': ['Inter', 'sans-serif'],
+            'functional-data': ['Inter', 'sans-serif'],
+            'body-md': ['Inter', 'sans-serif'],
           },
           fontSize: {
             'headline-lg': ['48px', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '400' }],
@@ -91,7 +91,7 @@
           <span class="text-charcoal/30 text-xs">/</span>
           <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="es" onclick="setLanguage('es')">ES</button>
         </div>
-        <a class="hidden md:inline-flex bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps rounded-lg active:scale-95 transition-transform hover:opacity-90" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
+        <a class="hidden md:inline-flex bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps active:scale-95 transition-transform hover:opacity-90" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
         <button class="md:hidden text-charcoal" data-i18n-aria-label="nav.menu_open" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.add('active'); document.body.style.overflow='hidden';">
           <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
             <line x1="4" y1="6" x2="20" y2="6"/>
@@ -272,7 +272,7 @@
     <div class="max-w-[1440px] mx-auto px-6 md:px-16">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="reveal">
-          <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block">Alghero</span>
+          <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block" data-i18n="experience.alghero_label">Alghero</span>
           <h2 class="font-headline-md text-headline-md text-primary mb-6" data-i18n="experience.alghero_title">A town that moves<br/>to its own rhythm</h2>
           <div class="divider divider-dark mb-8"></div>
           <p class="text-secondary leading-relaxed mb-6" data-i18n="experience.alghero_p1">
@@ -301,7 +301,7 @@
       <p class="text-body-lg opacity-70 mb-12" data-i18n="experience.cta_p">
         Book directly on Booking.com for our best available rates and instant confirmation.
       </p>
-      <a class="bg-white text-primary px-16 py-6 rounded-lg font-label-caps text-label-caps tracking-widest hover:bg-[#F5F0E8] transition-all transform hover:scale-105 active:scale-95 uppercase font-bold inline-block" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="rooms.cta_final_book">Book Your Stay</a>
+      <a class="bg-white text-primary px-16 py-6 font-label-caps text-label-caps tracking-widest hover:bg-[#F5F0E8] transition-all transform hover:scale-105 active:scale-95 uppercase font-bold inline-block" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="rooms.cta_final_book">Book Your Stay</a>
     </div>
   </section>
 

@@ -69,7 +69,7 @@
       const val = getValue(langData, key);
       if (val !== undefined) {
         if (el.hasAttribute('data-i18n-html')) {
-          el.innerHTML = val;
+          el.innerHTML = val.replace(/\n/g, '<br>');
         } else {
           el.textContent = val;
         }

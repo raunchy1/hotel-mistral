@@ -4,9 +4,9 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title data-i18n="meta.site_name">Rooms — Hotel Mistral, Alghero</title>
-  <meta name="description" content="25 rooms on three floors at Hotel Mistral. Doubles, singles, twins and standard — all with air conditioning, free WiFi and private bathroom."/>
+  <meta name="description" data-i18n="meta.rooms_desc" content="25 rooms on three floors at Hotel Mistral. Doubles, singles, twins and standard — all with air conditioning, free WiFi and private bathroom."/>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
   <link href="css/styles.css" rel="stylesheet"/>
   <script>
@@ -38,16 +38,16 @@
             'muted-green': '#7A8B6E',
           },
           fontFamily: {
-            'serif': ['Noto Serif', 'Georgia', 'serif'],
-            'sans': ['Manrope', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            'headline-md': ['Noto Serif'],
-            'headline-lg': ['Noto Serif'],
-            'body-lg': ['Manrope'],
-            'label-caps': ['Manrope'],
-            'headline-sm': ['Noto Serif'],
-            'trust-signal': ['Manrope'],
-            'functional-data': ['Manrope'],
-            'body-md': ['Manrope'],
+            'serif': ['Cormorant Garamond', 'Cormorant', 'Georgia', 'serif'],
+            'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            'headline-md': ['Cormorant Garamond', 'serif'],
+            'headline-lg': ['Cormorant Garamond', 'serif'],
+            'body-lg': ['Inter', 'sans-serif'],
+            'label-caps': ['Inter', 'sans-serif'],
+            'headline-sm': ['Cormorant Garamond', 'serif'],
+            'trust-signal': ['Inter', 'sans-serif'],
+            'functional-data': ['Inter', 'sans-serif'],
+            'body-md': ['Inter', 'sans-serif'],
           },
           fontSize: {
             'headline-lg': ['48px', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '400' }],
@@ -91,7 +91,7 @@
           <span class="text-charcoal/30 text-xs">/</span>
           <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="es" onclick="setLanguage('es')">ES</button>
         </div>
-        <a class="hidden md:inline-flex bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps rounded-lg active:scale-95 transition-transform hover:opacity-90" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
+        <a class="hidden md:inline-flex bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps active:scale-95 transition-transform hover:opacity-90" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
         <button class="md:hidden text-charcoal" data-i18n-aria-label="nav.menu_open" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.add('active'); document.body.style.overflow='hidden';">
           <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
             <line x1="4" y1="6" x2="20" y2="6"/>
@@ -193,16 +193,16 @@
           </p>
           <div class="grid grid-cols-2 gap-3 mb-8">
             <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_bed_single">One single bed</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Private balcony</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Air conditioning</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_balcony">Private balcony</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_ac">Air conditioning</span></div>
             <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_wifi">Free WiFi</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Flat-screen TV</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">In-room safe</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Private bathroom</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Hairdryer</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Work desk</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Electric kettle</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Mini fridge</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_tv">Flat-screen TV</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_safe">In-room safe</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_bathroom">Private bathroom</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_hairdryer">Hairdryer</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_desk">Work desk</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_kettle">Electric kettle</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_fridge">Mini fridge</span></div>
           </div>
           <a class="btn-primary" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="rooms.cta_check">Check Availability</a>
         </div>
@@ -240,17 +240,17 @@
           <div class="grid grid-cols-2 gap-3 mb-8">
             <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_beds_twin">Two single beds</span></div>
             <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_garden">Garden view</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Air conditioning</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Free WiFi</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Flat-screen TV</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">In-room safe</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Private bathroom</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Hairdryer</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Work desk</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Electric kettle</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Mini fridge</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_ac">Air conditioning</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_wifi">Free WiFi</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_tv">Flat-screen TV</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_safe">In-room safe</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_bathroom">Private bathroom</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_hairdryer">Hairdryer</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_desk">Work desk</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_kettle">Electric kettle</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_fridge">Mini fridge</span></div>
           </div>
-          <a class="btn-primary" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer">Check Availability</a>
+          <a class="btn-primary" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="rooms.cta_check">Check Availability</a>
         </div>
       </div>
     </div>
@@ -268,20 +268,20 @@
             Our standard double is quietly positioned on the interior side of the building, away from the street. One large bed, a functional bathroom, and all the same amenities as our other rooms — just without the balcony. Perfect for guests who plan to spend most of their time outdoors.
           </p>
           <div class="grid grid-cols-2 gap-3 mb-8">
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">One large double bed</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_bed">One large double bed</span></div>
             <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_interior">Quiet interior view</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Air conditioning</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Free WiFi</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Flat-screen TV</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">In-room safe</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Private bathroom</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Hairdryer</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Work desk</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Electric kettle</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Mini fridge</span></div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm">Soundproofing</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_ac">Air conditioning</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_wifi">Free WiFi</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_tv">Flat-screen TV</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_safe">In-room safe</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_bathroom">Private bathroom</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_hairdryer">Hairdryer</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_desk">Work desk</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_kettle">Electric kettle</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_fridge">Mini fridge</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline text-sm">check_circle</span><span class="text-sm" data-i18n="rooms.feature_soundproof">Soundproofing</span></div>
           </div>
-          <a class="btn-primary" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer">Check Availability</a>
+          <a class="btn-primary" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="rooms.cta_check">Check Availability</a>
         </div>
         <div class="reveal reveal-delay-2 grid grid-cols-2 gap-4 order-1 md:order-2">
           <div class="aspect-[3/4] overflow-hidden mt-12 rounded-lg">
@@ -336,7 +336,7 @@
       <p class="text-body-lg opacity-70 mb-12" data-i18n="rooms.cta_final_p">
         Check real-time availability, compare room types, and secure your stay with our best rates on Booking.com.
       </p>
-      <a class="bg-white text-primary px-16 py-6 rounded-lg font-label-caps text-label-caps tracking-widest hover:bg-[#F5F0E8] transition-all transform hover:scale-105 active:scale-95 uppercase font-bold inline-block" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="rooms.cta_final_book">Book Your Stay</a>
+      <a class="bg-white text-primary px-16 py-6 font-label-caps text-label-caps tracking-widest hover:bg-[#F5F0E8] transition-all transform hover:scale-105 active:scale-95 uppercase font-bold inline-block" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="rooms.cta_final_book">Book Your Stay</a>
     </div>
   </section>
 

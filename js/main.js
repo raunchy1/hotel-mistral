@@ -1,5 +1,6 @@
 /* ============================================
-   HOTEL MISTRAL — Main JavaScript
+   HOTEL MISTRAL — Premium Animation Engine
+   Cinematic, subtle, Mediterranean
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,10 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.querySelector('.mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-menu a');
 
-  // Navigation scroll effect
+  // ============================================
+  // NAVBAR — glass morphism on scroll
+  // ============================================
   function handleNavScroll() {
     if (!header) return;
-    if (window.scrollY > 60) {
+    if (window.scrollY > 40) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
@@ -21,7 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleNavScroll, { passive: true });
   handleNavScroll();
 
-  // Mobile menu link clicks (close menu)
+  // ============================================
+  // MOBILE MENU — close on link click
+  // ============================================
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
       if (mobileMenu) {
@@ -31,7 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Scroll reveal
+  // ============================================
+  // SCROLL REVEAL — cinematic, staggered
+  // ============================================
   const revealElements = document.querySelectorAll('.reveal');
 
   const revealObserver = new IntersectionObserver((entries) => {
@@ -42,13 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.08,
+    rootMargin: '0px 0px -30px 0px'
   });
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // Parallax effect for hero images
+  // ============================================
+  // PARALLAX — subtle hero movement (ratio 0.08)
+  // ============================================
   const parallaxImages = document.querySelectorAll('.parallax-img');
 
   function handleParallax() {
@@ -56,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const rect = img.parentElement.getBoundingClientRect();
       const scrolled = window.innerHeight - rect.top;
       if (scrolled > 0 && rect.bottom > 0) {
-        const yPos = scrolled * 0.08;
+        const yPos = scrolled * 0.06;
         img.style.transform = `translateY(${yPos}px) scale(1.1)`;
       }
     });
@@ -73,7 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
-  // Smooth scroll for anchor links
+  // ============================================
+  // SMOOTH SCROLL — for anchor links
+  // ============================================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
@@ -91,7 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Contact form handling (demo)
+  // ============================================
+  // CONTACT FORM — demo handling
+  // ============================================
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -106,5 +119,34 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.reset();
       }, 3000);
     });
+  }
+
+  // ============================================
+  // IMAGE HOVER ZOOM — global enhancement
+  // ============================================
+  document.querySelectorAll('.group, [class*="overflow-hidden"]').forEach(container => {
+    const img = container.querySelector('img');
+    if (!img) return;
+    
+    img.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+    
+    container.addEventListener('mouseenter', () => {
+      img.style.transform = 'scale(1.03)';
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      img.style.transform = 'scale(1)';
+    });
+  });
+
+  // ============================================
+  // HERO KEN BURNS — subtle zoom on load
+  // ============================================
+  const heroSection = document.querySelector('section:first-of-type');
+  if (heroSection) {
+    const heroImg = heroSection.querySelector('.parallax-img img');
+    if (heroImg) {
+      heroImg.classList.add('hero-zoom-active');
+    }
   }
 });
