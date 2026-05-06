@@ -140,13 +140,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ============================================
-  // CALENDAR — Booking Assistant
+  // CALENDAR — Booking Assistant (Event Delegation)
   // ============================================
   (function() {
-    const gridWrap = document.getElementById('calendar-grid-wrap');
-    if (!gridWrap) return;
+    var wrap = document.getElementById('calendar-grid-wrap');
+    if (!wrap) return;
 
-    const els = {
+    var els = {
       checkin: document.getElementById('checkin-display'),
       checkout: document.getElementById('checkout-display'),
       nights: document.getElementById('nights-display'),
@@ -156,21 +156,21 @@ document.addEventListener('DOMContentLoaded', () => {
       clear: document.getElementById('calendar-clear')
     };
 
-    const MONTH_NAMES = {
+    var MONTH_NAMES = {
       it: ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'],
       en: ['January','February','March','April','May','June','July','August','September','October','November','December'],
       de: ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
       es: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
     };
 
-    const WEEKDAYS = {
+    var WEEKDAYS = {
       it: ['Lun','Mar','Mer','Gio','Ven','Sab','Dom'],
       en: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
       de: ['Mo','Di','Mi','Do','Fr','Sa','So'],
       es: ['Lun','Mar','Mié','Jue','Vie','Sáb','Dom']
     };
 
-    let state = {
+    var state = {
       viewDate: new Date(),
       checkIn: null,
       checkOut: null,
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return new Date(d.getFullYear(), d.getMonth(), d.getDate());
     }
 
-    const today = stripTime(new Date());
+    var today = stripTime(new Date());
 
     function isSameDay(a, b) {
       if (!a || !b) return false;
@@ -193,114 +193,111 @@ document.addEventListener('DOMContentLoaded', () => {
       return d < today;
     }
 
+    function pad(n) { return String(n).padStart(2, '0'); }
+
     function formatDate(d) {
       if (!d) return '—';
-      const lang = window.currentLang || 'it';
-      const day = String(d.getDate()).padStart(2, '0');
-      const month = String(d.getMonth() + 1).padStart(2, '0');
-      const year = d.getFullYear();
-      if (lang === 'it' || lang === 'es') {
-        return day + '/' + month + '/' + year;
-      } else if (lang === 'de') {
-        return day + '.' + month + '.' + year;
-      }
+      var lang = window.currentLang || 'it';
+      var day = pad(d.getDate());
+      var month = pad(d.getMonth() + 1);
+      var year = d.getFullYear();
+      if (lang === 'it' || lang === 'es') return day + '/' + month + '/' + year;
+      if (lang === 'de') return day + '.' + month + '.' + year;
       return month + '/' + day + '/' + year;
     }
 
     function nightsText(n) {
-      const lang = window.currentLang || 'it';
+      var lang = window.currentLang || 'it';
       if (n <= 0) return '—';
-      const key = (n === 1) ? 'nights_singular' : 'nights';
-      const t = window.translations?.[lang]?.calendar?.[key] || (n === 1 ? 'notte' : 'notti');
+      var t = 'notti';
+      try { t = window.translations[lang].calendar[n === 1 ? 'nights_singular' : 'nights']; } catch(e){}
       return n + ' ' + t;
     }
 
     function getDaysForMonth(year, month) {
-      const first = new Date(year, month, 1);
-      const last = new Date(year, month + 1, 0);
-      const startDay = (first.getDay() + 6) % 7;
-      const days = [];
-      for (let i = 0; i < startDay; i++) days.push(null);
-      for (let i = 1; i <= last.getDate(); i++) {
+      var first = new Date(year, month, 1);
+      var last = new Date(year, month + 1, 0);
+      var startDay = (first.getDay() + 6) % 7;
+      var days = [];
+      for (var i = 0; i < startDay; i++) days.push(null);
+      for (var i = 1; i <= last.getDate(); i++) {
         days.push(new Date(year, month, i));
       }
       return days;
     }
 
     function renderMonth(year, month, index) {
-      const lang = window.currentLang || 'it';
-      const actualYear = year + Math.floor(month / 12);
-      const monthIndex = ((month % 12) + 12) % 12;
-      const monthName = MONTH_NAMES[lang][monthIndex] + ' ' + actualYear;
-      const days = getDaysForMonth(year, month);
+      var lang = window.currentLang || 'it';
+      var actualYear = year + Math.floor(month / 12);
+      var monthIndex = ((month % 12) + 12) % 12;
+      var monthName = MONTH_NAMES[lang][monthIndex] + ' ' + actualYear;
+      var days = getDaysForMonth(year, month);
 
-      let html = '<div class="calendar-month">';
+      var html = '<div class="calendar-month">';
       html += '<div class="calendar-month-header">';
       html += '<div class="calendar-month-name">' + monthName + '</div>';
       html += '<div class="calendar-nav">';
       if (index === 0) {
-        const prevDisabled = (year === today.getFullYear() && month <= today.getMonth()) ? 'disabled' : '';
-        html += '<button class="calendar-nav-btn" onclick="window.calendarApp.prevMonth()" ' + prevDisabled + ' aria-label="Previous month">‹</button>';
-        html += '<button class="calendar-nav-btn" onclick="window.calendarApp.nextMonth()" aria-label="Next month">›</button>';
+        var prevDisabled = (year === today.getFullYear() && month <= today.getMonth()) ? 'disabled' : '';
+        html += '<button class="calendar-nav-btn" data-action="prev" ' + prevDisabled + ' aria-label="Previous month">‹</button>';
+        html += '<button class="calendar-nav-btn" data-action="next" aria-label="Next month">›</button>';
       }
       html += '</div></div>';
 
       html += '<div class="calendar-weekdays">';
-      WEEKDAYS[lang].forEach(function(wd) {
-        html += '<span>' + wd + '</span>';
-      });
+      for (var w = 0; w < 7; w++) {
+        html += '<span>' + WEEKDAYS[lang][w] + '</span>';
+      }
       html += '</div>';
 
       html += '<div class="calendar-days">';
-      days.forEach(function(day) {
+      for (var i = 0; i < days.length; i++) {
+        var day = days[i];
         if (!day) {
           html += '<div class="calendar-day" style="visibility:hidden"></div>';
-          return;
+          continue;
         }
-        const d = stripTime(day);
-        const disabled = isPast(d);
-        const isCheckIn = isSameDay(d, state.checkIn);
-        const isCheckOut = isSameDay(d, state.checkOut);
-        const isHoverEnd = state.hoverDate && isSameDay(d, state.hoverDate) && !state.checkOut && state.checkIn && d > state.checkIn;
+        var d = stripTime(day);
+        var disabled = isPast(d);
+        var isCheckIn = isSameDay(d, state.checkIn);
+        var isCheckOut = isSameDay(d, state.checkOut);
+        var isHoverEnd = state.hoverDate && isSameDay(d, state.hoverDate) && !state.checkOut && state.checkIn && d > state.checkIn;
 
-        let classes = ['calendar-day'];
-        if (disabled) classes.push('disabled');
-        if (isCheckIn) classes.push('selected-start');
-        if (isCheckOut) classes.push('selected-end');
-        if (isHoverEnd) classes.push('preview-end');
+        var cls = ['calendar-day'];
+        if (disabled) cls.push('disabled');
+        if (isCheckIn) cls.push('selected-start');
+        if (isCheckOut) cls.push('selected-end');
+        if (isHoverEnd) cls.push('preview-end');
 
-        const rangeEnd = state.checkOut || state.hoverDate;
+        var rangeEnd = state.checkOut || state.hoverDate;
         if (state.checkIn && rangeEnd && d > state.checkIn && d < rangeEnd) {
-          if (state.checkOut) {
-            classes.push('in-range');
-          } else {
-            classes.push('in-range-preview');
-          }
+          cls.push(state.checkOut ? 'in-range' : 'in-range-preview');
         }
-        if (isSameDay(d, today)) classes.push('today');
+        if (isSameDay(d, today)) cls.push('today');
 
-        const cls = classes.join(' ');
-        const onclick = disabled ? '' : 'onclick="window.calendarApp.selectDate(' + d.getFullYear() + ',' + d.getMonth() + ',' + d.getDate() + ')"';
-        const onmouseenter = disabled ? '' : 'onmouseenter="window.calendarApp.hoverDate(' + d.getFullYear() + ',' + d.getMonth() + ',' + d.getDate() + ')"';
-        const onmouseleave = 'onmouseleave="window.calendarApp.leaveDate()"';
-
-        html += '<button type="button" class="' + cls + '" ' + onclick + ' ' + onmouseenter + ' ' + onmouseleave + ' ' + (disabled ? 'disabled' : '') + '>' + d.getDate() + '</button>';
-      });
+        var attrs = 'type="button" class="' + cls.join(' ') + '"';
+        if (!disabled) {
+          attrs += ' data-y="' + d.getFullYear() + '" data-m="' + d.getMonth() + '" data-d="' + d.getDate() + '"';
+        }
+        if (disabled) attrs += ' disabled';
+        html += '<button ' + attrs + '>' + d.getDate() + '</button>';
+      }
       html += '</div></div>';
       return html;
     }
 
     function render() {
-      const y = state.viewDate.getFullYear();
-      const m = state.viewDate.getMonth();
-      gridWrap.innerHTML = renderMonth(y, m, 0) + renderMonth(y, m + 1, 1);
+      var y = state.viewDate.getFullYear();
+      var m = state.viewDate.getMonth();
+      wrap.innerHTML = renderMonth(y, m, 0) + renderMonth(y, m + 1, 1);
 
       if (els.checkin) els.checkin.textContent = formatDate(state.checkIn);
       if (els.checkout) els.checkout.textContent = formatDate(state.checkOut);
 
-      const nights = (state.checkIn && state.checkOut)
-        ? Math.round((state.checkOut - state.checkIn) / (1000 * 60 * 60 * 24))
-        : 0;
+      var nights = 0;
+      if (state.checkIn && state.checkOut) {
+        nights = Math.round((state.checkOut - state.checkIn) / (86400000));
+      }
       if (els.nights) els.nights.textContent = nightsText(nights);
       if (els.guests) els.guests.textContent = state.guests;
 
@@ -320,64 +317,87 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateWhatsAppLink() {
       if (!state.checkIn || !state.checkOut || !els.whatsapp) return;
-      const lang = window.currentLang || 'it';
-      const df = formatDate(state.checkIn);
-      const dt = formatDate(state.checkOut);
-      const persone = state.guests === 1 ? 'persona' : 'persone';
-      const messages = {
-        it: 'Buongiorno, vorrei verificare la disponibilità per il soggiorno dal ' + df + ' al ' + dt + ' per ' + state.guests + ' ' + persone + '.',
-        en: 'Hello, I would like to check availability for a stay from ' + df + ' to ' + dt + ' for ' + state.guests + ' guest' + (state.guests > 1 ? 's' : '') + '.',
-        de: 'Guten Tag, ich möchte die Verfügbarkeit für einen Aufenthalt vom ' + df + ' bis zum ' + dt + ' für ' + state.guests + ' Person' + (state.guests > 1 ? 'en' : '') + ' prüfen.',
-        es: 'Buenos días, me gustaría verificar la disponibilidad para una estancia del ' + df + ' al ' + dt + ' para ' + state.guests + ' persona' + (state.guests > 1 ? 's' : '') + '.'
-      };
-      const msg = messages[lang] || messages.it;
+      var lang = window.currentLang || 'it';
+      var df = formatDate(state.checkIn);
+      var dt = formatDate(state.checkOut);
+      var persone = state.guests === 1 ? 'persona' : 'persone';
+      var msg = '';
+      if (lang === 'it') {
+        msg = 'Buongiorno, vorrei verificare la disponibilità per il soggiorno dal ' + df + ' al ' + dt + ' per ' + state.guests + ' ' + persone + '.';
+      } else if (lang === 'en') {
+        msg = 'Hello, I would like to check availability for a stay from ' + df + ' to ' + dt + ' for ' + state.guests + ' guest' + (state.guests > 1 ? 's' : '') + '.';
+      } else if (lang === 'de') {
+        msg = 'Guten Tag, ich möchte die Verfügbarkeit für einen Aufenthalt vom ' + df + ' bis zum ' + dt + ' für ' + state.guests + ' Person' + (state.guests > 1 ? 'en' : '') + ' prüfen.';
+      } else if (lang === 'es') {
+        msg = 'Buenos días, me gustaría verificar la disponibilidad para una estancia del ' + df + ' al ' + dt + ' para ' + state.guests + ' persona' + (state.guests > 1 ? 's' : '') + '.';
+      } else {
+        msg = 'Buongiorno, vorrei verificare la disponibilità per il soggiorno dal ' + df + ' al ' + dt + ' per ' + state.guests + ' ' + persone + '.';
+      }
       els.whatsapp.href = 'https://wa.me/393472479796?text=' + encodeURIComponent(msg);
     }
 
-    window.calendarApp = {
-      selectDate: function(y, m, d) {
-        const clicked = stripTime(new Date(y, m, d));
+    // Event delegation on the calendar grid container
+    wrap.addEventListener('click', function(e) {
+      var btn = e.target.closest('button[data-y]');
+      if (!btn) {
+        // Check for nav buttons
+        var nav = e.target.closest('button[data-action]');
+        if (nav) {
+          var action = nav.getAttribute('data-action');
+          if (action === 'prev') {
+            var current = state.viewDate;
+            if (current.getFullYear() === today.getFullYear() && current.getMonth() <= today.getMonth()) return;
+            state.viewDate = new Date(current.getFullYear(), current.getMonth() - 1, 1);
+            render();
+          } else if (action === 'next') {
+            var current = state.viewDate;
+            state.viewDate = new Date(current.getFullYear(), current.getMonth() + 1, 1);
+            render();
+          }
+        }
+        return;
+      }
 
-        // STATE 1: No check-in selected yet
-        // STATE 2: Both already selected → start over
-        // STATE 3: Clicked on/before check-in → reset check-in
-        if (!state.checkIn || state.checkOut || clicked <= state.checkIn) {
-          state.checkIn = clicked;
-          state.checkOut = null;
-          state.hoverDate = null;
-        } else {
-          // STATE 4: Clicked after check-in → set check-out
-          state.checkOut = clicked;
-          state.hoverDate = null;
-        }
+      var y = parseInt(btn.getAttribute('data-y'), 10);
+      var m = parseInt(btn.getAttribute('data-m'), 10);
+      var d = parseInt(btn.getAttribute('data-d'), 10);
+      var clicked = stripTime(new Date(y, m, d));
+
+      if (!state.checkIn || state.checkOut || clicked <= state.checkIn) {
+        state.checkIn = clicked;
+        state.checkOut = null;
+        state.hoverDate = null;
+      } else {
+        state.checkOut = clicked;
+        state.hoverDate = null;
+      }
+      render();
+    });
+
+    wrap.addEventListener('mouseover', function(e) {
+      var btn = e.target.closest('button[data-y]');
+      if (!btn) return;
+      if (!state.checkIn || state.checkOut) return;
+      var y = parseInt(btn.getAttribute('data-y'), 10);
+      var m = parseInt(btn.getAttribute('data-m'), 10);
+      var d = parseInt(btn.getAttribute('data-d'), 10);
+      var hovered = stripTime(new Date(y, m, d));
+      if (hovered > state.checkIn) {
+        state.hoverDate = hovered;
         render();
-      },
-      hoverDate: function(y, m, d) {
-        const hovered = stripTime(new Date(y, m, d));
-        if (state.checkIn && !state.checkOut && hovered > state.checkIn) {
-          state.hoverDate = hovered;
-          render();
-        }
-      },
-      leaveDate: function() {
-        if (state.hoverDate) {
-          state.hoverDate = null;
-          render();
-        }
-      },
-      prevMonth: function() {
-        const current = state.viewDate;
-        if (current.getFullYear() === today.getFullYear() && current.getMonth() <= today.getMonth()) return;
-        state.viewDate = new Date(current.getFullYear(), current.getMonth() - 1, 1);
+      }
+    });
+
+    wrap.addEventListener('mouseout', function(e) {
+      if (state.hoverDate) {
+        state.hoverDate = null;
         render();
-      },
-      nextMonth: function() {
-        const current = state.viewDate;
-        state.viewDate = new Date(current.getFullYear(), current.getMonth() + 1, 1);
-        render();
-      },
+      }
+    });
+
+    window.calendarApp = {
       changeGuests: function(delta) {
-        const next = state.guests + delta;
+        var next = state.guests + delta;
         if (next >= 1 && next <= 8) {
           state.guests = next;
           render();
