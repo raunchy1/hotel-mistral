@@ -526,6 +526,22 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015
   .nav-cta { display: none; }
 }
 
+/* Mobile utility classes */
+.hidden-mobile { display: initial; }
+.mobile-only { display: none; }
+@media (max-width: 720px) {
+  .hidden-mobile { display: none !important; }
+  .mobile-only { display: block; }
+}
+.menu-btn {
+  background: none; border: none; cursor: pointer;
+  padding: 4px; color: var(--antracite);
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Hero zoom animation (triggered by JS) */
+.hero-zoom-active { animation: heroZoom 8s ease-out forwards; }
+
 /* Mobile sticky CTA */
 .mobile-cta {
   display: none;

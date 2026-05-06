@@ -2,6 +2,7 @@ const translations =
 {
   "it": {
     "nav": {
+      "home": "Hotel",
       "rooms": "Camere",
       "experience": "Esperienza",
       "about": "Chi Siamo",
@@ -12,7 +13,7 @@ const translations =
       "menu_close": "Chiudi menu"
     },
     "home": {
-      "hero_location": "Alghero, Sardegna",
+      "hero_location": "Alghero, Sardegna · Dal 1990",
       "hero_title": "Matti lenti,\nluce calda e il\nritmo quieto di Alghero.",
       "cta_availability": "Verifica Disponibilita",
       "intro_label": "L'Hotel",
@@ -316,6 +317,7 @@ const translations =
       "form_message_ph": "Come possiamo aiutarti?",
       "form_submit": "Invia Messaggio",
       "form_submit_sent": "Messaggio inviato",
+      "form_success": "Il tuo messaggio è stato inviato. Ti risponderemo entro 24 ore.",
       "info_title": "Resta in contatto",
       "info_address_label": "Indirizzo",
       "info_phone_label": "Telefono e Email",
@@ -367,6 +369,7 @@ const translations =
   },
   "en": {
     "nav": {
+      "home": "Hotel",
       "rooms": "Rooms",
       "experience": "Experience",
       "about": "About",
@@ -377,7 +380,7 @@ const translations =
       "menu_close": "Close menu"
     },
     "home": {
-      "hero_location": "Alghero, Sardinia",
+      "hero_location": "Alghero, Sardinia · Since 1990",
       "hero_title": "Slow mornings,\nwarm light, and the\nquiet rhythm of Alghero.",
       "cta_availability": "Check Availability",
       "intro_label": "The Hotel",
@@ -681,6 +684,7 @@ const translations =
       "form_message_ph": "How can we help you?",
       "form_submit": "Send Message",
       "form_submit_sent": "Message sent",
+      "form_success": "Your message has been sent. We'll reply within 24 hours.",
       "info_title": "Get in touch",
       "info_address_label": "Address",
       "info_phone_label": "Phone & Email",
@@ -732,6 +736,7 @@ const translations =
   },
   "de": {
     "nav": {
+      "home": "Hotel",
       "rooms": "Zimmer",
       "experience": "Erlebnis",
       "about": "Über Uns",
@@ -742,7 +747,7 @@ const translations =
       "menu_close": "Menü schließen"
     },
     "home": {
-      "hero_location": "Alghero, Sardinien",
+      "hero_location": "Alghero, Sardinien · Seit 1990",
       "hero_title": "Langsame Morgen,\nwarmes Licht und der\nruhige Rhythmus von Alghero.",
       "cta_availability": "Verfügbarkeit Prüfen",
       "intro_label": "Das Hotel",
@@ -1046,6 +1051,7 @@ const translations =
       "form_message_ph": "Wie können wir Ihnen helfen?",
       "form_submit": "Nachricht Senden",
       "form_submit_sent": "Nachricht gesendet",
+      "form_success": "Ihre Nachricht wurde gesendet. Wir antworten innerhalb von 24 Stunden.",
       "info_title": "Kontakt aufnehmen",
       "info_address_label": "Adresse",
       "info_phone_label": "Telefon & E-Mail",
@@ -1097,6 +1103,7 @@ const translations =
   },
   "es": {
     "nav": {
+      "home": "Hotel",
       "rooms": "Habitaciones",
       "experience": "Experiencia",
       "about": "Nosotros",
@@ -1107,7 +1114,7 @@ const translations =
       "menu_close": "Cerrar menú"
     },
     "home": {
-      "hero_location": "Alghero, Cerdeña",
+      "hero_location": "Alghero, Cerdeña · Desde 1990",
       "hero_title": "Mañanas lentas,\nluz cálida y el\nritmo tranquilo de Alghero.",
       "cta_availability": "Consultar Disponibilidad",
       "intro_label": "El Hotel",
@@ -1411,6 +1418,7 @@ const translations =
       "form_message_ph": "¿Cómo podemos ayudarte?",
       "form_submit": "Enviar Mensaje",
       "form_submit_sent": "Mensaje enviado",
+      "form_success": "Tu mensaje ha sido enviado. Te responderemos en 24 horas.",
       "info_title": "Ponte en contacto",
       "info_address_label": "Dirección",
       "info_phone_label": "Teléfono y Email",
