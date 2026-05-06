@@ -104,11 +104,15 @@ const translations =
     "calendar": {
       "label": "Prenotazioni",
       "title": "Seleziona le date del soggiorno",
+      "hint": "Seleziona prima il check-in, poi il check-out",
       "checkin": "Check-in",
       "checkout": "Check-out",
       "guests": "Ospiti",
+      "nights": "notti",
+      "nights_singular": "notte",
       "clear": "Cancella",
-      "booking_cta": "Verifica disponibilità su Booking.com",
+      "cta_title": "Continua la prenotazione",
+      "booking_cta": "Verifica disponibilità su Booking",
       "whatsapp_cta": "Contatta su WhatsApp"
     },
     "rooms": {
@@ -465,10 +469,14 @@ const translations =
     "calendar": {
       "label": "Booking",
       "title": "Select your stay dates",
+      "hint": "First select check-in, then check-out",
       "checkin": "Check-in",
       "checkout": "Check-out",
       "guests": "Guests",
+      "nights": "nights",
+      "nights_singular": "night",
       "clear": "Clear",
+      "cta_title": "Continue your booking",
       "booking_cta": "Check availability on Booking.com",
       "whatsapp_cta": "Contact on WhatsApp"
     },
@@ -826,10 +834,14 @@ const translations =
     "calendar": {
       "label": "Buchung",
       "title": "Wählen Sie Ihre Aufenthaltsdaten",
+      "hint": "Wählen Sie zuerst die Anreise, dann die Abreise",
       "checkin": "Anreise",
       "checkout": "Abreise",
       "guests": "Gäste",
+      "nights": "Nächte",
+      "nights_singular": "Nacht",
       "clear": "Löschen",
+      "cta_title": "Buchung fortsetzen",
       "booking_cta": "Verfügbarkeit auf Booking.com prüfen",
       "whatsapp_cta": "Auf WhatsApp kontaktieren"
     },
@@ -1187,10 +1199,14 @@ const translations =
     "calendar": {
       "label": "Reservas",
       "title": "Selecciona las fechas de tu estancia",
+      "hint": "Primero selecciona la entrada, luego la salida",
       "checkin": "Entrada",
       "checkout": "Salida",
       "guests": "Huéspedes",
+      "nights": "noches",
+      "nights_singular": "noche",
       "clear": "Borrar",
+      "cta_title": "Continuar con la reserva",
       "booking_cta": "Consultar disponibilidad en Booking.com",
       "whatsapp_cta": "Contactar por WhatsApp"
     },

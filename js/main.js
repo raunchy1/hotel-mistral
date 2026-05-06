@@ -146,12 +146,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const gridWrap = document.getElementById('calendar-grid-wrap');
     if (!gridWrap) return;
 
-    const checkinDisplay = document.getElementById('checkin-display');
-    const checkoutDisplay = document.getElementById('checkout-display');
-    const guestsDisplay = document.getElementById('guests-display');
-    const ctaWrap = document.getElementById('calendar-cta-wrap');
-    const whatsappCta = document.getElementById('whatsapp-cta');
-    const clearBtn = document.getElementById('calendar-clear');
+    const els = {
+      checkin: document.getElementById('checkin-display'),
+      checkout: document.getElementById('checkout-display'),
+      nights: document.getElementById('nights-display'),
+      guests: document.getElementById('guests-display'),
+      cta: document.getElementById('calendar-cta-wrap'),
+      whatsapp: document.getElementById('whatsapp-cta'),
+      clear: document.getElementById('calendar-clear')
+    };
 
     const MONTH_NAMES = {
       it: ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'],
@@ -202,6 +205,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return day + '.' + month + '.' + year;
       }
       return month + '/' + day + '/' + year;
+    }
+
+    function nightsText(n) {
+      const lang = window.currentLang || 'it';
+      if (n <= 0) return '—';
+      const key = (n === 1) ? 'nights_singular' : 'nights';
+      const t = window.translations?.[lang]?.calendar?.[key] || (n === 1 ? 'notte' : 'notti');
+      return n + ' ' + t;
     }
 
     function getDaysForMonth(year, month) {
@@ -284,22 +295,31 @@ document.addEventListener('DOMContentLoaded', () => {
       const m = state.viewDate.getMonth();
       gridWrap.innerHTML = renderMonth(y, m, 0) + renderMonth(y, m + 1, 1);
 
-      if (checkinDisplay) checkinDisplay.textContent = formatDate(state.checkIn);
-      if (checkoutDisplay) checkoutDisplay.textContent = formatDate(state.checkOut);
-      if (guestsDisplay) guestsDisplay.textContent = state.guests;
+      if (els.checkin) els.checkin.textContent = formatDate(state.checkIn);
+      if (els.checkout) els.checkout.textContent = formatDate(state.checkOut);
+
+      const nights = (state.checkIn && state.checkOut)
+        ? Math.round((state.checkOut - state.checkIn) / (1000 * 60 * 60 * 24))
+        : 0;
+      if (els.nights) els.nights.textContent = nightsText(nights);
+      if (els.guests) els.guests.textContent = state.guests;
 
       if (state.checkIn && state.checkOut) {
-        if (ctaWrap) ctaWrap.classList.add('active');
         updateWhatsAppLink();
-        if (clearBtn) clearBtn.style.visibility = 'visible';
+        if (els.clear) els.clear.style.visibility = 'visible';
+        if (els.cta) {
+          requestAnimationFrame(function() {
+            if (els.cta) els.cta.classList.add('active');
+          });
+        }
       } else {
-        if (ctaWrap) ctaWrap.classList.remove('active');
-        if (clearBtn) clearBtn.style.visibility = state.checkIn ? 'visible' : 'hidden';
+        if (els.cta) els.cta.classList.remove('active');
+        if (els.clear) els.clear.style.visibility = state.checkIn ? 'visible' : 'hidden';
       }
     }
 
     function updateWhatsAppLink() {
-      if (!state.checkIn || !state.checkOut || !whatsappCta) return;
+      if (!state.checkIn || !state.checkOut || !els.whatsapp) return;
       const lang = window.currentLang || 'it';
       const df = formatDate(state.checkIn);
       const dt = formatDate(state.checkOut);
@@ -311,17 +331,22 @@ document.addEventListener('DOMContentLoaded', () => {
         es: 'Buenos días, me gustaría verificar la disponibilidad para una estancia del ' + df + ' al ' + dt + ' para ' + state.guests + ' persona' + (state.guests > 1 ? 's' : '') + '.'
       };
       const msg = messages[lang] || messages.it;
-      whatsappCta.href = 'https://wa.me/393472479796?text=' + encodeURIComponent(msg);
+      els.whatsapp.href = 'https://wa.me/393472479796?text=' + encodeURIComponent(msg);
     }
 
     window.calendarApp = {
       selectDate: function(y, m, d) {
         const clicked = stripTime(new Date(y, m, d));
-        if (!state.checkIn || (state.checkIn && state.checkOut) || clicked <= state.checkIn) {
+
+        // STATE 1: No check-in selected yet
+        // STATE 2: Both already selected → start over
+        // STATE 3: Clicked on/before check-in → reset check-in
+        if (!state.checkIn || state.checkOut || clicked <= state.checkIn) {
           state.checkIn = clicked;
           state.checkOut = null;
           state.hoverDate = null;
         } else {
+          // STATE 4: Clicked after check-in → set check-out
           state.checkOut = clicked;
           state.hoverDate = null;
         }
@@ -367,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
       render: render
     };
 
-    const originalSetLanguage = window.setLanguage;
+    var originalSetLanguage = window.setLanguage;
     if (originalSetLanguage) {
       window.setLanguage = function(lang) {
         originalSetLanguage(lang);

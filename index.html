@@ -257,6 +257,7 @@
       <div class="calendar-title reveal">
         <div class="section-num">— 05 / <span data-i18n="calendar.label">Booking</span></div>
         <h2 class="h-medium serif" style="margin-top:16px" data-i18n="calendar.title">Select your stay dates</h2>
+        <p class="calendar-hint" data-i18n="calendar.hint">Seleziona prima il check-in, poi il check-out</p>
       </div>
 
       <div class="calendar-wrap reveal reveal-delay-1">
@@ -269,6 +270,11 @@
           <div class="calendar-date-field">
             <label data-i18n="calendar.checkout">Check-out</label>
             <span id="checkout-display">—</span>
+          </div>
+          <div class="calendar-date-sep"></div>
+          <div class="calendar-date-field calendar-nights-field">
+            <label data-i18n="calendar.nights">Nights</label>
+            <span id="nights-display">—</span>
           </div>
           <div class="calendar-date-sep"></div>
           <div class="calendar-date-field">
@@ -288,7 +294,8 @@
         </div>
 
         <div class="calendar-cta-wrap" id="calendar-cta-wrap">
-          <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" class="btn btn-primary btn-arrow calendar-cta-primary" data-i18n="calendar.booking_cta">Check availability on Booking.com</a>
+          <div class="calendar-cta-title" data-i18n="calendar.cta_title">Continua la prenotazione</div>
+          <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" class="btn btn-primary btn-arrow calendar-cta-primary" data-i18n="calendar.booking_cta">Check availability on Booking</a>
           <a href="#" target="_blank" class="btn btn-ghost calendar-cta-secondary" id="whatsapp-cta" data-i18n="calendar.whatsapp_cta">Contact on WhatsApp</a>
         </div>
       </div>
