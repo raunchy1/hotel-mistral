@@ -140,11 +140,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ============================================
-  // CALENDAR — Booking Assistant (Event Delegation)
+  // CALENDAR — Booking Assistant
   // ============================================
   (function() {
     var wrap = document.getElementById('calendar-grid-wrap');
-    if (!wrap) return;
+    if (!wrap) { console.error('Calendar grid not found'); return; }
 
     var els = {
       checkin: document.getElementById('checkin-display'),
@@ -226,6 +226,24 @@ document.addEventListener('DOMContentLoaded', () => {
       return days;
     }
 
+    function getDayClasses(d) {
+      var disabled = isPast(d);
+      var isCheckIn = isSameDay(d, state.checkIn);
+      var isCheckOut = isSameDay(d, state.checkOut);
+      var isHoverEnd = state.hoverDate && isSameDay(d, state.hoverDate) && !state.checkOut && state.checkIn && d > state.checkIn;
+      var cls = ['calendar-day'];
+      if (disabled) cls.push('disabled');
+      if (isCheckIn) cls.push('selected-start');
+      if (isCheckOut) cls.push('selected-end');
+      if (isHoverEnd) cls.push('preview-end');
+      var rangeEnd = state.checkOut || state.hoverDate;
+      if (state.checkIn && rangeEnd && d > state.checkIn && d < rangeEnd) {
+        cls.push(state.checkOut ? 'in-range' : 'in-range-preview');
+      }
+      if (isSameDay(d, today)) cls.push('today');
+      return cls.join(' ');
+    }
+
     function renderMonth(year, month, index) {
       var lang = window.currentLang || 'it';
       var actualYear = year + Math.floor(month / 12);
@@ -259,25 +277,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         var d = stripTime(day);
         var disabled = isPast(d);
-        var isCheckIn = isSameDay(d, state.checkIn);
-        var isCheckOut = isSameDay(d, state.checkOut);
-        var isHoverEnd = state.hoverDate && isSameDay(d, state.hoverDate) && !state.checkOut && state.checkIn && d > state.checkIn;
-
-        var cls = ['calendar-day'];
-        if (disabled) cls.push('disabled');
-        if (isCheckIn) cls.push('selected-start');
-        if (isCheckOut) cls.push('selected-end');
-        if (isHoverEnd) cls.push('preview-end');
-
-        var rangeEnd = state.checkOut || state.hoverDate;
-        if (state.checkIn && rangeEnd && d > state.checkIn && d < rangeEnd) {
-          cls.push(state.checkOut ? 'in-range' : 'in-range-preview');
-        }
-        if (isSameDay(d, today)) cls.push('today');
-
-        var attrs = 'type="button" class="' + cls.join(' ') + '"';
+        var cls = getDayClasses(d);
+        var attrs = 'type="button" class="' + cls + '"';
         if (!disabled) {
-          attrs += ' data-y="' + d.getFullYear() + '" data-m="' + d.getMonth() + '" data-d="' + d.getDate() + '"';
+          attrs += ' data-date="' + d.getTime() + '"';
         }
         if (disabled) attrs += ' disabled';
         html += '<button ' + attrs + '>' + d.getDate() + '</button>';
@@ -286,17 +289,13 @@ document.addEventListener('DOMContentLoaded', () => {
       return html;
     }
 
-    function render() {
-      var y = state.viewDate.getFullYear();
-      var m = state.viewDate.getMonth();
-      wrap.innerHTML = renderMonth(y, m, 0) + renderMonth(y, m + 1, 1);
-
+    function updateUI() {
       if (els.checkin) els.checkin.textContent = formatDate(state.checkIn);
       if (els.checkout) els.checkout.textContent = formatDate(state.checkOut);
 
       var nights = 0;
       if (state.checkIn && state.checkOut) {
-        nights = Math.round((state.checkOut - state.checkIn) / (86400000));
+        nights = Math.round((state.checkOut - state.checkIn) / 86400000);
       }
       if (els.nights) els.nights.textContent = nightsText(nights);
       if (els.guests) els.guests.textContent = state.guests;
@@ -312,6 +311,87 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         if (els.cta) els.cta.classList.remove('active');
         if (els.clear) els.clear.style.visibility = state.checkIn ? 'visible' : 'hidden';
+      }
+    }
+
+    function updateDayClasses() {
+      var buttons = wrap.querySelectorAll('button[data-date]');
+      for (var i = 0; i < buttons.length; i++) {
+        var btn = buttons[i];
+        var ts = parseInt(btn.getAttribute('data-date'), 10);
+        var d = new Date(ts);
+        btn.className = getDayClasses(d);
+      }
+    }
+
+    function render() {
+      var y = state.viewDate.getFullYear();
+      var m = state.viewDate.getMonth();
+      wrap.innerHTML = renderMonth(y, m, 0) + renderMonth(y, m + 1, 1);
+      attachListeners();
+      updateUI();
+    }
+
+    function attachListeners() {
+      var buttons = wrap.querySelectorAll('button[data-date]');
+      for (var i = 0; i < buttons.length; i++) {
+        (function(btn) {
+          btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var ts = parseInt(btn.getAttribute('data-date'), 10);
+            var clicked = new Date(ts);
+            console.log('Calendar click:', formatDate(clicked), 'current checkIn:', state.checkIn ? formatDate(state.checkIn) : null);
+
+            if (!state.checkIn || state.checkOut || clicked <= state.checkIn) {
+              state.checkIn = clicked;
+              state.checkOut = null;
+              state.hoverDate = null;
+              console.log('-> Set check-in');
+            } else {
+              state.checkOut = clicked;
+              state.hoverDate = null;
+              console.log('-> Set check-out');
+            }
+            render();
+          });
+
+          btn.addEventListener('mouseenter', function() {
+            if (!state.checkIn || state.checkOut) return;
+            var ts = parseInt(btn.getAttribute('data-date'), 10);
+            var hovered = new Date(ts);
+            if (hovered > state.checkIn) {
+              state.hoverDate = hovered;
+              updateDayClasses();
+            }
+          });
+
+          btn.addEventListener('mouseleave', function() {
+            if (state.hoverDate) {
+              state.hoverDate = null;
+              updateDayClasses();
+            }
+          });
+        })(buttons[i]);
+      }
+
+      var navButtons = wrap.querySelectorAll('button[data-action]');
+      for (var i = 0; i < navButtons.length; i++) {
+        (function(btn) {
+          btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var action = btn.getAttribute('data-action');
+            if (action === 'prev') {
+              var current = state.viewDate;
+              if (current.getFullYear() === today.getFullYear() && current.getMonth() <= today.getMonth()) return;
+              state.viewDate = new Date(current.getFullYear(), current.getMonth() - 1, 1);
+              render();
+            } else if (action === 'next') {
+              var current = state.viewDate;
+              state.viewDate = new Date(current.getFullYear(), current.getMonth() + 1, 1);
+              render();
+            }
+          });
+        })(navButtons[i]);
       }
     }
 
@@ -335,65 +415,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       els.whatsapp.href = 'https://wa.me/393472479796?text=' + encodeURIComponent(msg);
     }
-
-    // Event delegation on the calendar grid container
-    wrap.addEventListener('click', function(e) {
-      var btn = e.target.closest('button[data-y]');
-      if (!btn) {
-        // Check for nav buttons
-        var nav = e.target.closest('button[data-action]');
-        if (nav) {
-          var action = nav.getAttribute('data-action');
-          if (action === 'prev') {
-            var current = state.viewDate;
-            if (current.getFullYear() === today.getFullYear() && current.getMonth() <= today.getMonth()) return;
-            state.viewDate = new Date(current.getFullYear(), current.getMonth() - 1, 1);
-            render();
-          } else if (action === 'next') {
-            var current = state.viewDate;
-            state.viewDate = new Date(current.getFullYear(), current.getMonth() + 1, 1);
-            render();
-          }
-        }
-        return;
-      }
-
-      var y = parseInt(btn.getAttribute('data-y'), 10);
-      var m = parseInt(btn.getAttribute('data-m'), 10);
-      var d = parseInt(btn.getAttribute('data-d'), 10);
-      var clicked = stripTime(new Date(y, m, d));
-
-      if (!state.checkIn || state.checkOut || clicked <= state.checkIn) {
-        state.checkIn = clicked;
-        state.checkOut = null;
-        state.hoverDate = null;
-      } else {
-        state.checkOut = clicked;
-        state.hoverDate = null;
-      }
-      render();
-    });
-
-    wrap.addEventListener('mouseover', function(e) {
-      var btn = e.target.closest('button[data-y]');
-      if (!btn) return;
-      if (!state.checkIn || state.checkOut) return;
-      var y = parseInt(btn.getAttribute('data-y'), 10);
-      var m = parseInt(btn.getAttribute('data-m'), 10);
-      var d = parseInt(btn.getAttribute('data-d'), 10);
-      var hovered = stripTime(new Date(y, m, d));
-      if (hovered > state.checkIn) {
-        state.hoverDate = hovered;
-        render();
-      }
-    });
-
-    wrap.addEventListener('mouseout', function(e) {
-      if (state.hoverDate) {
-        state.hoverDate = null;
-        render();
-      }
-    });
 
     window.calendarApp = {
       changeGuests: function(delta) {
