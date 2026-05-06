@@ -101,6 +101,16 @@ const translations =
       "cta_free_parking": "Parcheggio Gratuito",
       "cta_no_prepayment": "Nessun pagamento anticipato"
     },
+    "calendar": {
+      "label": "Prenotazioni",
+      "title": "Seleziona le date del soggiorno",
+      "checkin": "Check-in",
+      "checkout": "Check-out",
+      "guests": "Ospiti",
+      "clear": "Cancella",
+      "booking_cta": "Verifica disponibilità su Booking.com",
+      "whatsapp_cta": "Contatta su WhatsApp"
+    },
     "rooms": {
       "header_label": "Alloggio",
       "header_title": "Camere per ogni tipo di viaggiatore",
@@ -451,6 +461,16 @@ const translations =
       "cta_best_price": "BEST PRICE GUARANTEED",
       "cta_free_parking": "Free Parking",
       "cta_no_prepayment": "No prepayment"
+    },
+    "calendar": {
+      "label": "Booking",
+      "title": "Select your stay dates",
+      "checkin": "Check-in",
+      "checkout": "Check-out",
+      "guests": "Guests",
+      "clear": "Clear",
+      "booking_cta": "Check availability on Booking.com",
+      "whatsapp_cta": "Contact on WhatsApp"
     },
     "rooms": {
       "header_label": "Accommodation",
@@ -803,6 +823,16 @@ const translations =
       "cta_free_parking": "Kostenloses Parken",
       "cta_no_prepayment": "Keine Vorauszahlung"
     },
+    "calendar": {
+      "label": "Buchung",
+      "title": "Wählen Sie Ihre Aufenthaltsdaten",
+      "checkin": "Anreise",
+      "checkout": "Abreise",
+      "guests": "Gäste",
+      "clear": "Löschen",
+      "booking_cta": "Verfügbarkeit auf Booking.com prüfen",
+      "whatsapp_cta": "Auf WhatsApp kontaktieren"
+    },
     "rooms": {
       "header_label": "Unterkunft",
       "header_title": "Zimmer für jede Art von Reisenden",
@@ -1153,6 +1183,16 @@ const translations =
       "cta_best_price": "MEJOR PRECIO GARANTIZADO",
       "cta_free_parking": "Aparcamiento Gratis",
       "cta_no_prepayment": "Sin prepago"
+    },
+    "calendar": {
+      "label": "Reservas",
+      "title": "Selecciona las fechas de tu estancia",
+      "checkin": "Entrada",
+      "checkout": "Salida",
+      "guests": "Huéspedes",
+      "clear": "Borrar",
+      "booking_cta": "Consultar disponibilidad en Booking.com",
+      "whatsapp_cta": "Contactar por WhatsApp"
     },
     "rooms": {
       "header_label": "Alojamiento",
