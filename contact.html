@@ -3,323 +3,206 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title data-i18n="meta.site_name">Contact — Hotel Mistral, Alghero</title>
-  <meta name="description" data-i18n="meta.contact_desc" content="Contact Hotel Mistral in Alghero, Sardinia. Via Liguria 41. Phone +39 079 792 028. Email info@hotelmistral.it. Book on Booking.com."/>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title data-i18n="meta.contact_title">Contact — Hotel Mistral Alghero</title>
+  <meta name="description" data-i18n="meta.contact_desc" content="Get in touch with Hotel Mistral in Alghero. We are here to answer your questions and help you plan your stay in Sardinia."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
   <link href="css/styles.css" rel="stylesheet"/>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'primary': '#171818',
-            'primary-container': '#2c2c2c',
-            'secondary': '#635e54',
-            'secondary-container': '#e7dfd3',
-            'tertiary': '#211504',
-            'tertiary-container': '#382916',
-            'on-tertiary-container': '#a58f76',
-            'background': '#fef9f1',
-            'on-background': '#1d1c17',
-            'surface': '#fef9f1',
-            'surface-container': '#f2ede5',
-            'surface-container-low': '#f8f3eb',
-            'surface-dim': '#ded9d2',
-            'surface-variant': '#e7e2da',
-            'outline': '#747878',
-            'outline-variant': '#c4c7c7',
-            'sand': '#F5F0E8',
-            'beige': '#E8E0D4',
-            'warm-gray': '#8A8279',
-            'stone': '#6B6560',
-            'charcoal': '#2C2C2C',
-            'muted-green': '#7A8B6E',
-          },
-          fontFamily: {
-            'serif': ['Cormorant Garamond', 'Cormorant', 'Georgia', 'serif'],
-            'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            'headline-md': ['Cormorant Garamond', 'serif'],
-            'headline-lg': ['Cormorant Garamond', 'serif'],
-            'body-lg': ['Inter', 'sans-serif'],
-            'label-caps': ['Inter', 'sans-serif'],
-            'headline-sm': ['Cormorant Garamond', 'serif'],
-            'trust-signal': ['Inter', 'sans-serif'],
-            'functional-data': ['Inter', 'sans-serif'],
-            'body-md': ['Inter', 'sans-serif'],
-          },
-          fontSize: {
-            'headline-lg': ['48px', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '400' }],
-            'headline-md': ['32px', { lineHeight: '1.3', fontWeight: '400' }],
-            'headline-sm': ['24px', { lineHeight: '1.4', fontWeight: '500' }],
-            'body-lg': ['18px', { lineHeight: '1.6', fontWeight: '400' }],
-            'body-md': ['16px', { lineHeight: '1.5', fontWeight: '400' }],
-            'label-caps': ['12px', { lineHeight: '1', letterSpacing: '0.08em', fontWeight: '600' }],
-            'trust-signal': ['14px', { lineHeight: '1.2', fontWeight: '500' }],
-            'functional-data': ['20px', { lineHeight: '1.2', letterSpacing: '0.01em', fontWeight: '700' }],
-          },
-          spacing: {
-            'section-gap': '80px',
-            'gutter': '24px',
-          }
-        }
-      }
-    }
-  </script>
 </head>
-<body class="bg-background font-body-md text-body-md overflow-x-hidden" data-page="contact">
+<body class="page" data-page="contact">
 
-  <!-- Header -->
-  <header class="nav-main bg-[#F5F0E8] border-b border-[#E8E0D4] sticky top-0 z-50">
-    <div class="flex justify-between items-center h-24 px-6 md:px-16 max-w-[1440px] mx-auto w-full">
-      <a href="index.html" class="text-lg md:text-2xl font-serif tracking-[0.15em] text-[#2C2C2C] uppercase" data-i18n="location.address_name">Hotel Mistral</a>
-      <nav class="hidden md:flex gap-10 font-serif tracking-tight text-sm uppercase items-center">
-        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="rooms.html" data-i18n="nav.rooms">Rooms</a>
-        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="experience.html" data-i18n="nav.experience">Experience</a>
-        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="about.html" data-i18n="nav.about">About</a>
-        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="location.html" data-i18n="nav.location">Location</a>
-        <a class="text-stone-500 hover:text-[#2C2C2C] transition-all duration-300" href="contact.html" data-i18n="nav.contact">Contact</a>
-      </nav>
-      <div class="flex items-center gap-4">
-        <div class="hidden md:flex items-center gap-2 lang-switcher">
-          <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="it" onclick="setLanguage('it')">IT</button>
-          <span class="text-charcoal/30 text-xs">/</span>
-          <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="en" onclick="setLanguage('en')">EN</button>
-          <span class="text-charcoal/30 text-xs">/</span>
-          <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="de" onclick="setLanguage('de')">DE</button>
-          <span class="text-charcoal/30 text-xs">/</span>
-          <button class="lang-btn text-xs font-semibold tracking-wider uppercase px-2 py-1 rounded transition-colors" data-lang="es" onclick="setLanguage('es')">ES</button>
-        </div>
-        <a class="hidden md:inline-flex bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps active:scale-95 transition-transform hover:opacity-90" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
-        <button class="md:hidden text-charcoal" data-i18n-aria-label="nav.menu_open" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.add('active'); document.body.style.overflow='hidden';">
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
-            <line x1="4" y1="6" x2="20" y2="6"/>
-            <line x1="4" y1="12" x2="20" y2="12"/>
-            <line x1="4" y1="18" x2="20" y2="18"/>
-          </svg>
-        </button>
-      </div>
+  <!-- Nav -->
+  <nav class="nav" id="main-nav">
+    <a href="index.html" class="nav-brand" data-i18n="location.address_name">
+      Mistral
+      <small>Alghero</small>
+    </a>
+    <div class="nav-links hidden-mobile">
+      <a href="index.html" data-i18n="nav.home">Hotel</a>
+      <a href="rooms.html" data-i18n="nav.rooms">Rooms</a>
+      <a href="experience.html" data-i18n="nav.experience">Experience</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="location.html" data-i18n="nav.location">Location</a>
+      <a href="contact.html" class="active" data-i18n="nav.contact">Contact</a>
     </div>
-  </header>
+    <div class="nav-actions">
+      <div class="lang-switcher hidden-mobile">
+        <button class="lang-btn" data-lang="it" onclick="setLanguage('it')">IT</button>
+        <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
+        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
+        <button class="lang-btn" data-lang="de" onclick="setLanguage('de')">DE</button>
+        <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+      </div>
+      <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" class="nav-cta hidden-mobile" data-i18n="nav.book_now">Check Availability</a>
+      <button class="menu-btn mobile-only" onclick="document.querySelector('.mobile-menu').classList.add('active'); document.body.style.overflow='hidden';">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
 
   <!-- Mobile Menu -->
   <div class="mobile-menu">
-    <button class="absolute top-6 right-6 text-charcoal" data-i18n-aria-label="nav.menu_close" aria-label="Close menu" onclick="document.querySelector('.mobile-menu').classList.remove('active'); document.body.style.overflow='';">
-      <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
-        <line x1="4" y1="4" x2="20" y2="20"/>
-        <line x1="20" y1="4" x2="4" y2="20"/>
-      </svg>
+    <button style="position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;" onclick="document.querySelector('.mobile-menu').classList.remove('active'); document.body.style.overflow='';">
+      <span class="material-symbols-outlined" style="font-size:32px;color:var(--antracite)">close</span>
     </button>
+    <a href="index.html" data-i18n="nav.home">Hotel</a>
     <a href="rooms.html" data-i18n="nav.rooms">Rooms</a>
     <a href="experience.html" data-i18n="nav.experience">Experience</a>
     <a href="about.html" data-i18n="nav.about">About</a>
     <a href="location.html" data-i18n="nav.location">Location</a>
     <a href="contact.html" data-i18n="nav.contact">Contact</a>
-    <div class="flex items-center justify-center gap-3 mt-6 lang-switcher">
-      <button class="lang-btn text-sm font-semibold tracking-wider uppercase px-3 py-1 rounded transition-colors" data-lang="it" onclick="setLanguage('it')">IT</button>
-      <span class="text-charcoal/30 text-sm">/</span>
-      <button class="lang-btn text-sm font-semibold tracking-wider uppercase px-3 py-1 rounded transition-colors" data-lang="en" onclick="setLanguage('en')">EN</button>
-      <span class="text-charcoal/30 text-sm">/</span>
-      <button class="lang-btn text-sm font-semibold tracking-wider uppercase px-3 py-1 rounded transition-colors" data-lang="de" onclick="setLanguage('de')">DE</button>
-      <span class="text-charcoal/30 text-sm">/</span>
-      <button class="lang-btn text-sm font-semibold tracking-wider uppercase px-3 py-1 rounded transition-colors" data-lang="es" onclick="setLanguage('es')">ES</button>
+    <div class="lang-switcher" style="margin-top:24px">
+      <button class="lang-btn" data-lang="it" onclick="setLanguage('it')">IT</button>
+      <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
+      <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+      <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
+      <button class="lang-btn" data-lang="de" onclick="setLanguage('de')">DE</button>
+      <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
+      <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
     </div>
-    <a class="bg-[#2C2C2C] text-white px-8 py-3 font-label-caps text-label-caps rounded-lg active:scale-95 transition-transform hover:opacity-90 mt-4" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="nav.book_now">Book Now</a>
+    <a class="btn btn-primary btn-arrow" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" style="margin-top:24px" data-i18n="nav.book_now">Book Now</a>
   </div>
 
-  <!-- Page Header -->
-  <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-surface-container-low">
-    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
-      <div class="max-w-3xl reveal">
-        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block" data-i18n="contact.header_label">Contact</span>
-        <h1 class="font-headline-lg text-headline-lg text-primary mb-6" data-i18n="contact.header_title" data-i18n-html="">
-          We would love<br/>to hear from you
-        </h1>
-        <p class="text-secondary text-body-lg leading-relaxed" data-i18n="contact.header_desc">
-          Questions about your stay, a special request, or just a friendly enquiry? Reach out by phone, email, or the form below. We reply to every message personally.
-        </p>
-      </div>
+  <section class="page-header" style="padding-top:120px;padding-bottom:64px;background:var(--beige)">
+    <div class="container reveal">
+      <div class="section-num" data-i18n="contact.page_label">Contact</div>
+      <h1 class="h-large serif" style="margin-top:16px;max-width:14ch" data-i18n="contact.page_title" data-i18n-html="">
+        We would love to hear from you.
+      </h1>
+      <p style="margin-top:20px;max-width:50ch;color:var(--grigio)" data-i18n="contact.page_desc">
+        Whether you have a question about our rooms, want to know more about Alghero, or need help with a booking, we are here.
+      </p>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="py-24 md:py-32 bg-white">
-    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
-      <div class="grid md:grid-cols-2 gap-12">
-        <!-- Form -->
-        <div class="reveal">
-          <h2 class="font-headline-sm text-headline-sm mb-8" data-i18n="contact.form_title">Send a message</h2>
-          <form id="contact-form" class="space-y-6">
-            <div class="grid sm:grid-cols-2 gap-6">
-              <div>
-                <label class="block font-label-caps text-label-caps text-secondary mb-2" for="name" data-i18n="contact.form_name">Name</label>
-                <input id="name" name="name" data-i18n-placeholder="contact.form_name_ph" placeholder="Your name" required="" type="text"/>
-              </div>
-              <div>
-                <label class="block font-label-caps text-label-caps text-secondary mb-2" for="email" data-i18n="contact.form_email">Email</label>
-                <input id="email" name="email" data-i18n-placeholder="contact.form_email_ph" placeholder="your@email.com" required="" type="email"/>
-              </div>
-            </div>
-            <div>
-              <label class="block font-label-caps text-label-caps text-secondary mb-2" for="subject" data-i18n="contact.form_subject">Subject</label>
-              <select name="subject" required="">
-                <option disabled="" selected="" value="" data-i18n="contact.form_select_subject">Select a subject</option>
-                <option value="booking" data-i18n="contact.form_subject_booking">Booking Enquiry</option>
-                <option value="rooms" data-i18n="contact.form_subject_rooms">Room Information</option>
-                <option value="special" data-i18n="contact.form_subject_special">Special Request</option>
-                <option value="other" data-i18n="contact.form_subject_other">Other</option>
-              </select>
-            </div>
-            <div>
-              <label class="block font-label-caps text-label-caps text-secondary mb-2" for="message" data-i18n="contact.form_message">Message</label>
-              <textarea id="message" name="message" data-i18n-placeholder="contact.form_message_ph" placeholder="How can we help you?" required="" rows="6"></textarea>
-            </div>
-            <button class="btn-primary" type="submit" data-i18n="contact.form_submit">Send Message</button>
-          </form>
+  <!-- CONTATTI -->
+  <section class="section" id="contatti-dettagli">
+    <div class="container">
+      <div class="intro-grid reveal">
+        
+        <div>
+          <div class="section-num">— 01 / <span data-i18n="contact.info_label">Information</span></div>
+          <h2 class="h-medium serif" style="margin-top:24px;margin-bottom:32px" data-i18n="contact.info_title">
+            Get in touch
+          </h2>
+          
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:24px">
+            <li>
+              <div class="tiny muted" style="margin-bottom:4px" data-i18n="contact.address">Address</div>
+              <div style="font-size:18px;color:var(--antracite)" data-i18n="location.address_street">Via Liguria 41</div>
+              <div style="font-size:18px;color:var(--antracite)" data-i18n="location.address_city">07041 Alghero (SS), Italy</div>
+            </li>
+            <li>
+              <div class="tiny muted" style="margin-bottom:4px" data-i18n="contact.phone">Phone</div>
+              <div style="font-size:18px;color:var(--antracite)" data-i18n="location.phone">+39 079 792 028</div>
+            </li>
+            <li>
+              <div class="tiny muted" style="margin-bottom:4px" data-i18n="contact.email">Email</div>
+              <div style="font-size:18px;color:var(--antracite)" data-i18n="location.email">info@hotelmistral.it</div>
+            </li>
+            <li>
+              <div class="tiny muted" style="margin-bottom:4px" data-i18n="contact.reception">Reception Hours</div>
+              <div style="font-size:18px;color:var(--antracite)" data-i18n="contact.hours">Open 7:00 AM — 11:00 PM</div>
+            </li>
+          </ul>
         </div>
-        <!-- Info -->
-        <div class="reveal reveal-delay-2">
-          <h2 class="font-headline-sm text-headline-sm mb-8" data-i18n="contact.info_title">Get in touch</h2>
-          <div class="space-y-8">
-            <div>
-              <p class="font-label-caps text-label-caps text-secondary mb-2" data-i18n="contact.info_address_label">Address</p>
-              <address class="not-italic text-secondary leading-relaxed" data-i18n="location.address_street" data-i18n-html="">
-                Hotel Mistral<br/>
-                Via Liguria 41<br/>
-                07041 Alghero SS<br/>
-                Sardinia, Italy
-              </address>
-            </div>
-            <div>
-              <p class="font-label-caps text-label-caps text-secondary mb-2" data-i18n="contact.info_phone_label">Phone &amp; Email</p>
-              <div class="space-y-1">
-                <p><a class="text-primary hover:text-muted-green transition-colors" href="tel:+39079792028">+39 079 792 028</a></p>
-                <p><a class="text-primary hover:text-muted-green transition-colors" href="mailto:info@hotelmistral.it">info@hotelmistral.it</a></p>
+
+        <div class="intro-body">
+          <div style="background:var(--surface-container-low);padding:40px;border:1px solid var(--beige-scuro)">
+            <h3 class="h-small serif" style="margin-bottom:24px" data-i18n="contact.form_title">Send us a message</h3>
+            <form onsubmit="event.preventDefault(); alert('Message sent! (Demo)');" style="display:flex;flex-direction:column;gap:24px">
+              <div>
+                <label style="font-size:11px;color:var(--grigio);display:block;margin-bottom:6px;letter-spacing:0.1em;text-transform:uppercase" data-i18n="contact.form_name">Name</label>
+                <input type="text" required style="width:100%;padding:12px;border:1px solid var(--beige-scuro);background:var(--bianco);font-family:var(--sans);outline:none" />
               </div>
-            </div>
-            <div>
-              <p class="font-label-caps text-label-caps text-secondary mb-2" data-i18n="contact.info_hours_label">Reception Hours</p>
-              <div class="space-y-1 text-secondary">
-                <p data-i18n="contact.info_hours_concierge">Concierge: 6:30am — 10:30pm</p>
-                <p data-i18n="contact.info_hours_24h">24-hour access with magnetic key</p>
-                <p data-i18n="contact.info_hours_checkin">Check-in: from 2:00pm</p>
-                <p data-i18n="contact.info_hours_checkout">Check-out: until 10:00am</p>
+              <div>
+                <label style="font-size:11px;color:var(--grigio);display:block;margin-bottom:6px;letter-spacing:0.1em;text-transform:uppercase" data-i18n="contact.form_email">Email</label>
+                <input type="email" required style="width:100%;padding:12px;border:1px solid var(--beige-scuro);background:var(--bianco);font-family:var(--sans);outline:none" />
               </div>
-            </div>
-            <div>
-              <p class="font-label-caps text-label-caps text-secondary mb-2" data-i18n="contact.info_book_label">Book Online</p>
-              <p class="text-secondary text-sm leading-relaxed mb-4" data-i18n="contact.info_book_desc">
-                For instant confirmation and our best available rates, we recommend booking through Booking.com.
-              </p>
-              <a class="btn-outline" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="home.cta_book">Book on Booking.com</a>
-            </div>
+              <div>
+                <label style="font-size:11px;color:var(--grigio);display:block;margin-bottom:6px;letter-spacing:0.1em;text-transform:uppercase" data-i18n="contact.form_message">Message</label>
+                <textarea rows="4" required style="width:100%;padding:12px;border:1px solid var(--beige-scuro);background:var(--bianco);font-family:var(--sans);outline:none;resize:vertical"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="padding:16px;justify-content:center" data-i18n="contact.form_submit">Send Message</button>
+            </form>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Quick Info -->
-  <section class="py-24 md:py-32 bg-surface-container-low">
-    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
-      <div class="mb-12 reveal">
-        <span class="font-label-caps text-label-caps text-on-tertiary-container uppercase mb-2 block" data-i18n="contact.quick_label">At a Glance</span>
-        <h2 class="font-headline-md text-headline-md text-primary" data-i18n="contact.quick_title">Everything you need to know</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
-        <div class="reveal quick-info-card">
-          <h3 class="font-headline-sm text-headline-sm mb-3" data-i18n="contact.quick_checkin_title">Check-in &amp; Check-out</h3>
-          <p class="text-secondary text-sm leading-relaxed" data-i18n="contact.quick_checkin_desc">
-            Check-in is from 2:00pm. If you arrive earlier, you are welcome to leave your luggage and use the garden. Check-out is by 10:00am. Late check-out may be available on request.
-          </p>
-        </div>
-        <div class="reveal reveal-delay-1 quick-info-card">
-          <h3 class="font-headline-sm text-headline-sm mb-3" data-i18n="contact.quick_parking_title">Parking</h3>
-          <p class="text-secondary text-sm leading-relaxed" data-i18n="contact.quick_parking_desc">
-            Free private parking is available on site, monitored by video. Spaces are not assigned — simply park where you find room. No reservation is necessary.
-          </p>
-        </div>
-        <div class="reveal reveal-delay-2 quick-info-card">
-          <h3 class="font-headline-sm text-headline-sm mb-3" data-i18n="contact.quick_pets_title">Pets</h3>
-          <p class="text-secondary text-sm leading-relaxed" data-i18n="contact.quick_pets_desc">
-            Please contact us in advance if you plan to travel with a pet. We do our best to accommodate, but restrictions may apply depending on the room type.
-          </p>
-        </div>
-        <div class="reveal quick-info-card">
-          <h3 class="font-headline-sm text-headline-sm mb-3" data-i18n="contact.quick_children_title">Children</h3>
-          <p class="text-secondary text-sm leading-relaxed" data-i18n="contact.quick_children_desc">
-            Children of all ages are welcome. Cots are available on request, subject to availability. The garden and nearby beach make this a relaxed choice for families.
-          </p>
-        </div>
-        <div class="reveal reveal-delay-1 quick-info-card">
-          <h3 class="font-headline-sm text-headline-sm mb-3" data-i18n="contact.quick_payment_title">Payment</h3>
-          <p class="text-secondary text-sm leading-relaxed" data-i18n="contact.quick_payment_desc">
-            We accept all major credit cards. For bookings made directly, a deposit may be required. For online bookings, standard Booking.com terms apply.
-          </p>
-        </div>
-        <div class="reveal reveal-delay-2 quick-info-card">
-          <h3 class="font-headline-sm text-headline-sm mb-3" data-i18n="contact.quick_cancel_title">Cancellation</h3>
-          <p class="text-secondary text-sm leading-relaxed" data-i18n="contact.quick_cancel_desc">
-            Cancellation policies vary by rate and season. Please refer to your booking confirmation for specific terms, or contact us directly with any questions.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section class="py-24 px-6 md:px-16 bg-[#2C2C2C] text-white text-center">
-    <div class="max-w-3xl mx-auto reveal">
-      <span class="font-label-caps text-label-caps uppercase opacity-60 mb-2 block" data-i18n="contact.cta_label">Reservations</span>
-      <h2 class="font-headline-md text-headline-md mb-4" data-i18n="contact.cta_title">Ready to book?</h2>
-      <p class="text-body-lg opacity-70 mb-12" data-i18n="contact.cta_p">
-        Secure your room in Alghero with instant confirmation on Booking.com. Or send us a message — we reply within a few hours.
+  <!-- CTA FINALE -->
+  <section class="cta-final" style="background:var(--antracite);color:var(--bianco)">
+    <div class="container" style="text-align:center">
+      <div class="section-num" style="color:var(--grigio);border-color:var(--grigio)">— 02</div>
+      <h2 class="h-large serif" style="margin-top:24px" data-i18n="home.cta_title">
+        Ready to slow down?
+      </h2>
+      <p style="margin-top:16px;color:var(--grigio-chiaro);max-width:50ch;margin-left:auto;margin-right:auto" data-i18n="home.cta_desc">
+        We keep our best rates on Booking.com. Check availability, read more reviews, and reserve your room in Alghero directly.
       </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a class="bg-white text-primary px-16 py-6 font-label-caps text-label-caps tracking-widest hover:bg-[#F5F0E8] transition-all transform hover:scale-105 active:scale-95 uppercase font-bold inline-block" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="contact.info_book_cta">Book on Booking.com</a>
-        <a class="border border-white text-white px-16 py-6 rounded-lg font-label-caps text-label-caps tracking-widest hover:bg-white hover:text-primary transition-all uppercase font-bold inline-block" href="mailto:info@hotelmistral.it" data-i18n="contact.cta_email">Email Us</a>
+      
+      <div class="meta" style="color:var(--grigio-chiaro);border-color:var(--grigio);margin-top:32px">
+        <b style="font-family:'var(--serif)';font-size:24px;color:var(--bianco)">From €65</b>
+        <span style="margin:0 16px">·</span>
+        Free Parking
+        <span style="margin:0 16px">·</span>
+        No Prepayment
+      </div>
+
+      <div style="margin-top:40px">
+        <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" class="btn btn-primary btn-arrow" style="background:var(--bianco);color:var(--antracite);padding:20px 36px;font-size:15px;display:inline-flex" data-i18n="home.cta_book">
+          Book on Booking.com
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#E8E0D4] border-t border-[#D9CFC1] w-full py-12 md:py-16">
-    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
-      <div class="grid md:grid-cols-3 gap-12 mb-12">
+  <footer class="footer" id="contatti">
+    <div class="container">
+      <div class="footer-grid">
         <div>
-          <div class="text-lg font-serif tracking-widest text-[#2C2C2C] uppercase mb-4" data-i18n="location.address_name">Hotel Mistral</div>
-          <p class="text-sm text-secondary leading-relaxed mb-4" data-i18n="footer.desc">
+          <div class="brand-mark" data-i18n="location.address_name">Hotel Mistral</div>
+          <p style="max-width:32ch;color:var(--grigio-chiaro)" data-i18n="footer.desc">
             A family-run 3-star hotel in Alghero, Sardinia. 25 rooms, a garden, and a five-minute walk to Maria Pia Beach.
           </p>
-          <address class="text-sm text-secondary not-italic leading-relaxed" data-i18n="location.address_street" data-i18n-html="">
-            Via Liguria 41<br/>
-            07041 Alghero SS<br/>
-            Sardinia, Italy
-          </address>
         </div>
         <div>
-          <h4 class="font-label-caps text-label-caps text-secondary mb-6" data-i18n="footer.explore">Explore</h4>
-          <ul class="space-y-3">
-            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="rooms.html" data-i18n="nav.rooms">Rooms</a></li>
-            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="experience.html" data-i18n="nav.experience">Experience</a></li>
-            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="about.html" data-i18n="nav.about">About</a></li>
-            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="location.html" data-i18n="nav.location">Location</a></li>
-            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="contact.html" data-i18n="footer.contact">Contact</a></li>
+          <h4 data-i18n="footer.explore">Explore</h4>
+          <ul>
+            <li><a href="rooms.html" data-i18n="nav.rooms">Rooms</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="location.html" data-i18n="nav.location">Location</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-label-caps text-label-caps text-secondary mb-6" data-i18n="footer.contact">Contact</h4>
-          <ul class="space-y-3">
-            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="tel:+39079792028">+39 079 792 028</a></li>
-            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="mailto:info@hotelmistral.it">info@hotelmistral.it</a></li>
-            <li><a class="text-sm text-secondary hover:text-primary transition-colors" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener noreferrer" data-i18n="footer.book">Book on Booking.com →</a></li>
+          <h4 data-i18n="footer.contact">Contact</h4>
+          <ul>
+            <li data-i18n="location.address_street">Via Liguria 41</li>
+            <li data-i18n="location.address_city">07041 Alghero (SS)</li>
+            <li style="margin-top:12px" data-i18n="location.phone">+39 079 792 028</li>
+            <li data-i18n="location.email">info@hotelmistral.it</li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.booking">Booking</h4>
+          <ul>
+            <li><a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" data-i18n="footer.book_link">Book on Booking.com →</a></li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-[#D9CFC1] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-xs text-secondary" data-i18n="footer.copyright">© 2024 Hotel Mistral. All rights reserved.</p>
-        <p class="text-xs text-secondary" data-i18n="footer.tagline">A family-run hotel since 1990.</p>
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2024 Hotel Mistral. All rights reserved.</span>
+        <span data-i18n="footer.tagline">A family-run hotel since 1990.</span>
       </div>
     </div>
   </footer>
