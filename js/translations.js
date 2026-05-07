@@ -14,7 +14,7 @@ const translations =
     },
     "home": {
       "hero_location": "Alghero, Sardegna · Dal 1990",
-      "hero_title": "Matti lenti,\nluce calda e il\nritmo quieto di Alghero.",
+      "hero_title": "Mattine Lenti,\nluce calda e il\nritmo quieto di Alghero.",
       "cta_availability": "Verifica Disponibilita",
       "intro_label": "L'Hotel",
       "intro_title": "Un hotel a conduzione familiare,\nfatto bene e basta.",
@@ -100,7 +100,27 @@ const translations =
       "cta_from_price": "Da €65",
       "cta_best_price": "MIGLIOR PREZZO GARANTITO",
       "cta_free_parking": "Parcheggio Gratuito",
-      "cta_no_prepayment": "Nessun pagamento anticipato"
+      "cta_no_prepayment": "Nessun pagamento anticipato",
+      "exp_label": "La Permanenza",
+      "exp_title": "Mattine lente,\ngiorni aperti.",
+      "exp_p1": "La colazione è servita nella veranda, inondata di luce naturale e prodotti locali freschi. Pane fresco dalla panetteria, formaggi locali, frutta di stagione e vero caffè italiano.",
+      "exp_p2": "Da lì, la giornata è vostra. La spiaggia è a dieci minuti a piedi, il centro storico è a otto minuti in auto, oppure godetevi semplicemente il giardino e una sedia all'ombra.",
+      "exp_services": "Servizi Inclusi",
+      "srv_wifi": "WiFi Gratuito",
+      "srv_parking": "Parcheggio Privato",
+      "srv_ac": "Aria Condizionata",
+      "srv_bar": "Bar (7:00 – 22:30)",
+      "hero_parking": "Parcheggio Gratuito",
+      "best_price": "Miglior prezzo garantito",
+      "no_prepayment": "Nessun pagamento anticipato",
+      "hero_caption": "Vista esterna al tramonto",
+      "stats_rooms": "Camere",
+      "stats_stars": "Stelle",
+      "stats_years": "Anni",
+      "room_badge_last": "Ultime camere disponibili",
+      "room_badge_good": "Ottima scelta",
+      "room_view_all": "Vedi tutte le camere",
+      "cta_desc": "Manteniamo le nostre migliori tariffe su Booking.com. Verifica disponibilità, leggi altre recensioni, e prenota la tua camera ad Alghero direttamente."
     },
     "calendar": {
       "label": "Prenotazioni",
@@ -113,8 +133,8 @@ const translations =
       "nights_singular": "notte",
       "clear": "Cancella",
       "cta_title": "Continua la prenotazione",
-      "booking_cta": "Verifica disponibilità su Booking",
-      "whatsapp_cta": "Contatta su WhatsApp"
+      "booking_cta": "Prenota su Booking.com",
+      "whatsapp_cta": "Prenota su WhatsApp"
     },
     "rooms": {
       "header_label": "Alloggio",
@@ -353,8 +373,10 @@ const translations =
       "desc": "Un hotel a 3 stelle a conduzione familiare ad Alghero, Sardegna. 25 camere, un giardino, e cinque minuti a piedi dalla spiaggia di Maria Pia.",
       "explore": "Esplora",
       "contact": "Contatti",
+      "booking": "Prenotazioni",
       "book": "Prenota su Booking.com →",
-      "copyright": "© 2024 Hotel Mistral. Tutti i diritti riservati.",
+      "book_link": "Prenota su Booking.com →",
+      "copyright": "© 2025 Hotel Mistral. Tutti i diritti riservati.",
       "tagline": "Un hotel a conduzione familiare dal 1990."
     },
     "meta": {
@@ -467,7 +489,27 @@ const translations =
       "cta_from_price": "From €65",
       "cta_best_price": "BEST PRICE GUARANTEED",
       "cta_free_parking": "Free Parking",
-      "cta_no_prepayment": "No prepayment"
+      "cta_no_prepayment": "No prepayment",
+      "exp_label": "The Stay",
+      "exp_title": "Slow mornings,\nopen days.",
+      "exp_p1": "Breakfast is served in the veranda, filled with natural light and fresh local products. Fresh bread from the bakery, local cheeses, seasonal fruits, and real Italian coffee.",
+      "exp_p2": "From there, the day is yours. The beach is a ten-minute walk away, the old town is eight minutes by car, or simply enjoy the garden and a shaded chair.",
+      "exp_services": "Included Services",
+      "srv_wifi": "Free WiFi",
+      "srv_parking": "Private Parking",
+      "srv_ac": "Air Conditioning",
+      "srv_bar": "Bar (7am – 11pm)",
+      "hero_parking": "Free parking",
+      "best_price": "Best price guaranteed",
+      "no_prepayment": "No prepayment",
+      "hero_caption": "Exterior at dusk",
+      "stats_rooms": "Rooms",
+      "stats_stars": "Stars",
+      "stats_years": "Years",
+      "room_badge_last": "Last rooms available",
+      "room_badge_good": "Good choice",
+      "room_view_all": "View all rooms",
+      "cta_desc": "We keep our best rates on Booking.com. Check availability, read more reviews, and reserve your room in Alghero directly."
     },
     "calendar": {
       "label": "Booking",
@@ -480,8 +522,8 @@ const translations =
       "nights_singular": "night",
       "clear": "Clear",
       "cta_title": "Continue your booking",
-      "booking_cta": "Check availability on Booking.com",
-      "whatsapp_cta": "Contact on WhatsApp"
+      "booking_cta": "Book on Booking.com",
+      "whatsapp_cta": "Book on WhatsApp"
     },
     "rooms": {
       "header_label": "Accommodation",
@@ -720,8 +762,10 @@ const translations =
       "desc": "A family-run 3-star hotel in Alghero, Sardinia. 25 rooms, a garden, and a five-minute walk to Maria Pia Beach.",
       "explore": "Explore",
       "contact": "Contact",
+      "booking": "Booking",
       "book": "Book on Booking.com →",
-      "copyright": "© 2024 Hotel Mistral. All rights reserved.",
+      "book_link": "Book on Booking.com →",
+      "copyright": "© 2025 Hotel Mistral. All rights reserved.",
       "tagline": "A family-run hotel since 1990."
     },
     "meta": {
@@ -834,7 +878,27 @@ const translations =
       "cta_from_price": "Ab €65",
       "cta_best_price": "BESTPREIS GARANTIE",
       "cta_free_parking": "Kostenloses Parken",
-      "cta_no_prepayment": "Keine Vorauszahlung"
+      "cta_no_prepayment": "Keine Vorauszahlung",
+      "exp_label": "Der Aufenthalt",
+      "exp_title": "Ruhige Morgen,\noffene Tage.",
+      "exp_p1": "Das Frühstück wird auf der Veranda serviert, erfüllt von natürlichem Licht und frischen lokalen Produkten. Frisches Brot aus der Bäckerei, lokale Käsesorten, Saisonobst und echter italienischer Kaffee.",
+      "exp_p2": "Von dort gehört der Tag Ihnen. Der Strand ist zehn Minuten zu Fuß entfernt, die Altstadt acht Minuten mit dem Auto, oder genießen Sie einfach den Garten und einen Stuhl im Schatten.",
+      "exp_services": "Enthaltene Leistungen",
+      "srv_wifi": "Kostenloses WLAN",
+      "srv_parking": "Privates Parken",
+      "srv_ac": "Klimaanlage",
+      "srv_bar": "Bar (7:00 – 22:30 Uhr)",
+      "hero_parking": "Kostenloser Parkplatz",
+      "best_price": "Bestpreisgarantie",
+      "no_prepayment": "Keine Vorauszahlung",
+      "hero_caption": "Außenansicht in der Dämmerung",
+      "stats_rooms": "Zimmer",
+      "stats_stars": "Sterne",
+      "stats_years": "Jahre",
+      "room_badge_last": "Letzte Zimmer verfügbar",
+      "room_badge_good": "Gute Wahl",
+      "room_view_all": "Alle Zimmer ansehen",
+      "cta_desc": "Wir bieten unsere besten Preise auf Booking.com. Verfügbarkeit prüfen, mehr Bewertungen lesen und Ihr Zimmer in Alghero direkt reservieren."
     },
     "calendar": {
       "label": "Buchung",
@@ -847,8 +911,8 @@ const translations =
       "nights_singular": "Nacht",
       "clear": "Löschen",
       "cta_title": "Buchung fortsetzen",
-      "booking_cta": "Verfügbarkeit auf Booking.com prüfen",
-      "whatsapp_cta": "Auf WhatsApp kontaktieren"
+      "booking_cta": "Auf Booking.com buchen",
+      "whatsapp_cta": "Per WhatsApp buchen"
     },
     "rooms": {
       "header_label": "Unterkunft",
@@ -1087,8 +1151,10 @@ const translations =
       "desc": "Ein familiengeführtes 3-Sterne-Hotel in Alghero, Sardinien. 25 Zimmer, ein Garten, und fünf Minuten zu Fuß vom Strand Maria Pia.",
       "explore": "Entdecken",
       "contact": "Kontakt",
+      "booking": "Buchung",
       "book": "Auf Booking.com Buchen →",
-      "copyright": "© 2024 Hotel Mistral. Alle Rechte vorbehalten.",
+      "book_link": "Auf Booking.com Buchen →",
+      "copyright": "© 2025 Hotel Mistral. Alle Rechte vorbehalten.",
       "tagline": "Ein familiengeführtes Hotel seit 1990."
     },
     "meta": {
@@ -1201,7 +1267,27 @@ const translations =
       "cta_from_price": "Desde €65",
       "cta_best_price": "MEJOR PRECIO GARANTIZADO",
       "cta_free_parking": "Aparcamiento Gratis",
-      "cta_no_prepayment": "Sin prepago"
+      "cta_no_prepayment": "Sin prepago",
+      "exp_label": "La Estancia",
+      "exp_title": "Mañanas lentas,\ndías abiertos.",
+      "exp_p1": "El desayuno se sirve en la terraza, llena de luz natural y productos locales frescos. Pan fresco de la panadería, quesos locales, frutas de temporada y café italiano de verdad.",
+      "exp_p2": "Desde allí, el día es tuyo. La playa está a diez minutos andando, el casco antiguo a ocho minutos en coche, o simplemente disfruta del jardín y de una silla a la sombra.",
+      "exp_services": "Servicios Incluidos",
+      "srv_wifi": "WiFi Gratuito",
+      "srv_parking": "Aparcamiento Privado",
+      "srv_ac": "Aire Acondicionado",
+      "srv_bar": "Bar (7:00 – 23:00)",
+      "hero_parking": "Aparcamiento gratuito",
+      "best_price": "Mejor precio garantizado",
+      "no_prepayment": "Sin pago anticipado",
+      "hero_caption": "Exterior al atardecer",
+      "stats_rooms": "Habitaciones",
+      "stats_stars": "Estrellas",
+      "stats_years": "Años",
+      "room_badge_last": "Últimas habitaciones disponibles",
+      "room_badge_good": "Buena elección",
+      "room_view_all": "Ver todas las habitaciones",
+      "cta_desc": "Mantenemos nuestras mejores tarifas en Booking.com. Comprueba disponibilidad, lee más reseñas y reserva tu habitación en Alghero directamente."
     },
     "calendar": {
       "label": "Reservas",
@@ -1214,8 +1300,8 @@ const translations =
       "nights_singular": "noche",
       "clear": "Borrar",
       "cta_title": "Continuar con la reserva",
-      "booking_cta": "Consultar disponibilidad en Booking.com",
-      "whatsapp_cta": "Contactar por WhatsApp"
+      "booking_cta": "Reservar en Booking.com",
+      "whatsapp_cta": "Reservar por WhatsApp"
     },
     "rooms": {
       "header_label": "Alojamiento",
@@ -1454,8 +1540,10 @@ const translations =
       "desc": "Un hotel de 3 estrellas familiar en Alghero, Cerdeña. 25 habitaciones, un jardín, y cinco minutos a pie de la playa de Maria Pia.",
       "explore": "Explorar",
       "contact": "Contacto",
+      "booking": "Reservas",
       "book": "Reservar en Booking.com →",
-      "copyright": "© 2024 Hotel Mistral. Todos los derechos reservados.",
+      "book_link": "Reservar en Booking.com →",
+      "copyright": "© 2025 Hotel Mistral. Todos los derechos reservados.",
       "tagline": "Un hotel familiar desde 1990."
     },
     "meta": {

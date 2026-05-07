@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -29,14 +29,11 @@
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </div>
     <div class="nav-actions">
-      <div class="lang-switcher hidden-mobile">
-        <button class="lang-btn" data-lang="it" onclick="setLanguage('it')">IT</button>
-        <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
-        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
-        <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
-        <button class="lang-btn" data-lang="de" onclick="setLanguage('de')">DE</button>
-        <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
-        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+      <div class="lang-switcher hidden-mobile" aria-label="Seleziona lingua">
+        <button class="lang-btn active" data-lang="it" onclick="setLanguage('it')" title="Italiano"><span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span></button>
+        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')" title="English"><span class="lang-flag">🇬🇧</span><span class="lang-code">EN</span></button>
+        <button class="lang-btn" data-lang="de" onclick="setLanguage('de')" title="Deutsch"><span class="lang-flag">🇩🇪</span><span class="lang-code">DE</span></button>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')" title="Español"><span class="lang-flag">🇪🇸</span><span class="lang-code">ES</span></button>
       </div>
       <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" class="nav-cta hidden-mobile" data-i18n="nav.book_now">Check Availability</a>
       <button class="menu-btn mobile-only" onclick="document.querySelector('.mobile-menu').classList.add('active'); document.body.style.overflow='hidden';">
@@ -56,14 +53,11 @@
     <a href="about.html" data-i18n="nav.about">About</a>
     <a href="location.html" data-i18n="nav.location">Location</a>
     <a href="contact.html" data-i18n="nav.contact">Contact</a>
-    <div class="lang-switcher" style="margin-top:24px">
-      <button class="lang-btn" data-lang="it" onclick="setLanguage('it')">IT</button>
-      <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
-      <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
-      <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
-      <button class="lang-btn" data-lang="de" onclick="setLanguage('de')">DE</button>
-      <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
-      <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+    <div class="lang-switcher" style="margin-top:24px" aria-label="Seleziona lingua">
+      <button class="lang-btn active" data-lang="it" onclick="setLanguage('it')" title="Italiano"><span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span></button>
+      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')" title="English"><span class="lang-flag">🇬🇧</span><span class="lang-code">EN</span></button>
+      <button class="lang-btn" data-lang="de" onclick="setLanguage('de')" title="Deutsch"><span class="lang-flag">🇩🇪</span><span class="lang-code">DE</span></button>
+      <button class="lang-btn" data-lang="es" onclick="setLanguage('es')" title="Español"><span class="lang-flag">🇪🇸</span><span class="lang-code">ES</span></button>
     </div>
     <a class="btn btn-primary btn-arrow" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" style="margin-top:24px" data-i18n="nav.book_now">Book Now</a>
   </div>
@@ -163,7 +157,7 @@
             <span data-i18n="home.room_adults_2">2 Adults</span> · 14m² · <span data-i18n="home.room_bed_queen">Queen Bed</span>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:16px">
-            <div class="from"><span data-i18n="home.room_from">From</span> <b>€85</b> <span style="font-size:13px;color:var(--grigio)">/notte</span></div>
+            <div class="from"><span data-i18n="home.room_from">From</span> <b>€85</b> <span style="font-size:13px;color:var(--grigio)" data-i18n="calendar.nights_singular">notte</span></div>
             <span class="btn-arrow" style="font-size:14px" data-i18n="home.room_view_cta">Details</span>
           </div>
         </div>
@@ -180,7 +174,7 @@
             <span data-i18n="home.room_adults_1">1 Adult</span> · 9m² · <span data-i18n="home.room_bed_single">Single Bed</span>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:16px">
-            <div class="from"><span data-i18n="home.room_from">From</span> <b>€65</b> <span style="font-size:13px;color:var(--grigio)">/notte</span></div>
+            <div class="from"><span data-i18n="home.room_from">From</span> <b>€65</b> <span style="font-size:13px;color:var(--grigio)" data-i18n="calendar.nights_singular">notte</span></div>
             <span class="btn-arrow" style="font-size:14px" data-i18n="home.room_view_cta">Details</span>
           </div>
         </div>
@@ -200,7 +194,7 @@
             <span data-i18n="home.room_adults_2">2 Adults</span> · 13m² · <span data-i18n="home.room_beds_twin">Twin Beds</span>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:16px">
-            <div class="from"><span data-i18n="home.room_from">From</span> <b>€80</b> <span style="font-size:13px;color:var(--grigio)">/notte</span></div>
+            <div class="from"><span data-i18n="home.room_from">From</span> <b>€80</b> <span style="font-size:13px;color:var(--grigio)" data-i18n="calendar.nights_singular">notte</span></div>
             <span class="btn-arrow" style="font-size:14px" data-i18n="home.room_view_cta">Details</span>
           </div>
         </div>
@@ -216,19 +210,19 @@
           <img src="images/565534690.jpg" alt="Breakfast pastries" style="width:100%;height:100%;object-fit:cover" />
         </div>
         <div class="exp-text reveal reveal-delay-1">
-          <div class="section-num">— 03 / <span data-i18n="home.exp_label">The Stay</span></div>
-          <h2 class="h-large serif" style="margin-top:16px;margin-bottom:32px" data-i18n="home.exp_title" data-i18n-html="">
-            Slow mornings,<br/><span class="italic">open days.</span>
+          <div class="section-num">— 03 / <span data-i18n="home.experience_label">La Permanenza</span></div>
+          <h2 class="h-large serif" style="margin-top:16px;margin-bottom:40px" data-i18n="home.experience_title" data-i18n-html="">
+            Mattine lente,<br/><span class="italic">giorni aperti.</span>
           </h2>
-          <p data-i18n="home.exp_p1">
-            Breakfast is served in the veranda, filled with natural light and fresh local products. Fresh bread from the bakery downstairs, local cheeses, seasonal fruits, and real Italian coffee.
+          <p data-i18n="home.experience_p1">
+            La colazione è servita nella veranda, inondata di luce naturale e prodotti locali freschi. Pane fresco dalla panetteria, formaggi locali, frutta di stagione e vero caffè italiano.
           </p>
-          <p data-i18n="home.exp_p2">
-            From there, the day is yours. The beach is a ten-minute walk away, the historical center is eight minutes by car, or you can simply enjoy the garden and a chair in the shade.
+          <p data-i18n="home.experience_p2">
+            Da lì, la giornata è vostra. La spiaggia è a dieci minuti a piedi, il centro storico è a otto minuti in auto, oppure godetevi il giardino e una sedia all'ombra.
           </p>
 
           <div style="margin-top:48px">
-            <div class="tiny muted" style="margin-bottom:20px" data-i18n="home.exp_services">Included Services</div>
+            <div class="tiny muted" style="margin-bottom:20px" data-i18n="home.exp_services">Servizi Inclusi</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 32px">
               
               <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:8px;border-bottom:1px solid var(--beige-scuro)">
@@ -294,9 +288,15 @@
         </div>
 
         <div class="calendar-cta-wrap" id="calendar-cta-wrap">
-          <div class="calendar-cta-title" data-i18n="calendar.cta_title">Continua la prenotazione</div>
-          <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" class="btn btn-primary btn-arrow calendar-cta-primary" data-i18n="calendar.booking_cta">Check availability on Booking</a>
-          <a href="#" target="_blank" class="btn btn-ghost calendar-cta-secondary" id="whatsapp-cta" data-i18n="calendar.whatsapp_cta">Contact on WhatsApp</a>
+          <div class="calendar-cta-subtitle" data-i18n="calendar.cta_title">Continua la prenotazione</div>
+          <div class="calendar-cta-title" id="calendar-cta-summary" style="margin-bottom:4px"></div>
+          <div class="calendar-cta-buttons">
+            <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" class="btn btn-primary btn-arrow calendar-cta-primary" data-i18n="calendar.booking_cta">Prenota su Booking.com</a>
+            <a href="#" target="_blank" class="btn-whatsapp" id="whatsapp-cta" data-i18n="calendar.whatsapp_cta">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Prenota su WhatsApp
+            </a>
+          </div>
           <div class="calendar-whatsapp-num">WhatsApp: +39 347 247 9796</div>
         </div>
       </div>
@@ -310,16 +310,16 @@
       <h2 class="h-large serif" style="margin-top:24px" data-i18n="home.cta_title">
         Ready to slow down?
       </h2>
-      <p style="margin-top:16px;color:var(--grigio-chiaro);max-width:50ch;margin-left:auto;margin-right:auto" data-i18n="home.cta_desc">
-        We keep our best rates on Booking.com. Check availability, read more reviews, and reserve your room in Alghero directly.
+      <p style="margin-top:20px;color:var(--grigio-chiaro);max-width:52ch;margin-left:auto;margin-right:auto;font-size:17px;line-height:1.75" data-i18n="home.cta_p">
+        Manteniamo le nostre migliori tariffe su Booking.com. Verifica disponibilità, leggi altre recensioni, e prenota la tua camera ad Alghero direttamente.
       </p>
-      
-      <div class="meta" style="color:var(--grigio-chiaro);border-color:var(--grigio);margin-top:32px">
-        <b style="font-family:'var(--serif)';font-size:24px;color:var(--bianco)">From €65</b>
-        <span style="margin:0 16px">·</span>
-        Free Parking
-        <span style="margin:0 16px">·</span>
-        No Prepayment
+
+      <div class="meta" style="color:var(--grigio-chiaro);border-color:var(--grigio);margin-top:40px;font-size:15px">
+        <b style="font-family:var(--serif);font-size:26px;color:var(--bianco)" data-i18n="home.cta_from_price">Da €65</b>
+        <span style="margin:0 16px;opacity:0.4">·</span>
+        <span data-i18n="home.cta_free_parking">Parcheggio Gratuito</span>
+        <span style="margin:0 16px;opacity:0.4">·</span>
+        <span data-i18n="home.cta_no_prepayment">Nessun pagamento anticipato</span>
       </div>
 
       <div style="margin-top:40px">
@@ -363,14 +363,14 @@
           </ul>
         </div>
         <div>
-          <h4 data-i18n="footer.booking">Booking</h4>
+          <h4 data-i18n="footer.booking">Prenotazioni</h4>
           <ul>
-            <li><a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" data-i18n="footer.book_link">Book on Booking.com →</a></li>
+            <li><a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" data-i18n="footer.book">Prenota su Booking.com →</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span data-i18n="footer.copyright">© 2024 Hotel Mistral. All rights reserved.</span>
+        <span data-i18n="footer.copyright">© 2025 Hotel Mistral. Tutti i diritti riservati.</span>
         <span data-i18n="footer.tagline">A family-run hotel since 1990.</span>
       </div>
     </div>

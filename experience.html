@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -29,14 +29,11 @@
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </div>
     <div class="nav-actions">
-      <div class="lang-switcher hidden-mobile">
-        <button class="lang-btn" data-lang="it" onclick="setLanguage('it')">IT</button>
-        <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
-        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
-        <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
-        <button class="lang-btn" data-lang="de" onclick="setLanguage('de')">DE</button>
-        <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
-        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+      <div class="lang-switcher hidden-mobile" aria-label="Seleziona lingua">
+        <button class="lang-btn active" data-lang="it" onclick="setLanguage('it')" title="Italiano"><span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span></button>
+        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')" title="English"><span class="lang-flag">🇬🇧</span><span class="lang-code">EN</span></button>
+        <button class="lang-btn" data-lang="de" onclick="setLanguage('de')" title="Deutsch"><span class="lang-flag">🇩🇪</span><span class="lang-code">DE</span></button>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')" title="Español"><span class="lang-flag">🇪🇸</span><span class="lang-code">ES</span></button>
       </div>
       <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" class="nav-cta hidden-mobile" data-i18n="nav.book_now">Check Availability</a>
       <button class="menu-btn mobile-only" onclick="document.querySelector('.mobile-menu').classList.add('active'); document.body.style.overflow='hidden';">
@@ -56,14 +53,11 @@
     <a href="about.html" data-i18n="nav.about">About</a>
     <a href="location.html" data-i18n="nav.location">Location</a>
     <a href="contact.html" data-i18n="nav.contact">Contact</a>
-    <div class="lang-switcher" style="margin-top:24px">
-      <button class="lang-btn" data-lang="it" onclick="setLanguage('it')">IT</button>
-      <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
-      <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
-      <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
-      <button class="lang-btn" data-lang="de" onclick="setLanguage('de')">DE</button>
-      <span style="color:var(--grigio);opacity:0.3;font-size:10px">/</span>
-      <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+    <div class="lang-switcher" style="margin-top:24px" aria-label="Seleziona lingua">
+      <button class="lang-btn active" data-lang="it" onclick="setLanguage('it')" title="Italiano"><span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span></button>
+      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')" title="English"><span class="lang-flag">🇬🇧</span><span class="lang-code">EN</span></button>
+      <button class="lang-btn" data-lang="de" onclick="setLanguage('de')" title="Deutsch"><span class="lang-flag">🇩🇪</span><span class="lang-code">DE</span></button>
+      <button class="lang-btn" data-lang="es" onclick="setLanguage('es')" title="Español"><span class="lang-flag">🇪🇸</span><span class="lang-code">ES</span></button>
     </div>
     <a class="btn btn-primary btn-arrow" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" style="margin-top:24px" data-i18n="nav.book_now">Book Now</a>
   </div>
@@ -196,12 +190,12 @@
         <div>
           <h4 data-i18n="footer.booking">Booking</h4>
           <ul>
-            <li><a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" data-i18n="footer.book_link">Book on Booking.com →</a></li>
+            <li><a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" data-i18n="footer.book">Book on Booking.com →</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span data-i18n="footer.copyright">© 2024 Hotel Mistral. All rights reserved.</span>
+        <span data-i18n="footer.copyright">© 2025 Hotel Mistral. Tutti i diritti riservati.</span>
         <span data-i18n="footer.tagline">A family-run hotel since 1990.</span>
       </div>
     </div>

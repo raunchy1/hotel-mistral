@@ -26,7 +26,7 @@
   }
 
   function getCurrentLang() {
-    return getSavedLang() || getBrowserLang() || DEFAULT_LANG;
+    return getSavedLang() || DEFAULT_LANG;
   }
 
   window.currentLang = getCurrentLang();
