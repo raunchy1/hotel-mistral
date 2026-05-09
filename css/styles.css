@@ -521,6 +521,13 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015
   transition: background 200ms ease;
 }
 .nav-cta:hover { background: var(--inchiostro); }
+.menu-btn {
+  background: none; border: none; cursor: pointer;
+  padding: 8px; display: flex; align-items: center; justify-content: center;
+  color: var(--antracite);
+}
+.menu-btn .material-symbols-outlined { font-size: 28px; }
+.nav-actions { flex-shrink: 0; }
 
 @media (max-width: 720px) {
   .nav-links { display: none; }
@@ -989,6 +996,14 @@ image-slot {
   background: var(--antracite); color: var(--bianco);
   width: 48px; height: 48px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
+}
+
+/* Responsive visibility utilities */
+.mobile-only { display: none !important; }
+
+@media (max-width: 860px) {
+  .hidden-mobile { display: none !important; }
+  .mobile-only { display: flex !important; }
 }
 
 /* Custom scrollbar */
