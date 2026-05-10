@@ -12,7 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
   <link href="css/styles.css" rel="stylesheet"/>
 </head>
-<body class="page" data-page="experience">
+<body data-page="experience">
+  <div class="page">
 
   <!-- Nav -->
   <nav class="nav" id="main-nav">
@@ -36,16 +37,16 @@
         <button class="lang-btn" data-lang="es" onclick="setLanguage('es')" title="Español"><span class="lang-flag">🇪🇸</span><span class="lang-code">ES</span></button>
       </div>
       <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" class="nav-cta hidden-mobile" data-i18n="nav.book_now">Check Availability</a>
-      <button class="menu-btn mobile-only" onclick="document.querySelector('.mobile-menu').classList.add('active'); document.body.style.overflow='hidden';">
-        <span class="material-symbols-outlined">menu</span>
+      <button class="menu-btn mobile-only" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
     </div>
   </nav>
 
   <!-- Mobile Menu -->
   <div class="mobile-menu">
-    <button style="position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;" onclick="document.querySelector('.mobile-menu').classList.remove('active'); document.body.style.overflow='';">
-      <span class="material-symbols-outlined" style="font-size:32px;color:var(--antracite)">close</span>
+    <button class="menu-close" aria-label="Close menu" style="position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;color:var(--antracite);">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
     <a href="index.html" data-i18n="nav.home">Hotel</a>
     <a href="rooms.html" data-i18n="nav.rooms">Rooms</a>
@@ -66,10 +67,10 @@
     <div class="container reveal">
       <div class="section-num" data-i18n="exp.page_label">The Experience</div>
       <h1 class="h-large serif" style="margin-top:16px" data-i18n="exp.page_title" data-i18n-html="">
-        The art of doing <span class="italic">very little.</span>
+        The art of doing <span class="italic">absolutely nothing.</span>
       </h1>
       <p style="margin-top:20px;max-width:50ch;color:var(--grigio)" data-i18n="exp.page_desc">
-        A stay at Hotel Mistral is deliberately simple. We provide the setting—a quiet garden, a comfortable bed, a generous breakfast—and you set the pace.
+        Some hotels sell you activities. We sell you permission to pause. A garden that doesn't care about your inbox. A breakfast that refuses to rush. And a bar that understands aperitivo is a state of mind, not a time slot.
       </p>
     </div>
   </section>
@@ -86,15 +87,20 @@
         </div>
         <div class="intro-body reveal reveal-delay-1">
           <p class="serif" data-i18n="exp.bf_p1">
-            Our breakfast is served in the bright, glass-enclosed veranda overlooking the garden. We believe a good day starts with good food, prepared simply.
+            Breakfast is not a meal here. It is a slow ceremony of good decisions. Fresh croissants from the bakery across the street. Sardinian pecorino sliced thick enough to taste the hills. Figs in August, blood oranges in winter. And espresso made by someone who knows your face by day three.
           </p>
           <p data-i18n="exp.bf_p2">
-            The buffet features fresh pastries from the local bakery, traditional Sardinian sweets, cold cuts, cheeses, yogurt, and fresh fruit. The coffee is real Italian espresso, made to order at the bar.
+            Eat in the glass veranda overlooking the garden, or take your plate outside under the parasol. There is no checkout time for the breakfast table. The only rule is: go back for more if you want to.
           </p>
           
-          <div style="margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <div style="margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
             <img src="images/565534690.jpg" alt="Breakfast pastries" style="width:100%;height:300px;object-fit:cover" />
             <img src="images/565534742.jpg" alt="Buffet spread" style="width:100%;height:300px;object-fit:cover" />
+          </div>
+          <div class="photo-grid three" style="margin-top:16px">
+            <div class="img-wrap img-rounded"><img src="images/565534573.jpg" alt="Cold cuts and cheese station" style="height:260px" /></div>
+            <div class="img-wrap img-rounded"><img src="images/565534660.jpg" alt="Cereal and muesli station" style="height:260px" /></div>
+            <div class="img-wrap img-rounded"><img src="images/565534715.jpg" alt="Ring cake and pastries" style="height:260px" /></div>
           </div>
         </div>
       </div>
@@ -114,14 +120,15 @@
             A drink in<br/><span class="italic">the shade.</span>
           </h2>
           <p data-i18n="exp.bar_p1">
-            The hotel bar is open from 7 AM until 11 PM. It's a quiet place to retreat from the midday sun, read a book, or enjoy an aperitivo before heading into town for dinner.
+            Our bar opens at 7 AM when the first guests wander down for espresso, and closes at 11 PM when the last aperitivo glass is emptied. In between, it is whatever you need it to be — a refuge from the midday sun, a reading nook, or the starting point for an evening in Alghero's old town.
           </p>
           <p data-i18n="exp.bar_p2">
-            Take your drink to the garden terrace, or if the evening is cool, retreat to the lounge where our billiard table is always available for guests.
+            Take your drink to the garden terrace under the stars, or challenge someone to a slow game of billiard in the lounge. The table is always ready. The cues are always straight. And the conversation is always better after the second round.
           </p>
 
-          <div style="margin-top:32px">
-            <img src="images/554113145.jpg" alt="Billiard table" style="width:100%;height:240px;object-fit:cover" />
+          <div style="margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <img src="images/554112353.jpg" alt="Billiard room" style="width:100%;height:260px;object-fit:cover" />
+            <img src="images/554113145.jpg" alt="Billiard table" style="width:100%;height:260px;object-fit:cover" />
           </div>
         </div>
       </div>
@@ -200,6 +207,15 @@
       </div>
     </div>
   </footer>
+</div>
+
+
+  <!-- WhatsApp Floating CTA -->
+  <a href="https://wa.me/393472479796?text=Hello,%20I%20would%20like%20to%20check%20availability%20at%20Hotel%20Mistral." target="_blank" class="whatsapp-float" aria-label="Book on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span class="whatsapp-float-text">Book on WhatsApp</span>
+    <span class="whatsapp-float-num">+39 347 247 9796</span>
+  </a>
 
   <script src="js/translations.js?v=3"></script>
   <script src="js/i18n.js?v=3"></script>

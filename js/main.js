@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // Elements
-  const header = document.querySelector('header');
+  const header = document.querySelector('.nav');
   const mobileMenu = document.querySelector('.mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-menu a');
 
@@ -25,15 +25,46 @@ document.addEventListener('DOMContentLoaded', () => {
   handleNavScroll();
 
   // ============================================
-  // MOBILE MENU — close on link click
+  // MOBILE MENU — robust open/close handlers
   // ============================================
+  const menuBtn = document.querySelector('.menu-btn');
+  const menuCloseBtn = document.querySelector('.menu-close');
+
+  function openMobileMenu() {
+    if (mobileMenu) {
+      mobileMenu.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+  function closeMobileMenu() {
+    if (mobileMenu) {
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (menuBtn) {
+    menuBtn.addEventListener('click', openMobileMenu);
+  }
+  if (menuCloseBtn) {
+    menuCloseBtn.addEventListener('click', closeMobileMenu);
+  }
+
+  // Close on link click
   mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (mobileMenu) {
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = '';
-      }
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // Close on backdrop click
+  if (mobileMenu) {
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) closeMobileMenu();
     });
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMobileMenu();
   });
 
   // ============================================
