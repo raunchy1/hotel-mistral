@@ -1307,6 +1307,10 @@ image-slot {
   text-align: center;
 }
 .mobile-menu a:hover, .mobile-menu a:active { color: var(--mare); }
+/* Keep btn colors inside mobile menu — otherwise primary CTA goes dark-on-dark */
+.mobile-menu a.btn-primary,
+.mobile-menu a.btn.btn-primary { color: var(--bianco); font-family: var(--sans); font-size: 14px; }
+.mobile-menu a.btn-primary:hover { color: var(--bianco); }
 
 /* Language Switcher — flag-based (legacy flat row, used in mobile menu) */
 .lang-switcher { display: flex; align-items: center; gap: 2px; }
