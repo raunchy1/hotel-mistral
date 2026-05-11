@@ -6,6 +6,8 @@
   <title data-i18n="meta.site_name">Hotel Mistral — A Quiet Corner of Alghero</title>
   <meta name="description" data-i18n="meta.home_desc" content="Hotel Mistral is a family-run 3-star hotel in Alghero, Sardinia. 25 rooms, garden, breakfast veranda, and a five-minute walk to Maria Pia Beach."/>
   
+  <link rel="icon" type="image/png" sizes="196x196" href="images/favicon-196x196.png"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30..100;1,9..144,300..700,30..100&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet"/>
@@ -16,9 +18,12 @@
 
   <!-- Nav -->
   <nav class="nav" id="main-nav">
-    <a href="index.html" class="nav-brand" data-i18n="location.address_name">
-      Mistral
-      <small>Alghero</small>
+    <a href="index.html" class="nav-brand" aria-label="Hotel Mistral Alghero">
+      <img src="images/logo.png" alt="" class="nav-logo" width="40" height="40"/>
+      <span class="nav-brand-text">
+        <span class="nav-brand-name">Mistral</span>
+        <small>Alghero</small>
+      </span>
     </a>
     <div class="nav-links hidden-mobile">
       <a href="index.html" class="active" data-i18n="nav.home">Hotel</a>
@@ -75,7 +80,7 @@
           <div class="hero-meta">
             <span class="price-line">
               <span class="price-from" data-i18n="home.hero_starting_from">From</span>
-              <span class="price-num">€65</span>
+              <span class="price-num">€42</span>
               <span class="price-night" data-i18n="home.hero_price">/ night</span>
             </span>
             <span data-i18n="home.hero_beach_distance">300m from beach</span>
@@ -96,7 +101,7 @@
         </div>
 
         <div class="hero-image reveal reveal-delay-1">
-          <img src="images/111886637.jpg" alt="Hotel Mistral exterior" style="width:100%;height:100%;object-fit:cover" />
+          <img src="images/hotel-exterior-night.jpg" alt="Hotel Mistral, ingresso al tramonto" style="width:100%;height:100%;object-fit:cover" />
           <div class="hero-caption" data-i18n="home.hero_caption">Exterior at dusk</div>
         </div>
       </div>
@@ -122,8 +127,8 @@
           </p>
           
           <div style="margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
-            <img src="images/554112384.jpg" alt="Hotel Mistral terrace" style="width:100%;height:380px;object-fit:cover" />
-            <img src="images/554113139.jpg" alt="Hotel Mistral front patio" style="width:100%;height:380px;object-fit:cover" />
+            <img src="images/hotel-garden.jpg" alt="Il giardino dell'Hotel Mistral" style="width:100%;height:380px;object-fit:cover" />
+            <img src="images/hotel-entrance.jpg" alt="L'ingresso dell'Hotel Mistral" style="width:100%;height:380px;object-fit:cover" />
           </div>
 
           <div class="stats-strip">
@@ -153,7 +158,7 @@
         <!-- Room 1 -->
         <a class="room-card reveal" href="rooms.html#double">
           <div class="img-wrap">
-            <img src="images/861583205.jpg" alt="Double Room" style="width:100%;height:100%;object-fit:cover" />
+            <img src="images/room-double-01.jpg" alt="Camera matrimoniale con balcone" style="width:100%;height:100%;object-fit:cover" />
           </div>
           <div style="margin-bottom:8px">
             <span class="tag-scarce">● <span data-i18n="home.room_badge_last">Last rooms available</span></span>
@@ -165,7 +170,7 @@
             <span data-i18n="home.room_adults_2">2 Adults</span> · 14m² · <span data-i18n="home.room_bed_queen">Queen Bed</span>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:16px">
-            <div class="from"><span data-i18n="home.room_from">From</span> <b>€85</b> <span style="font-size:13px;color:var(--grigio)" data-i18n="calendar.nights_singular">notte</span></div>
+            <div class="from"><span data-i18n="home.room_from">From</span> <b>€68</b> <span style="font-size:13px;color:var(--grigio)" data-i18n="calendar.nights_singular">notte</span></div>
             <span class="btn-arrow" style="font-size:14px" data-i18n="home.room_view_cta">Details</span>
           </div>
         </a>
@@ -173,7 +178,7 @@
         <!-- Room 2 -->
         <a class="room-card reveal reveal-delay-1" href="rooms.html#single">
           <div class="img-wrap">
-            <img src="images/861584336.jpg" alt="Single Room" style="width:100%;height:100%;object-fit:cover" />
+            <img src="images/room-twin-01.jpg" alt="Camera doppia con due letti singoli" style="width:100%;height:100%;object-fit:cover" />
           </div>
           <div class="meta-line">
             <h3 class="serif" data-i18n="home.room_single_name">Single Room with Balcony</h3>
@@ -182,7 +187,7 @@
             <span data-i18n="home.room_adults_1">1 Adult</span> · 9m² · <span data-i18n="home.room_bed_single">Single Bed</span>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:16px">
-            <div class="from"><span data-i18n="home.room_from">From</span> <b>€65</b> <span style="font-size:13px;color:var(--grigio)" data-i18n="calendar.nights_singular">notte</span></div>
+            <div class="from"><span data-i18n="home.room_from">From</span> <b>€42</b> <span style="font-size:13px;color:var(--grigio)" data-i18n="calendar.nights_singular">notte</span></div>
             <span class="btn-arrow" style="font-size:14px" data-i18n="home.room_view_cta">Details</span>
           </div>
         </a>
@@ -190,7 +195,7 @@
         <!-- Room 3 -->
         <a class="room-card reveal reveal-delay-2" href="rooms.html#twin">
           <div class="img-wrap">
-            <img src="images/861583258.jpg" alt="Twin Room" style="width:100%;height:100%;object-fit:cover" />
+            <img src="images/room-double-02.jpg" alt="Camera matrimoniale - dettaglio" style="width:100%;height:100%;object-fit:cover" />
           </div>
           <div style="margin-bottom:8px">
             <span class="tag-good">● <span data-i18n="home.room_badge_good">Good choice</span></span>
@@ -202,7 +207,7 @@
             <span data-i18n="home.room_adults_2">2 Adults</span> · 13m² · <span data-i18n="home.room_beds_twin">Twin Beds</span>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:16px">
-            <div class="from"><span data-i18n="home.room_from">From</span> <b>€80</b> <span style="font-size:13px;color:var(--grigio)" data-i18n="calendar.nights_singular">notte</span></div>
+            <div class="from"><span data-i18n="home.room_from">From</span> <b>€58</b> <span style="font-size:13px;color:var(--grigio)" data-i18n="calendar.nights_singular">notte</span></div>
             <span class="btn-arrow" style="font-size:14px" data-i18n="home.room_view_cta">Details</span>
           </div>
         </a>
@@ -215,7 +220,7 @@
     <div class="container">
       <div class="exp-grid">
         <div class="exp-image reveal">
-          <img src="images/565534690.jpg" alt="Breakfast pastries" style="width:100%;height:100%;object-fit:cover" />
+          <img src="images/hotel-breakfast.jpg" alt="Sala colazioni con veranda vetrata" style="width:100%;height:100%;object-fit:cover" />
         </div>
         <div class="exp-text reveal reveal-delay-1">
           <div class="section-num">— 03 / <span data-i18n="home.experience_label">La Permanenza</span></div>
@@ -229,23 +234,21 @@
             Then the day is yours. Rent a bike and follow the coast. Explore Alghero's old town at sunset. Or simply stay put — the billiard room is open, the garden chairs are never all taken, and the bar serves cold drinks until 11 PM.
           </p>
 
-          <div style="margin-top:48px">
-            <div class="tiny muted" style="margin-bottom:20px" data-i18n="home.exp_services">Servizi Inclusi</div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 32px">
-              
-              <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:8px;border-bottom:1px solid var(--beige-scuro)">
-                <span style="font-size:14px" data-i18n="home.srv_wifi">Free WiFi</span>
-              </div>
-              <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:8px;border-bottom:1px solid var(--beige-scuro)">
-                <span style="font-size:14px" data-i18n="home.srv_parking">Private Parking</span>
-              </div>
-              <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:8px;border-bottom:1px solid var(--beige-scuro)">
-                <span style="font-size:14px" data-i18n="home.srv_ac">Air Conditioning</span>
-              </div>
-              <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:8px;border-bottom:1px solid var(--beige-scuro)">
-                <span style="font-size:14px" data-i18n="home.srv_bar">Bar (7am-11pm)</span>
-              </div>
-
+          <div style="margin-top:56px">
+            <div class="tiny muted" style="margin-bottom:24px" data-i18n="home.exp_services">Servizi Inclusi</div>
+            <div class="services-grid">
+              <div class="srv-item"><span data-i18n="home.srv_wifi">WiFi Gratuito</span></div>
+              <div class="srv-item"><span data-i18n="home.srv_parking">Parcheggio Privato</span></div>
+              <div class="srv-item"><span data-i18n="home.srv_ac">Aria Condizionata</span></div>
+              <div class="srv-item"><span data-i18n="home.srv_bar">Bar 7:00 — 22:30</span></div>
+              <div class="srv-item"><span data-i18n="home.srv_breakfast">Colazione a Buffet</span></div>
+              <div class="srv-item"><span data-i18n="home.srv_garden">Giardino Privato</span></div>
+              <div class="srv-item"><span data-i18n="home.srv_billiard">Sala Biliardo</span></div>
+              <div class="srv-item"><span data-i18n="home.srv_key">Chiave Magnetica H24</span></div>
+              <div class="srv-item"><span data-i18n="home.srv_pets">Animali Ammessi</span></div>
+              <div class="srv-item"><span data-i18n="home.srv_beach">Spiaggia Convenzionata</span></div>
+              <div class="srv-item"><span data-i18n="home.srv_bike">Noleggio Bici</span></div>
+              <div class="srv-item"><span data-i18n="home.srv_accessibility">Accessibilità</span></div>
             </div>
           </div>
         </div>
@@ -323,7 +326,7 @@
       </p>
 
       <div class="meta" style="color:var(--grigio-chiaro);border-color:var(--grigio);margin-top:40px;font-size:15px">
-        <b style="font-family:var(--serif);font-size:26px;color:var(--bianco)" data-i18n="home.cta_from_price">Da €65</b>
+        <b style="font-family:var(--serif);font-size:26px;color:var(--bianco);font-weight:350" data-i18n="home.cta_from_price">Da €42</b>
         <span style="margin:0 16px;opacity:0.4">·</span>
         <span data-i18n="home.cta_free_parking">Parcheggio Gratuito</span>
         <span style="margin:0 16px;opacity:0.4">·</span>

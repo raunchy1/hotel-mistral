@@ -6,6 +6,8 @@
   <title data-i18n="meta.contact_title">Contact — Hotel Mistral Alghero</title>
   <meta name="description" data-i18n="meta.contact_desc" content="Get in touch with Hotel Mistral in Alghero. We are here to answer your questions and help you plan your stay in Sardinia."/>
   
+  <link rel="icon" type="image/png" sizes="196x196" href="images/favicon-196x196.png"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30..100;1,9..144,300..700,30..100&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet"/>
@@ -16,9 +18,12 @@
 
   <!-- Nav -->
   <nav class="nav" id="main-nav">
-    <a href="index.html" class="nav-brand" data-i18n="location.address_name">
-      Mistral
-      <small>Alghero</small>
+    <a href="index.html" class="nav-brand" aria-label="Hotel Mistral Alghero">
+      <img src="images/logo.png" alt="" class="nav-logo" width="40" height="40"/>
+      <span class="nav-brand-text">
+        <span class="nav-brand-name">Mistral</span>
+        <small>Alghero</small>
+      </span>
     </a>
     <div class="nav-links hidden-mobile">
       <a href="index.html" data-i18n="nav.home">Hotel</a>
@@ -81,7 +86,7 @@
         
         <div>
           <div style="margin-bottom:32px">
-            <img src="images/554113139.jpg" alt="Hotel Mistral entrance patio" style="width:100%;height:280px;object-fit:cover" />
+            <img src="images/hotel-entrance.jpg" alt="L'ingresso dell'Hotel Mistral" style="width:100%;height:280px;object-fit:cover" />
           </div>
           <div class="section-num">— 01 / <span data-i18n="contact.info_label">Information</span></div>
           <h2 class="h-medium serif" style="margin-top:24px;margin-bottom:32px" data-i18n="contact.info_title">

@@ -6,6 +6,8 @@
   <title data-i18n="meta.location_title">Location — Hotel Mistral Alghero</title>
   <meta name="description" data-i18n="meta.location_desc" content="Hotel Mistral is located a short walk from Maria Pia Beach and a quick drive from Alghero's historic center. See our location on the map."/>
   
+  <link rel="icon" type="image/png" sizes="196x196" href="images/favicon-196x196.png"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30..100;1,9..144,300..700,30..100&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet"/>
@@ -16,9 +18,12 @@
 
   <!-- Nav -->
   <nav class="nav" id="main-nav">
-    <a href="index.html" class="nav-brand" data-i18n="location.address_name">
-      Mistral
-      <small>Alghero</small>
+    <a href="index.html" class="nav-brand" aria-label="Hotel Mistral Alghero">
+      <img src="images/logo.png" alt="" class="nav-logo" width="40" height="40"/>
+      <span class="nav-brand-text">
+        <span class="nav-brand-name">Mistral</span>
+        <small>Alghero</small>
+      </span>
     </a>
     <div class="nav-links hidden-mobile">
       <a href="index.html" data-i18n="nav.home">Hotel</a>
@@ -163,7 +168,7 @@
   <section class="section location-photo">
     <div class="container">
       <div class="reveal">
-        <img src="images/111886637.jpg" alt="Hotel Mistral exterior at dusk" style="width:100%;height:clamp(300px,40vw,500px);object-fit:cover" />
+        <img src="images/alghero-coast.jpg" alt="La costa di Alghero, Sardegna" style="width:100%;height:clamp(300px,40vw,500px);object-fit:cover" />
       </div>
     </div>
   </section>

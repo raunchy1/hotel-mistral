@@ -586,6 +586,27 @@ h1, h2, h3 {
   padding-top: 40px;
   border-top: 1px solid var(--beige-scuro);
 }
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 36px;
+}
+@media (min-width: 1024px) { .services-grid { grid-template-columns: 1fr 1fr 1fr; } }
+.srv-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--beige-scuro);
+  font-size: 14.5px;
+  color: var(--inchiostro);
+}
+.srv-item::before {
+  content: "—";
+  color: var(--grigio-chiaro);
+  font-family: var(--serif);
+  font-size: 14px;
+}
 .stat { display: flex; flex-direction: column; gap: 8px; }
 .stat-num {
   font-family: var(--serif);
@@ -655,24 +676,46 @@ h1, h2, h3 {
   border-bottom-color: var(--beige-scuro);
 }
 .nav-brand {
-  font-family: var(--serif);
-  font-size: 26px;
-  letter-spacing: -0.02em;
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  align-items: center;
+  gap: 14px;
+  color: var(--inchiostro);
+  text-decoration: none;
+}
+.nav-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 2px rgba(26,26,26,0.06));
+  transition: transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-brand:hover .nav-logo { transform: scale(1.04); }
+.nav-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 3px;
+}
+.nav-brand-name {
+  font-family: var(--serif);
+  font-size: 22px;
+  letter-spacing: -0.02em;
   font-weight: 400;
   font-variation-settings: "opsz" 96, "SOFT" 50;
   color: var(--inchiostro);
 }
 .nav-brand small {
-  font-size: 10px;
-  letter-spacing: 0.24em;
+  font-size: 9px;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--grigio);
   font-family: var(--sans);
   font-weight: 500;
 }
+.nav.scrolled .nav-logo { width: 34px; height: 34px; }
+.nav.scrolled .nav-brand-name { font-size: 20px; }
 .nav-links { display: flex; gap: 40px; font-size: 13px; letter-spacing: 0.04em; }
 .nav-links a {
   color: var(--antracite);
