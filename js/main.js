@@ -25,6 +25,46 @@ document.addEventListener('DOMContentLoaded', () => {
   handleNavScroll();
 
   // ============================================
+  // LANGUAGE DROPDOWN — collapsed, premium
+  // ============================================
+  const langDropdowns = document.querySelectorAll('.lang-dropdown');
+  langDropdowns.forEach(dd => {
+    const trigger = dd.querySelector('.lang-trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const opening = !dd.classList.contains('open');
+      langDropdowns.forEach(d => d.classList.remove('open'));
+      if (opening) dd.classList.add('open');
+      trigger.setAttribute('aria-expanded', String(opening));
+    });
+    dd.querySelectorAll('.lang-opt').forEach(opt => {
+      opt.addEventListener('click', () => {
+        dd.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+  document.addEventListener('click', (e) => {
+    langDropdowns.forEach(dd => {
+      if (!dd.contains(e.target)) {
+        dd.classList.remove('open');
+        const t = dd.querySelector('.lang-trigger');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      langDropdowns.forEach(dd => {
+        dd.classList.remove('open');
+        const t = dd.querySelector('.lang-trigger');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // ============================================
   // MOBILE MENU — robust open/close handlers
   // ============================================
   const menuBtn = document.querySelector('.menu-btn');
@@ -476,6 +516,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
     render();
   })();
+
+  // ============================================
+  // 3D LETTER TESTIMONIALS — tilt on hover
+  // ============================================
+  const tiltCards = document.querySelectorAll('.letter-card[data-tilt]');
+
+  tiltCards.forEach(card => {
+    let rafId = null;
+    let targetRotateX = 0;
+    let targetRotateY = 0;
+    let currentRotateX = 0;
+    let currentRotateY = 0;
+    let isHovering = false;
+
+    const depth = parseFloat(getComputedStyle(card).getPropertyValue('--depth')) || 0;
+
+    function animate() {
+      currentRotateX += (targetRotateX - currentRotateX) * 0.12;
+      currentRotateY += (targetRotateY - currentRotateY) * 0.12;
+
+      const isSettled = Math.abs(targetRotateX - currentRotateX) < 0.01 && Math.abs(targetRotateY - currentRotateY) < 0.01;
+
+      if (isSettled) {
+        currentRotateX = targetRotateX;
+        currentRotateY = targetRotateY;
+      }
+
+      const lift = isHovering ? -8 : 0;
+      card.style.transform = `perspective(800px) rotateX(${currentRotateX}deg) rotateY(${currentRotateY}deg) translateZ(${depth}) translateY(${lift}px)`;
+
+      if (!isSettled || isHovering) {
+        rafId = requestAnimationFrame(animate);
+      } else {
+        rafId = null;
+      }
+    }
+
+    card.addEventListener('mouseenter', () => {
+      isHovering = true;
+      if (!rafId) rafId = requestAnimationFrame(animate);
+    });
+
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      targetRotateY = ((x - centerX) / centerX) * 6;
+      targetRotateX = -((y - centerY) / centerY) * 6;
+
+      if (!rafId) {
+        rafId = requestAnimationFrame(animate);
+      }
+    });
+
+    card.addEventListener('mouseleave', () => {
+      isHovering = false;
+      targetRotateX = 0;
+      targetRotateY = 0;
+      if (!rafId) {
+        rafId = requestAnimationFrame(animate);
+      }
+    });
+  });
 
   // ============================================
   // HERO KEN BURNS — subtle zoom on load

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30..100;1,9..144,300..700,30..100&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet"/>
-  <link href="css/styles.css" rel="stylesheet"/>
+  <link href="css/styles.css?v=8" rel="stylesheet"/>
 </head>
 <body data-page="location">
   <div class="page">
@@ -34,13 +34,20 @@
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </div>
     <div class="nav-actions">
-      <div class="lang-switcher hidden-mobile" aria-label="Seleziona lingua">
-        <button class="lang-btn active" data-lang="it" onclick="setLanguage('it')" title="Italiano"><span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span></button>
-        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')" title="English"><span class="lang-flag">🇬🇧</span><span class="lang-code">EN</span></button>
-        <button class="lang-btn" data-lang="de" onclick="setLanguage('de')" title="Deutsch"><span class="lang-flag">🇩🇪</span><span class="lang-code">DE</span></button>
-        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')" title="Español"><span class="lang-flag">🇪🇸</span><span class="lang-code">ES</span></button>
+      <div class="lang-dropdown hidden-mobile" data-lang-switcher>
+        <button class="lang-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Seleziona lingua">
+          <span class="lang-current-flag">🇮🇹</span>
+          <span class="lang-current-code">IT</span>
+          <svg class="lang-chev" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+        </button>
+        <div class="lang-menu" role="listbox">
+          <button class="lang-opt active" data-lang="it" onclick="setLanguage('it')" role="option" aria-selected="true"><span class="lang-flag">🇮🇹</span><span class="lang-opt-name">Italiano</span><span class="lang-opt-check">✓</span></button>
+          <button class="lang-opt" data-lang="en" onclick="setLanguage('en')" role="option"><span class="lang-flag">🇬🇧</span><span class="lang-opt-name">English</span><span class="lang-opt-check">✓</span></button>
+          <button class="lang-opt" data-lang="de" onclick="setLanguage('de')" role="option"><span class="lang-flag">🇩🇪</span><span class="lang-opt-name">Deutsch</span><span class="lang-opt-check">✓</span></button>
+          <button class="lang-opt" data-lang="es" onclick="setLanguage('es')" role="option"><span class="lang-flag">🇪🇸</span><span class="lang-opt-name">Español</span><span class="lang-opt-check">✓</span></button>
+        </div>
       </div>
-      <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" class="nav-cta hidden-mobile" data-i18n="nav.book_now">Check Availability</a>
+      <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" class="nav-cta hidden-mobile" data-i18n="nav.book_now">Prenota</a>
       <button class="menu-btn mobile-only" aria-label="Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -123,7 +130,7 @@
 
             <!-- Mare -->
             <path d="M 0,0 L 0,250 Q 80,260 160,240 Q 200,230 240,250 Q 280,270 320,255 Q 360,240 400,260 L 400,0 Z" fill="#C8D5DA" opacity="0.7" />
-            <text x="40" y="80" font-family="Cormorant Garamond, serif" font-size="18" font-style="italic" fill="#6B7C85">Mar di Sardegna</text>
+            <text x="40" y="80" font-family="Cormorant Garamond, serif" font-size="18" font-style="italic" fill="#6B7C85" data-i18n="location.map_sea">Mar di Sardegna</text>
 
             <!-- Strade -->
             <path d="M 0,310 Q 100,300 200,320 Q 300,340 400,315" stroke="#D9CFBF" stroke-width="1.5" fill="none" />
@@ -132,25 +139,25 @@
 
             <!-- Spiaggia Maria Pia -->
             <circle cx="120" cy="245" r="4" fill="#8A8279" />
-            <text x="130" y="240" font-family="Inter, sans-serif" font-size="10" letter-spacing="0.1em" text-transform="uppercase" fill="#2C2C2C">SPIAGGIA MARIA PIA</text>
-            <text x="130" y="254" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="#8A8279">300 m</text>
+            <text x="130" y="240" font-family="Inter, sans-serif" font-size="10" letter-spacing="0.1em" text-transform="uppercase" fill="#2C2C2C" data-i18n="location.map_beach">SPIAGGIA MARIA PIA</text>
+            <text x="130" y="254" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="#8A8279" data-i18n="location.map_beach_dist">300 m</text>
 
             <!-- Hotel -->
             <circle cx="200" cy="320" r="8" fill="#2C2C2C" />
             <circle cx="200" cy="320" r="14" fill="none" stroke="#2C2C2C" stroke-width="1" opacity="0.4" />
             <circle cx="200" cy="320" r="22" fill="none" stroke="#2C2C2C" stroke-width="1" opacity="0.2" />
-            <text x="215" y="318" font-family="Cormorant Garamond, serif" font-size="16" fill="#2C2C2C" font-style="italic">Hotel Mistral</text>
-            <text x="215" y="332" font-family="Inter, sans-serif" font-size="9" letter-spacing="0.12em" fill="#8A8279">VIA LIGURIA 41</text>
+            <text x="215" y="318" font-family="Cormorant Garamond, serif" font-size="16" fill="#2C2C2C" font-style="italic" data-i18n="location.map_hotel">Hotel Mistral</text>
+            <text x="215" y="332" font-family="Inter, sans-serif" font-size="9" letter-spacing="0.12em" fill="#8A8279" data-i18n="location.map_address">VIA LIGURIA 41</text>
 
             <!-- Centro storico -->
             <circle cx="320" cy="420" r="4" fill="#8A8279" />
-            <text x="240" y="440" font-family="Inter, sans-serif" font-size="10" letter-spacing="0.1em" fill="#2C2C2C">CENTRO STORICO</text>
-            <text x="240" y="454" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="#8A8279">2.5 km · 8 min auto</text>
+            <text x="240" y="440" font-family="Inter, sans-serif" font-size="10" letter-spacing="0.1em" fill="#2C2C2C" data-i18n="location.map_centro">CENTRO STORICO</text>
+            <text x="240" y="454" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="#8A8279" data-i18n="location.map_centro_dist">2.5 km · 8 min auto</text>
 
             <!-- Aeroporto -->
             <circle cx="60" cy="460" r="4" fill="#8A8279" />
-            <text x="20" y="480" font-family="Inter, sans-serif" font-size="10" letter-spacing="0.1em" fill="#2C2C2C">AEROPORTO</text>
-            <text x="20" y="494" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="#8A8279">6 km</text>
+            <text x="20" y="480" font-family="Inter, sans-serif" font-size="10" letter-spacing="0.1em" fill="#2C2C2C" data-i18n="location.map_airport">AEROPORTO</text>
+            <text x="20" y="494" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="#8A8279" data-i18n="location.map_airport_dist">6 km</text>
 
             <!-- Compass -->
             <g transform="translate(360, 40)">
@@ -185,11 +192,11 @@
       </p>
       
       <div class="meta" style="color:var(--grigio-chiaro);border-color:var(--grigio);margin-top:32px">
-        <b style="font-family:var(--serif);font-size:24px;color:var(--bianco);font-weight:400">From €65</b>
+        <b style="font-family:var(--serif);font-size:24px;color:var(--bianco);font-weight:400" data-i18n="common.from_price">From €65</b>
         <span style="margin:0 16px">·</span>
-        Free Parking
+        <span data-i18n="common.free_parking">Free Parking</span>
         <span style="margin:0 16px">·</span>
-        No Prepayment
+        <span data-i18n="common.no_prepayment">No Prepayment</span>
       </div>
 
       <div style="margin-top:40px">
@@ -212,6 +219,20 @@
           <p style="max-width:32ch;color:var(--grigio-chiaro)" data-i18n="footer.desc">
             A family-run 3-star hotel in Alghero, Sardinia. 25 rooms, a garden, and a five-minute walk to Maria Pia Beach.
           </p>
+          <div class="footer-socials" aria-label="Social">
+            <a href="https://www.facebook.com/hotelmistralalghero/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-8h3l1-4h-4V7.5C13 6.6 13.3 6 14.6 6H17V2.2C16.6 2.1 15.4 2 14.1 2 11.4 2 9.5 3.7 9.5 6.7V10H6v4h3.5v8H13Z"/></svg>
+            </a>
+            <a href="https://www.tripadvisor.it/Hotel_Review-g187880-d277462-Reviews-Hotel_Mistral-Alghero_Province_of_Sassari_Sardinia.html" target="_blank" rel="noopener" aria-label="TripAdvisor">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 6.6c-2.4-1.5-5.2-2.2-7.9-2.2H0l2.2 2.4a4.9 4.9 0 0 0-.8 2.7c0 2.7 2.2 4.9 4.9 4.9 1.5 0 2.9-.7 3.8-1.8L12 14.9l1.9-2.3a4.9 4.9 0 0 0 3.8 1.8c2.7 0 4.9-2.2 4.9-4.9 0-1-.3-1.9-.8-2.7L24 4.4h-4.1c-2.7 0-5.5.7-7.9 2.2Zm-5.7 5.7a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6Zm11.4 0a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6Zm-11.4-1.4a1.4 1.4 0 1 0 0-2.8 1.4 1.4 0 0 0 0 2.8Zm11.4 0a1.4 1.4 0 1 0 0-2.8 1.4 1.4 0 0 0 0 2.8Z"/></svg>
+            </a>
+            <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener" aria-label="Booking.com">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 2h9a5 5 0 0 1 3 8.9A5 5 0 0 1 15 20H6V2Zm4 3v5h4a2.5 2.5 0 0 0 0-5h-4Zm0 8v4h5a2 2 0 1 0 0-4h-5Z"/></svg>
+            </a>
+            <a href="https://wa.me/393472479796?text=Salve,%20vorrei%20verificare%20la%20disponibilit%C3%A0%20presso%20Hotel%20Mistral." target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+          </div>
         </div>
         <div>
           <h4 data-i18n="footer.explore">Explore</h4>
@@ -249,14 +270,14 @@
 
 
   <!-- WhatsApp Floating CTA -->
-  <a href="https://wa.me/393472479796?text=Hello,%20I%20would%20like%20to%20check%20availability%20at%20Hotel%20Mistral." target="_blank" class="whatsapp-float" aria-label="Book on WhatsApp">
+  <a href="https://wa.me/393472479796?text=Hello,%20I%20would%20like%20to%20check%20availability%20at%20Hotel%20Mistral." target="_blank" class="whatsapp-float" aria-label="Book on WhatsApp" data-i18n-aria-label="common.book_whatsapp">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-    <span class="whatsapp-float-text">Book on WhatsApp</span>
+    <span class="whatsapp-float-text" data-i18n="common.book_whatsapp">Book on WhatsApp</span>
     <span class="whatsapp-float-num">+39 347 247 9796</span>
   </a>
 
-  <script src="js/translations.js?v=5"></script>
-  <script src="js/i18n.js?v=5"></script>
-  <script src="js/main.js?v=5"></script>
+  <script src="js/translations.js?v=8"></script>
+  <script src="js/i18n.js?v=8"></script>
+  <script src="js/main.js?v=8"></script>
 </body>
 </html>

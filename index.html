@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30..100;1,9..144,300..700,30..100&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet"/>
-  <link href="css/styles.css" rel="stylesheet"/>
+  <link href="css/styles.css?v=8" rel="stylesheet"/>
 </head>
 <body data-page="home">
   <div class="page">
@@ -34,13 +34,20 @@
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </div>
     <div class="nav-actions">
-      <div class="lang-switcher hidden-mobile" aria-label="Seleziona lingua">
-        <button class="lang-btn active" data-lang="it" onclick="setLanguage('it')" title="Italiano"><span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span></button>
-        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')" title="English"><span class="lang-flag">🇬🇧</span><span class="lang-code">EN</span></button>
-        <button class="lang-btn" data-lang="de" onclick="setLanguage('de')" title="Deutsch"><span class="lang-flag">🇩🇪</span><span class="lang-code">DE</span></button>
-        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')" title="Español"><span class="lang-flag">🇪🇸</span><span class="lang-code">ES</span></button>
+      <div class="lang-dropdown hidden-mobile" data-lang-switcher>
+        <button class="lang-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Seleziona lingua">
+          <span class="lang-current-flag">🇮🇹</span>
+          <span class="lang-current-code">IT</span>
+          <svg class="lang-chev" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+        </button>
+        <div class="lang-menu" role="listbox">
+          <button class="lang-opt active" data-lang="it" onclick="setLanguage('it')" role="option" aria-selected="true"><span class="lang-flag">🇮🇹</span><span class="lang-opt-name">Italiano</span><span class="lang-opt-check">✓</span></button>
+          <button class="lang-opt" data-lang="en" onclick="setLanguage('en')" role="option"><span class="lang-flag">🇬🇧</span><span class="lang-opt-name">English</span><span class="lang-opt-check">✓</span></button>
+          <button class="lang-opt" data-lang="de" onclick="setLanguage('de')" role="option"><span class="lang-flag">🇩🇪</span><span class="lang-opt-name">Deutsch</span><span class="lang-opt-check">✓</span></button>
+          <button class="lang-opt" data-lang="es" onclick="setLanguage('es')" role="option"><span class="lang-flag">🇪🇸</span><span class="lang-opt-name">Español</span><span class="lang-opt-check">✓</span></button>
+        </div>
       </div>
-      <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" class="nav-cta hidden-mobile" data-i18n="nav.book_now">Check Availability</a>
+      <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" class="nav-cta hidden-mobile" data-i18n="nav.book_now">Prenota</a>
       <button class="menu-btn mobile-only" aria-label="Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -256,11 +263,128 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS — 3D Letter Testimonials -->
+  <section class="section testimonials-3d" id="testimonials">
+    <div class="container">
+      <div class="testimonials-header reveal">
+        <div class="section-num">— 04 / <span data-i18n="home.testimonials_label">Parole degli Ospiti</span></div>
+        <h2 class="h-large serif" style="margin-top:16px;max-width:16ch" data-i18n="home.testimonials_title">Cosa dicono di noi.</h2>
+      </div>
+
+      <div class="letters-grid">
+        <!-- Letter 1 -->
+        <div class="letter-card reveal reveal-delay-1" data-tilt>
+          <div class="letter-paper">
+            <div class="letter-stamp">★★★★★</div>
+            <div class="letter-avatar" style="background: linear-gradient(135deg, #3D5A68 0%, #2C4A58 100%);">P</div>
+            <blockquote class="letter-quote" data-i18n="home.testimonial_1_text">
+              "Un hotel a conduzione familiare pieno di carattere e fascino. Il personale gentile e disponibile, la posizione eccellente, e la colazione favolosa. Impeccabilmente pulito in ogni parte. Consigliatissimo."
+            </blockquote>
+            <div class="letter-meta">
+              <span class="letter-name" data-i18n="home.testimonial_1_author">Patrick, Irlanda</span>
+              <span class="letter-source">TripAdvisor</span>
+            </div>
+          </div>
+          <div class="letter-shadow"></div>
+        </div>
+
+        <!-- Letter 2 -->
+        <div class="letter-card reveal reveal-delay-2" data-tilt>
+          <div class="letter-paper">
+            <div class="letter-stamp">★★★★★</div>
+            <div class="letter-avatar" style="background: linear-gradient(135deg, #A04E2E 0%, #7A3A22 100%);">M</div>
+            <blockquote class="letter-quote" data-i18n="home.testimonial_2_text">
+              "Lo staff era super gentile e meravigliosamente rilassato. La camera era molto confortevole e perfettamente climatizzata, e la posizione non poteva essere più comoda — a pochi passi dalla spiaggia."
+            </blockquote>
+            <div class="letter-meta">
+              <span class="letter-name" data-i18n="home.testimonial_2_author">Meghan, Irlanda</span>
+              <span class="letter-source">TripAdvisor</span>
+            </div>
+          </div>
+          <div class="letter-shadow"></div>
+        </div>
+
+        <!-- Letter 3 -->
+        <div class="letter-card reveal reveal-delay-3" data-tilt>
+          <div class="letter-paper">
+            <div class="letter-stamp">★★★★★</div>
+            <div class="letter-avatar" style="background: linear-gradient(135deg, #6B655C 0%, #4A4540 100%);">L</div>
+            <blockquote class="letter-quote" data-i18n="home.testimonial_3_text">
+              "Immacolatamente pulito, eccellentemente situato, con una colazione davvero ottima e i proprietari più calorosi e accoglienti che si possano incontrare."
+            </blockquote>
+            <div class="letter-meta">
+              <span class="letter-name" data-i18n="home.testimonial_3_author">Livia, Belgio</span>
+              <span class="letter-source">Booking.com</span>
+            </div>
+          </div>
+          <div class="letter-shadow"></div>
+        </div>
+
+        <!-- Letter 4 -->
+        <div class="letter-card reveal reveal-delay-1" data-tilt>
+          <div class="letter-paper">
+            <div class="letter-stamp">★★★★★</div>
+            <div class="letter-avatar" style="background: linear-gradient(135deg, #4a7a5a 0%, #355e42 100%);">A</div>
+            <blockquote class="letter-quote" data-i18n="home.testimonial_4_text">
+              "Mi è piaciuto tutto. Struttura ottima, stanze spaziose e pulite, spazi ben curati nei particolari, staff cordialissimo e amichevole. A pochi passi da una splendida spiaggia."
+            </blockquote>
+            <div class="letter-meta">
+              <span class="letter-name" data-i18n="home.testimonial_4_author">Alberto, Italia</span>
+              <span class="letter-source">Booking.com</span>
+            </div>
+          </div>
+          <div class="letter-shadow"></div>
+        </div>
+
+        <!-- Letter 5 -->
+        <div class="letter-card reveal reveal-delay-2" data-tilt>
+          <div class="letter-paper">
+            <div class="letter-stamp">★★★★★</div>
+            <div class="letter-avatar" style="background: linear-gradient(135deg, #8B6F47 0%, #6B5435 100%);">G</div>
+            <blockquote class="letter-quote" data-i18n="home.testimonial_5_text">
+              "Ottima accoglienza con indicazioni di ristorantini davvero top. Stanza grande, letto enorme, bagno super accessoriato. Pulitissimo. Torneremo sicuramente."
+            </blockquote>
+            <div class="letter-meta">
+              <span class="letter-name" data-i18n="home.testimonial_5_author">Giulia, Italia</span>
+              <span class="letter-source">TripAdvisor</span>
+            </div>
+          </div>
+          <div class="letter-shadow"></div>
+        </div>
+
+        <!-- Letter 6 -->
+        <div class="letter-card reveal reveal-delay-3" data-tilt>
+          <div class="letter-paper">
+            <div class="letter-stamp">★★★★☆</div>
+            <div class="letter-avatar" style="background: linear-gradient(135deg, #5B8A72 0%, #456B58 100%);">S</div>
+            <blockquote class="letter-quote" data-i18n="home.testimonial_6_text">
+              "Hotel very clean and friendly. Mistral is a nice family run hotel, a stone's throw away from the beautiful beach of Maria Pia and about half an hour walk from the city center."
+            </blockquote>
+            <div class="letter-meta">
+              <span class="letter-name" data-i18n="home.testimonial_6_author">Sarah, UK</span>
+              <span class="letter-source">TripAdvisor</span>
+            </div>
+          </div>
+          <div class="letter-shadow"></div>
+        </div>
+      </div>
+
+      <div class="testimonials-footer reveal">
+        <div class="testimonials-score">
+          <span class="score-num">4.8</span>
+          <span class="score-stars">★★★★★</span>
+          <span class="score-text" data-i18n="home.testimonials_score">su 893 recensioni</span>
+        </div>
+        <a href="https://www.tripadvisor.it/Hotel_Review-g187880-d277462-Reviews-Hotel_Mistral-Alghero_Province_of_Sassari_Sardinia.html" target="_blank" class="btn btn-ghost btn-arrow" data-i18n="home.testimonials_cta">Leggi tutte le recensioni</a>
+      </div>
+    </div>
+  </section>
+
   <!-- CALENDAR / BOOKING ASSISTANT -->
   <section class="calendar-section" id="prenota">
     <div class="container">
       <div class="calendar-title reveal">
-        <div class="section-num">— 04 / <span data-i18n="calendar.label">Booking</span></div>
+        <div class="section-num">— 05 / <span data-i18n="calendar.label">Booking</span></div>
         <h2 class="h-medium serif" style="margin-top:16px" data-i18n="calendar.title">Select your stay dates</h2>
         <p class="calendar-hint" data-i18n="calendar.hint">Seleziona prima il check-in, poi il check-out</p>
       </div>
@@ -308,7 +432,7 @@
               Prenota su WhatsApp
             </a>
           </div>
-          <div class="calendar-whatsapp-num">WhatsApp: +39 347 247 9796</div>
+          <div class="calendar-whatsapp-num" data-i18n="common.whatsapp_number">WhatsApp: +39 347 247 9796</div>
         </div>
       </div>
     </div>
@@ -317,7 +441,7 @@
   <!-- CTA FINALE -->
   <section class="cta-final" style="background:var(--antracite);color:var(--bianco)">
     <div class="container" style="text-align:center">
-      <div class="section-num" style="color:var(--grigio);border-color:var(--grigio)">— 05</div>
+      <div class="section-num" style="color:var(--grigio);border-color:var(--grigio)">— 06</div>
       <h2 class="h-large serif" style="margin-top:24px" data-i18n="home.cta_title">
         Your room by the sea is waiting.
       </h2>
@@ -353,6 +477,20 @@
           <p style="max-width:32ch;color:var(--grigio-chiaro)" data-i18n="footer.desc">
             A family-run 3-star hotel in Alghero, Sardinia. 25 rooms, a garden, and a five-minute walk to Maria Pia Beach.
           </p>
+          <div class="footer-socials" aria-label="Social">
+            <a href="https://www.facebook.com/hotelmistralalghero/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-8h3l1-4h-4V7.5C13 6.6 13.3 6 14.6 6H17V2.2C16.6 2.1 15.4 2 14.1 2 11.4 2 9.5 3.7 9.5 6.7V10H6v4h3.5v8H13Z"/></svg>
+            </a>
+            <a href="https://www.tripadvisor.it/Hotel_Review-g187880-d277462-Reviews-Hotel_Mistral-Alghero_Province_of_Sassari_Sardinia.html" target="_blank" rel="noopener" aria-label="TripAdvisor">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 6.6c-2.4-1.5-5.2-2.2-7.9-2.2H0l2.2 2.4a4.9 4.9 0 0 0-.8 2.7c0 2.7 2.2 4.9 4.9 4.9 1.5 0 2.9-.7 3.8-1.8L12 14.9l1.9-2.3a4.9 4.9 0 0 0 3.8 1.8c2.7 0 4.9-2.2 4.9-4.9 0-1-.3-1.9-.8-2.7L24 4.4h-4.1c-2.7 0-5.5.7-7.9 2.2Zm-5.7 5.7a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6Zm11.4 0a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6Zm-11.4-1.4a1.4 1.4 0 1 0 0-2.8 1.4 1.4 0 0 0 0 2.8Zm11.4 0a1.4 1.4 0 1 0 0-2.8 1.4 1.4 0 0 0 0 2.8Z"/></svg>
+            </a>
+            <a href="https://www.booking.com/Share-Ju31eYQ" target="_blank" rel="noopener" aria-label="Booking.com">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 2h9a5 5 0 0 1 3 8.9A5 5 0 0 1 15 20H6V2Zm4 3v5h4a2.5 2.5 0 0 0 0-5h-4Zm0 8v4h5a2 2 0 1 0 0-4h-5Z"/></svg>
+            </a>
+            <a href="https://wa.me/393472479796?text=Salve,%20vorrei%20verificare%20la%20disponibilit%C3%A0%20presso%20Hotel%20Mistral." target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+          </div>
         </div>
         <div>
           <h4 data-i18n="footer.explore">Explore</h4>
@@ -390,14 +528,14 @@
 
 
   <!-- WhatsApp Floating CTA -->
-  <a href="https://wa.me/393472479796?text=Hello,%20I%20would%20like%20to%20check%20availability%20at%20Hotel%20Mistral." target="_blank" class="whatsapp-float" aria-label="Book on WhatsApp">
+  <a href="https://wa.me/393472479796?text=Hello,%20I%20would%20like%20to%20check%20availability%20at%20Hotel%20Mistral." target="_blank" class="whatsapp-float" aria-label="Book on WhatsApp" data-i18n-aria-label="common.book_whatsapp">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-    <span class="whatsapp-float-text">Book on WhatsApp</span>
+    <span class="whatsapp-float-text" data-i18n="common.book_whatsapp">Book on WhatsApp</span>
     <span class="whatsapp-float-num">+39 347 247 9796</span>
   </a>
 
-  <script src="js/translations.js?v=5"></script>
-  <script src="js/i18n.js?v=5"></script>
-  <script src="js/main.js?v=5"></script>
+  <script src="js/translations.js?v=8"></script>
+  <script src="js/i18n.js?v=8"></script>
+  <script src="js/main.js?v=8"></script>
 </body>
 </html>

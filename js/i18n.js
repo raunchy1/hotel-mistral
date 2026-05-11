@@ -30,6 +30,7 @@
   }
 
   window.currentLang = getCurrentLang();
+  document.documentElement.classList.add('i18n-pending');
 
   function getValue(obj, path) {
     const parts = path.split('.');
@@ -116,15 +117,34 @@
       }
     }
 
-    // Update lang switcher active state
+    // Update lang switcher active state (legacy flat row)
     document.querySelectorAll('.lang-btn').forEach(btn => {
       const isActive = btn.getAttribute('data-lang') === lang;
       btn.classList.toggle('active', isActive);
       btn.style.opacity = isActive ? '1' : '0.5';
     });
 
+    // Update collapsed-dropdown active state and trigger label
+    document.querySelectorAll('.lang-dropdown').forEach(dd => {
+      const flagMap = { it: '🇮🇹', en: '🇬🇧', de: '🇩🇪', es: '🇪🇸' };
+      const trigger = dd.querySelector('.lang-trigger');
+      if (trigger) {
+        const flagEl = trigger.querySelector('.lang-current-flag');
+        const codeEl = trigger.querySelector('.lang-current-code');
+        if (flagEl) flagEl.textContent = flagMap[lang] || '';
+        if (codeEl) codeEl.textContent = lang.toUpperCase();
+      }
+      dd.querySelectorAll('.lang-opt').forEach(opt => {
+        opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+      });
+    });
+
     // Update HTML lang attribute
     document.documentElement.setAttribute('lang', lang);
+
+    // Reveal page now that translations are applied
+    document.documentElement.classList.remove('i18n-pending');
+    document.documentElement.classList.add('i18n-ready');
   }
 
   window.setLanguage = function(lang) {

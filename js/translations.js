@@ -1,4 +1,4 @@
-const translations = 
+window.translations =
 {
   "it": {
     "nav": {
@@ -14,7 +14,7 @@ const translations =
     },
     "home": {
       "hero_location": "Alghero, Sardegna · Dal 1990",
-      "hero_title": "Svegliati tra i pini,\nnon tra le sveglie —\na 300 metri dal mare.",
+      "hero_title": "Svegliati tra i <em>pini,</em><br>non tra le sveglie — 300m dal mare.",
       "cta_availability": "Verifica Disponibilita",
       "intro_label": "L'Hotel",
       "intro_title": "Un hotel a conduzione familiare,\nfatto bene e basta.",
@@ -32,7 +32,7 @@ const translations =
       "room_standard_desc": "Un letto grande · Interno tranquillo",
       "cta_view_all": "Vedi Tutte le Camere",
       "experience_label": "Esperienza",
-      "experience_title": "Colazione in veranda,\npoi il giorno e tuo.",
+      "experience_title": "Mattine lente,<br><em>giorni aperti.</em>",
       "experience_p1": "Ogni mattina inizia allo stesso modo — l'odore dell'espresso che sale dal bar, i cornetti caldi dalla panetteria in fondo alla strada, e il pecorino sardo tagliato spesso. Mangia nella veranda di vetro o porta il caffe in giardino. Nessuna fretta. Nessuna coda. Solo il tipo di colazione che ti fa cancellare i programmi.",
       "experience_p2": "Poi la giornata e tua. Noleggia una bici e segui la costa. Esplora il centro storico di Alghero al tramonto. O semplicemente resta: la sala biliardo e aperta, le sedie del giardino non sono mai tutte prese, e il bar serve drink freddi fino alle 23.",
       "cta_explore": "Esplora l'Esperienza",
@@ -102,7 +102,7 @@ const translations =
       "cta_free_parking": "Parcheggio Gratuito",
       "cta_no_prepayment": "Nessun pagamento anticipato",
       "exp_label": "La Permanenza",
-      "exp_title": "Mattine lente,\ngiorni aperti.",
+      "exp_title": "Mattine lente,<br><em>giorni aperti.</em>",
       "exp_p1": "La colazione è servita nella veranda, inondata di luce naturale e prodotti locali freschi. Pane fresco dalla panetteria, formaggi locali, frutta di stagione e vero caffè italiano.",
       "exp_p2": "Da lì, la giornata è vostra. La spiaggia è a dieci minuti a piedi, il centro storico è a otto minuti in auto, oppure godetevi semplicemente il giardino e una sedia all'ombra.",
       "exp_services": "Servizi inclusi",
@@ -130,6 +130,22 @@ const translations =
       "reviews_excellent": "Eccellente",
       "reviews_source": "Punteggio medio basato su Booking.com, Tripadvisor e Google.",
       "cta_whatsapp": "Prenota su WhatsApp",
+      "testimonials_label": "Parole degli Ospiti",
+      "testimonials_title": "Cosa dicono di noi.",
+      "testimonial_1_text": "Un hotel a conduzione familiare pieno di carattere e fascino. Il personale gentile e disponibile, la posizione eccellente, e la colazione favolosa. Impeccabilmente pulito in ogni parte. Consigliatissimo.",
+      "testimonial_1_author": "Patrick, Irlanda",
+      "testimonial_2_text": "Lo staff era super gentile e meravigliosamente rilassato. La camera era molto confortevole e perfettamente climatizzata, e la posizione non poteva essere più comoda — a pochi passi dalla spiaggia.",
+      "testimonial_2_author": "Meghan, Irlanda",
+      "testimonial_3_text": "Immacolatamente pulito, eccellentemente situato, con una colazione davvero ottima e i proprietari più calorosi e accoglienti che si possano incontrare.",
+      "testimonial_3_author": "Livia, Belgio",
+      "testimonial_4_text": "Mi è piaciuto tutto. Struttura ottima, stanze spaziose e pulite, spazi ben curati nei particolari, staff cordialissimo e amichevole. A pochi passi da una splendida spiaggia.",
+      "testimonial_4_author": "Alberto, Italia",
+      "testimonial_5_text": "Ottima accoglienza con indicazioni di ristorantini davvero top. Stanza grande, letto enorme, bagno super accessoriato. Pulitissimo. Torneremo sicuramente.",
+      "testimonial_5_author": "Giulia, Italia",
+      "testimonial_6_text": "Hotel very clean and friendly. Mistral is a nice family run hotel, a stone's throw away from the beautiful beach of Maria Pia and about half an hour walk from the city center.",
+      "testimonial_6_author": "Sarah, UK",
+      "testimonials_score": "Punteggio basato su recensioni verificate Booking.com, TripAdvisor e Google",
+      "testimonials_cta": "Leggi tutte le recensioni",
       "srv_breakfast": "Colazione a Buffet",
       "srv_garden": "Giardino Privato",
       "srv_billiard": "Sala Biliardo",
@@ -208,7 +224,10 @@ const translations =
       "book_btn": "Prenota questa camera",
       "page_desc": "Venticinque camere su tre piani. Niente artifici. Nessun \"concetto\" sopra-disegnato. Solo pavimenti freschi in cotto, lenzuola fresche di bucato, balconi privati, e bagni davvero puliti. Perché dopo una giornata sotto il sole sardo, meriti una camera che lavora forte quanto hai giocato.",
       "page_label": "Camere",
-      "page_title": "Camere all'altezza."
+      "page_title": "Camere all'altezza.",
+      "bathrooms_label": "Bagni",
+      "bathrooms_title": "Puliti, moderni e <em>privati.</em>",
+      "bathrooms_desc": "Ogni camera ha il proprio bagno privato — niente servizi condivisi, niente sorprese. Lavabi a vista, box doccia in vetro e asciugamani bianchi freschi ogni giorno. Perché sono i piccoli dettagli a fare la differenza tra un buon soggiorno e uno indimenticabile."
     },
     "experience": {
       "header_label": "Esperienza",
@@ -359,7 +378,16 @@ const translations =
       "phone": "+39 079 951 828",
       "page_desc": "Siamo immersi in una tasca residenziale tranquilla di Alghero — abbastanza vicini alla spiaggia di Maria Pia per una nuotata mattutina, abbastanza lontani dal trambusto turistico per sentire i tuoi pensieri. Il centro storico è a otto minuti in auto. L'aeroporto a dodici. La posizione perfetta non è essere nel mezzo. È essere esattamente dove vuoi essere.",
       "page_label": "Dove Siamo",
-      "page_title": "Vicini a tutto."
+      "page_title": "Vicini a tutto.",
+      "map_sea": "Mar di Sardegna",
+      "map_beach": "SPIAGGIA MARIA PIA",
+      "map_beach_dist": "300 m",
+      "map_hotel": "Hotel Mistral",
+      "map_address": "VIA LIGURIA 41",
+      "map_centro": "CENTRO STORICO",
+      "map_centro_dist": "2.5 km · 8 min auto",
+      "map_airport": "AEROPORTO",
+      "map_airport_dist": "6 km"
     },
     "contact": {
       "header_label": "Contatti",
@@ -458,6 +486,15 @@ const translations =
       "page_desc": "Alcuni hotel ti vendono attività. Noi ti vendiamo il permesso di fermarti. Un giardino che non si preoccupa della tua casella email. Una colazione che si rifiuta di andare di fretta. E un bar che capisce che l'aperitivo è uno stato d'animo, non un'ora.",
       "page_label": "L'Esperienza",
       "page_title": "L'arte del fare poco."
+    },
+    "common": {
+      "book_whatsapp": "Prenota su WhatsApp",
+      "from_price": "Da €65",
+      "per_night": "/ notte",
+      "free_parking": "Parcheggio Gratuito",
+      "no_prepayment": "Nessun pagamento anticipato",
+      "whatsapp_number": "WhatsApp: +39 347 247 9796",
+      "separator_dot": "·"
     }
   },
   "en": {
@@ -474,7 +511,7 @@ const translations =
     },
     "home": {
       "hero_location": "Alghero, Sardinia · Since 1990",
-      "hero_title": "Wake up to\npine trees,\nnot alarms — 300m from the sea.",
+      "hero_title": "Wake up to <em>pine trees,</em><br>not alarms — 300m from the sea.",
       "cta_availability": "Check Availability",
       "intro_label": "The Hotel",
       "intro_title": "A family-run hotel,\nsimply done well.",
@@ -492,7 +529,7 @@ const translations =
       "room_standard_desc": "One large bed · Quiet interior",
       "cta_view_all": "View All Rooms",
       "experience_label": "Experience",
-      "experience_title": "Breakfast on the veranda,\nthen the day is yours.",
+      "experience_title": "Slow mornings,<br><em>open days.</em>",
       "experience_p1": "Every morning starts the same way — the smell of espresso rising from the bar, warm croissants from the bakery down the street, and Sardinian pecorino sliced thick. Eat inside the glass veranda or take your coffee to the garden. No rush. No queues. Just the kind of breakfast that makes you cancel your plans.",
       "experience_p2": "Then the day is yours. Rent a bike and follow the coast. Explore Alghero's old town at sunset. Or simply stay put — the billiard room is open, the garden chairs are never all taken, and the bar serves cold drinks until 11 PM.",
       "cta_explore": "Explore the Experience",
@@ -562,7 +599,7 @@ const translations =
       "cta_free_parking": "Free Parking",
       "cta_no_prepayment": "No prepayment",
       "exp_label": "The Stay",
-      "exp_title": "Slow mornings,\nopen days.",
+      "exp_title": "Slow mornings,<br><em>open days.</em>",
       "exp_p1": "Breakfast is served in the veranda, filled with natural light and fresh local products. Fresh bread from the bakery, local cheeses, seasonal fruits, and real Italian coffee.",
       "exp_p2": "From there, the day is yours. The beach is a ten-minute walk away, the old town is eight minutes by car, or simply enjoy the garden and a shaded chair.",
       "exp_services": "Included services",
@@ -590,6 +627,22 @@ const translations =
       "reviews_excellent": "Excellent",
       "reviews_source": "Average score based on Booking.com, Tripadvisor, and Google.",
       "cta_whatsapp": "Book on WhatsApp",
+      "testimonials_label": "Guest Words",
+      "testimonials_title": "What they say about us.",
+      "testimonial_1_text": "A family-run hotel full of character and charm. The staff kind and helpful, excellent location, and fabulous breakfast. Spotlessly clean throughout. Highly recommended.",
+      "testimonial_1_author": "Patrick, Ireland",
+      "testimonial_2_text": "The staff were super lovely and wonderfully relaxed. The room was very comfortable and perfectly air-conditioned, and the location could not have been more convenient — a short stroll to the beach.",
+      "testimonial_2_author": "Meghan, Ireland",
+      "testimonial_3_text": "Immaculately clean, excellently located, with a truly great breakfast and the most warm, welcoming owners one could hope to meet.",
+      "testimonial_3_author": "Livia, Belgium",
+      "testimonial_4_text": "I liked everything. Great structure, spacious and clean rooms, spaces cared for in every detail, extremely kind and friendly staff. A stone's throw from a splendid beach.",
+      "testimonial_4_author": "Alberto, Italy",
+      "testimonial_5_text": "Excellent hospitality with truly top restaurant recommendations. Large room, huge bed, super equipped bathroom. Spotlessly clean. We will definitely be back.",
+      "testimonial_5_author": "Giulia, Italy",
+      "testimonial_6_text": "Hotel very clean and friendly. Mistral is a nice family run hotel, a stone's throw away from the beautiful beach of Maria Pia and about half an hour walk from the city center.",
+      "testimonial_6_author": "Sarah, UK",
+      "testimonials_score": "Score based on verified reviews from Booking.com, TripAdvisor and Google",
+      "testimonials_cta": "Read all reviews",
       "srv_breakfast": "Buffet Breakfast",
       "srv_garden": "Private Garden",
       "srv_billiard": "Billiard Room",
@@ -668,7 +721,10 @@ const translations =
       "book_btn": "Book this room",
       "page_desc": "Twenty-five rooms across three floors. No gimmicks. No over-designed \"concepts.\" Just cool terracotta floors, crisp linen, private balconies, and bathrooms that are actually clean. Because after a day in Sardinian sun, you deserve a room that works as hard as you played.",
       "page_label": "Accommodation",
-      "page_title": "Rooms that earn their keep."
+      "page_title": "Rooms that earn their keep.",
+      "bathrooms_label": "Bathrooms",
+      "bathrooms_title": "Clean, modern, and <em>private.</em>",
+      "bathrooms_desc": "Every room has its own bathroom — no shared facilities, no surprises. Vessel sinks, glass shower enclosures, and fresh white towels daily. Because the little details are what separate a good stay from a great one."
     },
     "experience": {
       "header_label": "Experience",
@@ -819,7 +875,16 @@ const translations =
       "phone": "+39 079 951 828",
       "page_desc": "We are tucked into a quiet residential pocket of Alghero — close enough to Maria Pia Beach for a morning swim, far enough from the tourist bustle to actually hear yourself think. The old town is eight minutes by car. The airport is twelve. Perfect location is not about being in the middle. It is about being exactly where you want to be.",
       "page_label": "Location",
-      "page_title": "Close to everything."
+      "page_title": "Close to everything.",
+      "map_sea": "Sardinian Sea",
+      "map_beach": "MARIA PIA BEACH",
+      "map_beach_dist": "300 m",
+      "map_hotel": "Hotel Mistral",
+      "map_address": "VIA LIGURIA 41",
+      "map_centro": "OLD TOWN",
+      "map_centro_dist": "2.5 km · 8 min by car",
+      "map_airport": "AIRPORT",
+      "map_airport_dist": "6 km"
     },
     "contact": {
       "header_label": "Contact",
@@ -918,6 +983,15 @@ const translations =
       "page_desc": "Some hotels sell you activities. We sell you permission to pause. A garden that doesn't care about your inbox. A breakfast that refuses to rush. And a bar that understands aperitivo is a state of mind, not a time slot.",
       "page_label": "The Experience",
       "page_title": "The art of doing little."
+    },
+    "common": {
+      "book_whatsapp": "Book on WhatsApp",
+      "from_price": "From €65",
+      "per_night": "/ night",
+      "free_parking": "Free Parking",
+      "no_prepayment": "No Prepayment",
+      "whatsapp_number": "WhatsApp: +39 347 247 9796",
+      "separator_dot": "·"
     }
   },
   "de": {
@@ -934,7 +1008,7 @@ const translations =
     },
     "home": {
       "hero_location": "Alghero, Sardinien · Seit 1990",
-      "hero_title": "Langsame Morgen,\nwarmes Licht und der\nruhige Rhythmus von Alghero.",
+      "hero_title": "Aufwachen zu <em>Pinien,</em><br>nicht zu Weckern — 300m vom Meer.",
       "cta_availability": "Verfügbarkeit Prüfen",
       "intro_label": "Das Hotel",
       "intro_title": "Ein familiengeführtes Hotel,\neinfach gut gemacht.",
@@ -952,7 +1026,7 @@ const translations =
       "room_standard_desc": "Ein großes Bett · Ruhige Innenlage",
       "cta_view_all": "Alle Zimmer Ansehen",
       "experience_label": "Erlebnis",
-      "experience_title": "Frühstück serviert\nauf der Veranda",
+      "experience_title": "Langsame Morgen,<br><em>offene Tage.</em>",
       "experience_p1": "Die Morgen hier beginnen mit dem Duft von frischem Brot und Kaffee, der von der Veranda herüberweht. Wir servieren ein einfaches Buffet mit regionalen Käsesorten, Aufschnitt, saisonalem Obst und Gebäck aus der Bäckerei um die Ecke. Essen Sie draußen, wenn das Wetter es erlaubt — der Garten ist vor zehn Uhr am schönsten.",
       "experience_p2": "Nach dem Frühstück gehen Sie durch den Kiefernwald zum Strand Maria Pia. Mieten Sie ein Fahrrad und folgen Sie der Küste. Oder bleiben Sie einfach: der Billardraum ist geöffnet, die Bar serviert kalte Getränke bis spätabends, und die Gartenstühle sind nie alle besetzt.",
       "cta_explore": "Das Erlebnis Entdecken",
@@ -1022,7 +1096,7 @@ const translations =
       "cta_free_parking": "Kostenloses Parken",
       "cta_no_prepayment": "Keine Vorauszahlung",
       "exp_label": "Der Aufenthalt",
-      "exp_title": "Ruhige Morgen,\noffene Tage.",
+      "exp_title": "Langsame Morgen,<br><em>offene Tage.</em>",
       "exp_p1": "Das Frühstück wird auf der Veranda serviert, erfüllt von natürlichem Licht und frischen lokalen Produkten. Frisches Brot aus der Bäckerei, lokale Käsesorten, Saisonobst und echter italienischer Kaffee.",
       "exp_p2": "Von dort gehört der Tag Ihnen. Der Strand ist zehn Minuten zu Fuß entfernt, die Altstadt acht Minuten mit dem Auto, oder genießen Sie einfach den Garten und einen Stuhl im Schatten.",
       "exp_services": "Inklusivleistungen",
@@ -1050,6 +1124,22 @@ const translations =
       "reviews_excellent": "Hervorragend",
       "reviews_source": "Durchschnittsbewertung basierend auf Booking.com, Tripadvisor und Google.",
       "cta_whatsapp": "Per WhatsApp buchen",
+      "testimonials_label": "Gästestimmen",
+      "testimonials_title": "Was unsere Gäste sagen.",
+      "testimonial_1_text": "Ein familiengeführtes Hotel voller Charakter und Charme. Freundliches und hilfsbereites Personal, hervorragende Lage und fantastisches Frühstück. Durchweg makellos sauber. Sehr empfohlen.",
+      "testimonial_1_author": "Patrick, Irland",
+      "testimonial_2_text": "Das Personal war super liebenswürdig und wunderbar entspannt. Das Zimmer war sehr komfortabel und perfekt klimatisiert, und die Lage hätte nicht besser sein können — nur einen kurzen Spaziergang vom Strand entfernt.",
+      "testimonial_2_author": "Meghan, Irland",
+      "testimonial_3_text": "Makellos sauber, hervorragend gelegen, mit einem wirklich großartigen Frühstück und den herzlichsten, einladendsten Eigentümern, die man sich wünschen kann.",
+      "testimonial_3_author": "Livia, Belgien",
+      "testimonial_4_text": "Mir hat alles gefallen. Hervorragende Unterkunft, geräumige und saubere Zimmer, liebevoll gepflegte Räumlichkeiten, äußerst freundliches Personal. Nur einen Katzensprung von einem herrlichen Strand entfernt.",
+      "testimonial_4_author": "Alberto, Italien",
+      "testimonial_5_text": "Hervorragende Gastfreundschaft mit wirklich erstklassigen Restaurantempfehlungen. Großes Zimmer, riesiges Bett, super ausgestattetes Bad. Makellos sauber. Wir kommen sicher wieder.",
+      "testimonial_5_author": "Giulia, Italien",
+      "testimonial_6_text": "Sehr sauberes und freundliches Hotel. Mistral ist ein schönes familiengeführtes Hotel, einen Steinwurf vom wunderschönen Strand von Maria Pia entfernt und etwa eine halbe Stunde Fußweg vom Stadtzentrum.",
+      "testimonial_6_author": "Sarah, UK",
+      "testimonials_score": "Bewertung basierend auf verifizierten Booking.com-, TripAdvisor- und Google-Rezensionen",
+      "testimonials_cta": "Alle Bewertungen lesen",
       "srv_breakfast": "Frühstücksbuffet",
       "srv_garden": "Privater Garten",
       "srv_billiard": "Billardraum",
@@ -1128,7 +1218,10 @@ const translations =
       "book_btn": "Dieses Zimmer buchen",
       "page_desc": "Fünfundzwanzig Zimmer auf drei Etagen. Keine Tricks. Keine überdesignten \"Konzepte\". Nur kühle Terrakottaböden, knackige Bettwäsche, private Balkone und Bäder, die wirklich sauber sind. Denn nach einem Tag in der sardischen Sonne verdienen Sie ein Zimmer, das so hart arbeitet, wie Sie gespielt haben.",
       "page_label": "Unterkunft",
-      "page_title": "Zimmer, die ihr Geld wert sind."
+      "page_title": "Zimmer, die ihr Geld wert sind.",
+      "bathrooms_label": "Badezimmer",
+      "bathrooms_title": "Sauber, modern und <em>privat.</em>",
+      "bathrooms_desc": "Jedes Zimmer hat sein eigenes Bad — keine Gemeinschaftsanlagen, keine Überraschungen. Aufsatzwaschbecken, gläserne Duschkabinen und täglich frische weiße Handtücher. Denn die kleinen Details machen den Unterschied zwischen einem guten und einem großartigen Aufenthalt."
     },
     "experience": {
       "header_label": "Erlebnis",
@@ -1279,7 +1372,16 @@ const translations =
       "phone": "+39 079 951 828",
       "page_desc": "Wir liegen in einer ruhigen Wohngegend Algheros — nah genug am Maria-Pia-Strand für einen morgendlichen Schwimmgang, weit genug vom Touristentrubel entfernt, um tatsächlich zu hören, was Sie denken. Die Altstadt ist acht Minuten mit dem Auto entfernt. Der Flughafen zwölf. Perfekte Lage bedeutet nicht, in der Mitte zu sein. Es bedeutet, genau dort zu sein, wo Sie sein wollen.",
       "page_label": "Lage",
-      "page_title": "Nahe an allem."
+      "page_title": "Nahe an allem.",
+      "map_sea": "Sardisches Meer",
+      "map_beach": "STRAND MARIA PIA",
+      "map_beach_dist": "300 m",
+      "map_hotel": "Hotel Mistral",
+      "map_address": "VIA LIGURIA 41",
+      "map_centro": "ALTSTADT",
+      "map_centro_dist": "2,5 km · 8 Min. Auto",
+      "map_airport": "FLUGHAFEN",
+      "map_airport_dist": "6 km"
     },
     "contact": {
       "header_label": "Kontakt",
@@ -1378,6 +1480,15 @@ const translations =
       "page_desc": "Manche Hotels verkaufen Ihnen Aktivitäten. Wir verkaufen Ihnen die Erlaubnis, innezuhalten. Einen Garten, der sich nicht um Ihren Posteingang kümmert. Ein Frühstück, das sich weigert zu hetzen. Und eine Bar, die versteht, dass Aperitivo ein Geisteszustand ist, kein Zeitfenster.",
       "page_label": "Das Erlebnis",
       "page_title": "Die Kunst des Wenigtuns."
+    },
+    "common": {
+      "book_whatsapp": "Auf WhatsApp buchen",
+      "from_price": "Ab €65",
+      "per_night": "/ Nacht",
+      "free_parking": "Kostenlose Parkplätze",
+      "no_prepayment": "Keine Vorauszahlung",
+      "whatsapp_number": "WhatsApp: +39 347 247 9796",
+      "separator_dot": "·"
     }
   },
   "es": {
@@ -1394,7 +1505,7 @@ const translations =
     },
     "home": {
       "hero_location": "Alghero, Cerdeña · Desde 1990",
-      "hero_title": "Mañanas lentas,\nluz cálida y el\nritmo tranquilo de Alghero.",
+      "hero_title": "Despierta entre <em>pinos,</em><br>no entre alarmas — 300m del mar.",
       "cta_availability": "Consultar Disponibilidad",
       "intro_label": "El Hotel",
       "intro_title": "Un hotel familiar,\nhecho bien y sin más.",
@@ -1412,7 +1523,7 @@ const translations =
       "room_standard_desc": "Una cama grande · Interior tranquilo",
       "cta_view_all": "Ver Todas las Habitaciones",
       "experience_label": "Experiencia",
-      "experience_title": "Desayuno en la terraza,\nluego el día es tuyo.",
+      "experience_title": "Mañanas lentas,<br><em>días abiertos.</em>",
       "experience_p1": "Las mañanas aquí comienzan con el olor de pan fresco y café que llega desde la terraza. Servimos un sencillo buffet con quesos locales, embutidos, fruta de temporada y pasteles de la panadería de la esquina. Come fuera si el tiempo lo permite — el jardín está en su mejor momento antes de las diez.",
       "experience_p2": "Después del desayuno, camina hasta la playa de Maria Pia a través del pinar. Alquila una bicicleta y sigue la costa. O simplemente quédate: la sala de billar está abierta, el bar sirve bebidas frías hasta tarde, y las sillas del jardín nunca están todas ocupadas.",
       "cta_explore": "Explora la Experiencia",
@@ -1482,7 +1593,7 @@ const translations =
       "cta_free_parking": "Aparcamiento Gratis",
       "cta_no_prepayment": "Sin prepago",
       "exp_label": "La Estancia",
-      "exp_title": "Mañanas lentas,\ndías abiertos.",
+      "exp_title": "Mañanas lentas,<br><em>días abiertos.</em>",
       "exp_p1": "El desayuno se sirve en la terraza, llena de luz natural y productos locales frescos. Pan fresco de la panadería, quesos locales, frutas de temporada y café italiano de verdad.",
       "exp_p2": "Desde allí, el día es tuyo. La playa está a diez minutos andando, el casco antiguo a ocho minutos en coche, o simplemente disfruta del jardín y de una silla a la sombra.",
       "exp_services": "Servicios incluidos",
@@ -1510,6 +1621,22 @@ const translations =
       "reviews_excellent": "Excelente",
       "reviews_source": "Puntuación media basada en Booking.com, Tripadvisor y Google.",
       "cta_whatsapp": "Reserva por WhatsApp",
+      "testimonials_label": "Palabras de los Huéspedes",
+      "testimonials_title": "Lo que dicen de nosotros.",
+      "testimonial_1_text": "Un hotel familiar lleno de carácter y encanto. El personal amable y servicial, la ubicación excelente y el desayuno fabuloso. Impecablemente limpio en todas partes. Muy recomendado.",
+      "testimonial_1_author": "Patrick, Irlanda",
+      "testimonial_2_text": "El personal era súper amable y maravillosamente relajado. La habitación era muy cómoda y perfectamente climatizada, y la ubicación no podría haber sido más conveniente — a un corto paseo de la playa.",
+      "testimonial_2_author": "Meghan, Irlanda",
+      "testimonial_3_text": "Impecablemente limpio, excelentemente ubicado, con un desayuno realmente bueno y los propietarios más cálidos y acogedores que uno pueda conocer.",
+      "testimonial_3_author": "Livia, Bélgica",
+      "testimonial_4_text": "Me gustó todo. Estructura excelente, habitaciones amplias y limpias, espacios cuidados en cada detalle, personal extremadamente amable. A tiro de piedra de una playa espléndida.",
+      "testimonial_4_author": "Alberto, Italia",
+      "testimonial_5_text": "Hospitalidad excelente con recomendaciones de restaurantes realmente de primera. Habitación grande, cama enorme, baño súper equipado. Impecablemente limpio. Volveremos sin duda.",
+      "testimonial_5_author": "Giulia, Italia",
+      "testimonial_6_text": "Hotel muy limpio y amigable. Mistral es un bonito hotel familiar, a tiro de piedra de la hermosa playa de Maria Pia y a unos treinta minutos a pie del centro de la ciudad.",
+      "testimonial_6_author": "Sarah, Reino Unido",
+      "testimonials_score": "Puntuación basada en opiniones verificadas de Booking.com, TripAdvisor y Google",
+      "testimonials_cta": "Lee todas las reseñas",
       "srv_breakfast": "Desayuno Buffet",
       "srv_garden": "Jardín privado",
       "srv_billiard": "Sala de billar",
@@ -1588,7 +1715,10 @@ const translations =
       "book_btn": "Reservar esta habitación",
       "page_desc": "Veinticinco habitaciones en tres plantas. Sin artificios. Sin \"conceptos\" sobrediseñados. Sólo suelos frescos de terracota, sábanas crujientes, balcones privados y baños realmente limpios. Porque tras un día bajo el sol sardo, mereces una habitación que trabaje tan duro como tú has jugado.",
       "page_label": "Alojamiento",
-      "page_title": "Habitaciones a la altura."
+      "page_title": "Habitaciones a la altura.",
+      "bathrooms_label": "Baños",
+      "bathrooms_title": "Limpios, modernos y <em>privados.</em>",
+      "bathrooms_desc": "Cada habitación cuenta con su propio baño — sin instalaciones compartidas, sin sorpresas. Lavabos sobre encimera, mamparas de cristal y toallas blancas frescas a diario. Porque son los pequeños detalles los que marcan la diferencia entre una buena estancia y una excelente."
     },
     "experience": {
       "header_label": "Experiencia",
@@ -1739,7 +1869,16 @@ const translations =
       "phone": "+39 079 951 828",
       "page_desc": "Estamos en un tranquilo bolsillo residencial de Alghero — lo bastante cerca de la playa de Maria Pia para un baño matutino, lo bastante lejos del bullicio turístico para escuchar tus pensamientos. El casco antiguo está a ocho minutos en coche. El aeropuerto a doce. La ubicación perfecta no es estar en el medio. Es estar exactamente donde quieres estar.",
       "page_label": "Ubicación",
-      "page_title": "Cerca de todo."
+      "page_title": "Cerca de todo.",
+      "map_sea": "Mar de Cerdeña",
+      "map_beach": "PLAYA MARIA PIA",
+      "map_beach_dist": "300 m",
+      "map_hotel": "Hotel Mistral",
+      "map_address": "VIA LIGURIA 41",
+      "map_centro": "CASCO ANTIGUO",
+      "map_centro_dist": "2,5 km · 8 min en coche",
+      "map_airport": "AEROPUERTO",
+      "map_airport_dist": "6 km"
     },
     "contact": {
       "header_label": "Contacto",
@@ -1838,6 +1977,15 @@ const translations =
       "page_desc": "Algunos hoteles te venden actividades. Nosotros te vendemos permiso para pausar. Un jardín que no se preocupa por tu bandeja de entrada. Un desayuno que se niega a apresurarse. Y un bar que entiende que el aperitivo es un estado mental, no una franja horaria.",
       "page_label": "La Experiencia",
       "page_title": "El arte de hacer poco."
+    },
+    "common": {
+      "book_whatsapp": "Reserva por WhatsApp",
+      "from_price": "Desde €65",
+      "per_night": "/ noche",
+      "free_parking": "Aparcamiento Gratuito",
+      "no_prepayment": "Sin pago anticipado",
+      "whatsapp_number": "WhatsApp: +39 347 247 9796",
+      "separator_dot": "·"
     }
   }
 };
