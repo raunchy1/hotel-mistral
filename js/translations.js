@@ -67,7 +67,7 @@ const translations =
       "cta_book": "Prenota su Booking.com",
       "cta_or_contact": "Oppure <a href=\"contact.html\" class=\"underline underline-offset-4 hover:text-charcoal transition-colors\">contattaci direttamente</a> per qualsiasi domanda.",
       "hero_starting_from": "A partire da",
-      "hero_price": "€65 / notte",
+      "hero_price": "/ notte",
       "hero_beach_distance": "300m dalla spiaggia",
       "hero_wifi_parking": "WiFi e Parcheggio Gratuiti",
       "room_view_garden": "Vista Giardino",
@@ -120,7 +120,16 @@ const translations =
       "room_badge_last": "Ultime camere disponibili",
       "room_badge_good": "Ottima scelta",
       "room_view_all": "Vedi tutte le camere",
-      "cta_desc": "Manteniamo le nostre migliori tariffe su Booking.com. Verifica disponibilità, leggi altre recensioni, e prenota la tua camera ad Alghero direttamente."
+      "cta_desc": "Manteniamo le nostre migliori tariffe su Booking.com. Verifica disponibilità, leggi altre recensioni, e prenota la tua camera ad Alghero direttamente.",
+      "hl_cleanliness": "Pulizia",
+      "hl_staff": "Staff",
+      "hl_value": "Qualità-Prezzo",
+      "rev1_author": "Marco e Giulia",
+      "rev1_quote": "\"Camera impeccabile, personale gentile, e una posizione perfetta per chi vuole il mare senza rinunciare al centro. Torneremo.\"",
+      "reviews_count": "412 recensioni",
+      "reviews_excellent": "Eccellente",
+      "reviews_source": "Punteggio medio basato su Booking.com, Tripadvisor e Google.",
+      "cta_whatsapp": "Prenota su WhatsApp"
     },
     "calendar": {
       "label": "Prenotazioni",
@@ -180,7 +189,18 @@ const translations =
       "cta_final_label": "Prenotazioni",
       "cta_final_title": "Trova la tua camera ad Alghero",
       "cta_final_p": "Verifica disponibilita in tempo reale, confronta i tipi di camera, e assicura il tuo soggiorno con le nostre migliori tariffe su Booking.com.",
-      "cta_final_book": "Prenota il Tuo Soggiorno"
+      "cta_final_book": "Prenota il Tuo Soggiorno",
+      "am_ac": "Aria condizionata",
+      "am_balcony": "Balcone privato",
+      "am_desk": "Scrivania",
+      "am_double_bed": "Un letto matrimoniale",
+      "am_single_bed": "Un letto singolo",
+      "am_twin_beds": "Due letti singoli",
+      "am_wifi": "WiFi gratuito",
+      "book_btn": "Prenota questa camera",
+      "page_desc": "Venticinque camere su tre piani. Niente artifici. Nessun \"concetto\" sopra-disegnato. Solo pavimenti freschi in cotto, lenzuola fresche di bucato, balconi privati, e bagni davvero puliti. Perché dopo una giornata sotto il sole sardo, meriti una camera che lavora forte quanto hai giocato.",
+      "page_label": "Camere",
+      "page_title": "Camere all'altezza."
     },
     "experience": {
       "header_label": "Esperienza",
@@ -261,7 +281,10 @@ const translations =
       "cta_label": "Visita",
       "cta_title": "Vieni come ospite.\nTorna come abitue.",
       "cta_p": "Molti dei nostri ospiti tornano da anni. Ci piacerebbe darti il benvenuto per la prima volta.",
-      "cta_book": "Prenota il Tuo Soggiorno"
+      "cta_book": "Prenota il Tuo Soggiorno",
+      "page_label": "La Nostra Storia",
+      "page_title": "Una famiglia. Un hotel.",
+      "story_label": "Storia"
     },
     "location": {
       "header_label": "Dove Siamo",
@@ -315,7 +338,20 @@ const translations =
       "cta_label": "Prenotazioni",
       "cta_title": "Siamo facili da trovare,\ndifficili da lasciare",
       "cta_p": "Prenota la tua camera e inizia a pianificare il tuo itinerario ad Alghero. Siamo felici di raccomandarti i nostri posti preferiti.",
-      "cta_book": "Prenota il Tuo Soggiorno"
+      "cta_book": "Prenota il Tuo Soggiorno",
+      "dist1_name": "Spiaggia di Maria Pia",
+      "dist1_meta": "10 min a piedi",
+      "dist2_name": "Centro Storico",
+      "dist2_meta": "8 min in auto",
+      "dist3_name": "Aeroporto di Alghero",
+      "dist3_meta": "12 min in auto",
+      "dist4_name": "Grotta di Nettuno",
+      "dist4_meta": "25 min in auto",
+      "email": "info@hotelmistral.it",
+      "phone": "+39 079 792 028",
+      "page_desc": "Siamo immersi in una tasca residenziale tranquilla di Alghero — abbastanza vicini alla spiaggia di Maria Pia per una nuotata mattutina, abbastanza lontani dal trambusto turistico per sentire i tuoi pensieri. Il centro storico è a otto minuti in auto. L'aeroporto a dodici. La posizione perfetta non è essere nel mezzo. È essere esattamente dove vuoi essere.",
+      "page_label": "Dove Siamo",
+      "page_title": "Vicini a tutto."
     },
     "contact": {
       "header_label": "Contatti",
@@ -367,7 +403,16 @@ const translations =
       "cta_title": "Pronto a prenotare?",
       "cta_p": "Assicura la tua camera ad Alghero con conferma immediata su Booking.com. O inviaci un messaggio — rispondiamo entro poche ore.",
       "cta_book": "Prenota su Booking.com",
-      "cta_email": "Scrivici"
+      "cta_email": "Scrivici",
+      "address": "Indirizzo",
+      "email": "Email",
+      "hours": "Aperto 7:00 — 23:00",
+      "info_label": "Informazioni",
+      "page_desc": "Cerchi un consiglio per la camera? Vuoi sapere se agosto è troppo affollato? O semplicemente dove i locali mangiano pesce ad Alghero? Chiamaci, scrivici un'email o un messaggio WhatsApp. Una persona vera — probabilmente qualcuno di nome Mistral — risponderà nel giro di ore, non giorni.",
+      "page_label": "Contatti",
+      "page_title": "Domande?",
+      "phone": "Telefono",
+      "reception": "Orari Reception"
     },
     "footer": {
       "desc": "Un hotel a 3 stelle a conduzione familiare ad Alghero, Sardegna. 25 camere, un giardino, e cinque minuti a piedi dalla spiaggia di Maria Pia.",
@@ -386,7 +431,25 @@ const translations =
       "experience_desc": "Colazione in giardino, drink al tramonto, partite a biliardo e il ritmo lento di Alghero. Vivi l'Hotel Mistral.",
       "about_desc": "L'Hotel Mistral e un hotel a conduzione familiare ad Alghero dal 1990. 25 camere, un giardino, e la convinzione che l'ospitalita si faccia di persona.",
       "location_desc": "L'Hotel Mistral si trova in Via Liguria 41 ad Alghero, Sardegna. A 300 metri dalla spiaggia di Maria Pia, vicino al centro storico, con parcheggio privato gratuito.",
-      "contact_desc": "Contatta l'Hotel Mistral ad Alghero, Sardegna. Via Liguria 41. Telefono +39 079 792 028. Email info@hotelmistral.it. Prenota su Booking.com."
+      "contact_desc": "Contatta l'Hotel Mistral ad Alghero, Sardegna. Via Liguria 41. Telefono +39 079 792 028. Email info@hotelmistral.it. Prenota su Booking.com.",
+      "about_title": "La Nostra Storia — Hotel Mistral Alghero",
+      "contact_title": "Contatti — Hotel Mistral Alghero",
+      "experience_title": "L'Esperienza Mistral — Alghero",
+      "location_title": "Dove Siamo — Hotel Mistral Alghero",
+      "rooms_title": "Camere — Hotel Mistral Alghero"
+    },
+    "exp": {
+      "bar_label": "Pomeriggio & Sera",
+      "bar_title": "Un drink a Mistral",
+      "bar_p1": "Il nostro bar apre alle 7 quando i primi ospiti scendono per l'espresso, e chiude alle 23 quando l'ultimo bicchiere d'aperitivo viene svuotato. Nel mezzo, è ciò che vuoi che sia — un rifugio dal sole di mezzogiorno, un angolo per leggere, o il punto di partenza per una serata nel centro storico di Alghero.",
+      "bar_p2": "Porta il drink in giardino sotto le stelle, o sfida qualcuno a una lenta partita di biliardo nella lounge. Il tavolo è sempre pronto. Le stecche sono sempre dritte. E la conversazione è sempre migliore dopo il secondo giro.",
+      "bf_label": "Mattina",
+      "bf_title": "La colazione",
+      "bf_p1": "La colazione qui non è un pasto. È una lenta cerimonia di buone decisioni. Cornetti freschi dalla panetteria di fronte. Pecorino sardo tagliato spesso, abbastanza da sentire le colline. Fichi in agosto, arance rosse in inverno. Ed espresso fatto da qualcuno che il terzo giorno ti riconosce già.",
+      "bf_p2": "Mangia nella veranda di vetro che affaccia sul giardino, o porta il piatto fuori sotto l'ombrellone. Non c'è un orario di chiusura per il tavolo della colazione. L'unica regola è: torna a prenderne ancora se vuoi.",
+      "page_desc": "Alcuni hotel ti vendono attività. Noi ti vendiamo il permesso di fermarti. Un giardino che non si preoccupa della tua casella email. Una colazione che si rifiuta di andare di fretta. E un bar che capisce che l'aperitivo è uno stato d'animo, non un'ora.",
+      "page_label": "L'Esperienza",
+      "page_title": "L'arte del fare poco."
     }
   },
   "en": {
@@ -455,8 +518,8 @@ const translations =
       "cta_p": "We keep our best rates exclusively on Booking.com. Check real-time availability, read verified guest reviews, and secure your stay in Alghero in under two minutes. No prepayment. Free cancellation on most rates.",
       "cta_book": "Book on Booking.com",
       "cta_or_contact": "Or <a href=\"contact.html\" class=\"underline underline-offset-4 hover:text-charcoal transition-colors\">contact us directly</a> for any questions.",
-      "hero_starting_from": "Starting From",
-      "hero_price": "€65 / night",
+      "hero_starting_from": "Starting from",
+      "hero_price": "/ night",
       "hero_beach_distance": "300m from beach",
       "hero_wifi_parking": "Free WiFi & Parking",
       "room_view_garden": "Garden View",
@@ -509,7 +572,16 @@ const translations =
       "room_badge_last": "Last rooms available",
       "room_badge_good": "Good choice",
       "room_view_all": "View all rooms",
-      "cta_desc": "We keep our best rates on Booking.com. Check availability, read more reviews, and reserve your room in Alghero directly."
+      "cta_desc": "We keep our best rates on Booking.com. Check availability, read more reviews, and reserve your room in Alghero directly.",
+      "hl_cleanliness": "Cleanliness",
+      "hl_staff": "Staff",
+      "hl_value": "Value for Money",
+      "rev1_author": "Marco & Giulia",
+      "rev1_quote": "\"Spotlessly clean room, kind staff, and a perfect location for those who want to be near the sea without giving up the center. We will be back.\"",
+      "reviews_count": "412 reviews",
+      "reviews_excellent": "Excellent",
+      "reviews_source": "Average score based on Booking.com, Tripadvisor, and Google.",
+      "cta_whatsapp": "Book on WhatsApp"
     },
     "calendar": {
       "label": "Booking",
@@ -569,7 +641,18 @@ const translations =
       "cta_final_label": "Reservations",
       "cta_final_title": "Find your room in Alghero",
       "cta_final_p": "Check real-time availability, compare room types, and secure your stay with our best rates on Booking.com.",
-      "cta_final_book": "Book Your Stay"
+      "cta_final_book": "Book Your Stay",
+      "am_ac": "Air conditioning",
+      "am_balcony": "Private balcony",
+      "am_desk": "Writing desk",
+      "am_double_bed": "One large double bed",
+      "am_single_bed": "One single bed",
+      "am_twin_beds": "Two single beds",
+      "am_wifi": "Free WiFi",
+      "book_btn": "Book this room",
+      "page_desc": "Twenty-five rooms across three floors. No gimmicks. No over-designed \"concepts.\" Just cool terracotta floors, crisp linen, private balconies, and bathrooms that are actually clean. Because after a day in Sardinian sun, you deserve a room that works as hard as you played.",
+      "page_label": "Accommodation",
+      "page_title": "Rooms that earn their keep."
     },
     "experience": {
       "header_label": "Experience",
@@ -650,7 +733,10 @@ const translations =
       "cta_label": "Visit Us",
       "cta_title": "Come as a guest.\nLeave as a regular.",
       "cta_p": "Many of our guests have been returning for years. We would love to welcome you for the first time.",
-      "cta_book": "Book Your Stay"
+      "cta_book": "Book Your Stay",
+      "page_label": "Our Story",
+      "page_title": "One family. One hotel.",
+      "story_label": "History"
     },
     "location": {
       "header_label": "Location",
@@ -704,7 +790,20 @@ const translations =
       "cta_label": "Reservations",
       "cta_title": "We are easy to find,\nhard to leave",
       "cta_p": "Book your room and start planning your Alghero itinerary. We are happy to recommend our favourite local spots.",
-      "cta_book": "Book Your Stay"
+      "cta_book": "Book Your Stay",
+      "dist1_name": "Maria Pia Beach",
+      "dist1_meta": "10 min walk",
+      "dist2_name": "Historic Center",
+      "dist2_meta": "8 min by car",
+      "dist3_name": "Alghero Airport",
+      "dist3_meta": "12 min by car",
+      "dist4_name": "Neptune's Grotto",
+      "dist4_meta": "25 min by car",
+      "email": "info@hotelmistral.it",
+      "phone": "+39 079 792 028",
+      "page_desc": "We are tucked into a quiet residential pocket of Alghero — close enough to Maria Pia Beach for a morning swim, far enough from the tourist bustle to actually hear yourself think. The old town is eight minutes by car. The airport is twelve. Perfect location is not about being in the middle. It is about being exactly where you want to be.",
+      "page_label": "Location",
+      "page_title": "Close to everything."
     },
     "contact": {
       "header_label": "Contact",
@@ -756,7 +855,16 @@ const translations =
       "cta_title": "Ready to book?",
       "cta_p": "Secure your room in Alghero with instant confirmation on Booking.com. Or send us a message — we reply within a few hours.",
       "cta_book": "Book on Booking.com",
-      "cta_email": "Email Us"
+      "cta_email": "Email Us",
+      "address": "Address",
+      "email": "Email",
+      "hours": "Open 7:00 AM — 11:00 PM",
+      "info_label": "Information",
+      "page_desc": "Need a room recommendation? Wondering if August is too crowded? Or just want to know where locals eat seafood in Alghero? Call us, email us, or send a WhatsApp. A real human — probably someone named Mistral — will reply within hours, not days.",
+      "page_label": "Contact",
+      "page_title": "Questions?",
+      "phone": "Phone",
+      "reception": "Reception Hours"
     },
     "footer": {
       "desc": "A family-run 3-star hotel in Alghero, Sardinia. 25 rooms, a garden, and a five-minute walk to Maria Pia Beach.",
@@ -775,7 +883,25 @@ const translations =
       "experience_desc": "Garden breakfasts, afternoon drinks on the veranda, billiard games at sunset, and the slow rhythm of Alghero. Experience Hotel Mistral.",
       "about_desc": "Hotel Mistral has been a family-run hotel in Alghero since 1990. 25 rooms, one garden, and a belief in simple, genuine hospitality.",
       "location_desc": "Hotel Mistral is located on Via Liguria 41 in Alghero, Sardinia. 300 metres from Maria Pia Beach, near the old town, with free private parking.",
-      "contact_desc": "Contact Hotel Mistral in Alghero, Sardinia. Via Liguria 41. Phone +39 079 792 028. Email info@hotelmistral.it. Book on Booking.com."
+      "contact_desc": "Contact Hotel Mistral in Alghero, Sardinia. Via Liguria 41. Phone +39 079 792 028. Email info@hotelmistral.it. Book on Booking.com.",
+      "about_title": "Our Story — Hotel Mistral Alghero",
+      "contact_title": "Contact — Hotel Mistral Alghero",
+      "experience_title": "The Mistral Experience — Alghero",
+      "location_title": "Location — Hotel Mistral Alghero",
+      "rooms_title": "Rooms — Hotel Mistral Alghero"
+    },
+    "exp": {
+      "bar_label": "Afternoon & Evening",
+      "bar_title": "A drink at Mistral",
+      "bar_p1": "Our bar opens at 7 AM when the first guests wander down for espresso, and closes at 11 PM when the last aperitivo glass is emptied. In between, it is whatever you need it to be — a refuge from the midday sun, a reading nook, or the starting point for an evening in Alghero's old town.",
+      "bar_p2": "Take your drink to the garden terrace under the stars, or challenge someone to a slow game of billiards in the lounge. The table is always ready. The cues are always straight. And the conversation is always better after the second round.",
+      "bf_label": "Morning",
+      "bf_title": "Breakfast",
+      "bf_p1": "Breakfast is not a meal here. It is a slow ceremony of good decisions. Fresh croissants from the bakery across the street. Sardinian pecorino sliced thick enough to taste the hills. Figs in August, blood oranges in winter. And espresso made by someone who knows your face by day three.",
+      "bf_p2": "Eat in the glass veranda overlooking the garden, or take your plate outside under the parasol. There is no checkout time for the breakfast table. The only rule is: go back for more if you want to.",
+      "page_desc": "Some hotels sell you activities. We sell you permission to pause. A garden that doesn't care about your inbox. A breakfast that refuses to rush. And a bar that understands aperitivo is a state of mind, not a time slot.",
+      "page_label": "The Experience",
+      "page_title": "The art of doing little."
     }
   },
   "de": {
@@ -845,7 +971,7 @@ const translations =
       "cta_book": "Auf Booking.com Buchen",
       "cta_or_contact": "Oder <a href=\"contact.html\" class=\"underline underline-offset-4 hover:text-charcoal transition-colors\">kontaktieren Sie uns direkt</a> bei Fragen.",
       "hero_starting_from": "Ab",
-      "hero_price": "Ab 65 EUR / Nacht",
+      "hero_price": "/ Nacht",
       "hero_beach_distance": "300m vom Strand",
       "hero_wifi_parking": "Kostenloses WLAN & Parken",
       "room_view_garden": "Gartenblick",
@@ -898,7 +1024,16 @@ const translations =
       "room_badge_last": "Letzte Zimmer verfügbar",
       "room_badge_good": "Gute Wahl",
       "room_view_all": "Alle Zimmer ansehen",
-      "cta_desc": "Wir bieten unsere besten Preise auf Booking.com. Verfügbarkeit prüfen, mehr Bewertungen lesen und Ihr Zimmer in Alghero direkt reservieren."
+      "cta_desc": "Wir bieten unsere besten Preise auf Booking.com. Verfügbarkeit prüfen, mehr Bewertungen lesen und Ihr Zimmer in Alghero direkt reservieren.",
+      "hl_cleanliness": "Sauberkeit",
+      "hl_staff": "Personal",
+      "hl_value": "Preis-Leistung",
+      "rev1_author": "Marco & Giulia",
+      "rev1_quote": "\"Makellos sauberes Zimmer, freundliches Personal und eine perfekte Lage für alle, die das Meer wollen, ohne das Zentrum aufzugeben. Wir kommen wieder.\"",
+      "reviews_count": "412 Bewertungen",
+      "reviews_excellent": "Hervorragend",
+      "reviews_source": "Durchschnittsbewertung basierend auf Booking.com, Tripadvisor und Google.",
+      "cta_whatsapp": "Per WhatsApp buchen"
     },
     "calendar": {
       "label": "Buchung",
@@ -958,7 +1093,18 @@ const translations =
       "cta_final_label": "Reservierungen",
       "cta_final_title": "Finden Sie Ihr Zimmer in Alghero",
       "cta_final_p": "Prüfen Sie die Echtzeit-Verfügbarkeit, vergleichen Sie Zimmertypen, und sichern Sie sich Ihren Aufenthalt zu unseren besten Preisen auf Booking.com.",
-      "cta_final_book": "Jetzt Buchen"
+      "cta_final_book": "Jetzt Buchen",
+      "am_ac": "Klimaanlage",
+      "am_balcony": "Privater Balkon",
+      "am_desk": "Schreibtisch",
+      "am_double_bed": "Ein großes Doppelbett",
+      "am_single_bed": "Ein Einzelbett",
+      "am_twin_beds": "Zwei Einzelbetten",
+      "am_wifi": "Kostenloses WLAN",
+      "book_btn": "Dieses Zimmer buchen",
+      "page_desc": "Fünfundzwanzig Zimmer auf drei Etagen. Keine Tricks. Keine überdesignten \"Konzepte\". Nur kühle Terrakottaböden, knackige Bettwäsche, private Balkone und Bäder, die wirklich sauber sind. Denn nach einem Tag in der sardischen Sonne verdienen Sie ein Zimmer, das so hart arbeitet, wie Sie gespielt haben.",
+      "page_label": "Unterkunft",
+      "page_title": "Zimmer, die ihr Geld wert sind."
     },
     "experience": {
       "header_label": "Erlebnis",
@@ -1039,7 +1185,10 @@ const translations =
       "cta_label": "Besuchen Sie Uns",
       "cta_title": "Kommen Sie als Gast.\nGehen Sie als Stammgast.",
       "cta_p": "Viele unserer Gäste kommen seit Jahren zurück. Wir würden Sie gerne zum ersten Mal begrüßen.",
-      "cta_book": "Jetzt Buchen"
+      "cta_book": "Jetzt Buchen",
+      "page_label": "Unsere Geschichte",
+      "page_title": "Eine Familie. Ein Hotel.",
+      "story_label": "Geschichte"
     },
     "location": {
       "header_label": "Lage",
@@ -1093,7 +1242,20 @@ const translations =
       "cta_label": "Reservierungen",
       "cta_title": "Wir sind leicht zu finden,\nschwer zu verlassen",
       "cta_p": "Buchen Sie Ihr Zimmer und beginnen Sie mit der Planung Ihres Alghero-Programms. Wir empfehlen Ihnen gerne unsere Lieblingsorte.",
-      "cta_book": "Jetzt Buchen"
+      "cta_book": "Jetzt Buchen",
+      "dist1_name": "Maria-Pia-Strand",
+      "dist1_meta": "10 Min. zu Fuß",
+      "dist2_name": "Altstadt",
+      "dist2_meta": "8 Min. mit dem Auto",
+      "dist3_name": "Flughafen Alghero",
+      "dist3_meta": "12 Min. mit dem Auto",
+      "dist4_name": "Neptungrotte",
+      "dist4_meta": "25 Min. mit dem Auto",
+      "email": "info@hotelmistral.it",
+      "phone": "+39 079 792 028",
+      "page_desc": "Wir liegen in einer ruhigen Wohngegend Algheros — nah genug am Maria-Pia-Strand für einen morgendlichen Schwimmgang, weit genug vom Touristentrubel entfernt, um tatsächlich zu hören, was Sie denken. Die Altstadt ist acht Minuten mit dem Auto entfernt. Der Flughafen zwölf. Perfekte Lage bedeutet nicht, in der Mitte zu sein. Es bedeutet, genau dort zu sein, wo Sie sein wollen.",
+      "page_label": "Lage",
+      "page_title": "Nahe an allem."
     },
     "contact": {
       "header_label": "Kontakt",
@@ -1145,7 +1307,16 @@ const translations =
       "cta_title": "Bereit zu buchen?",
       "cta_p": "Sichern Sie sich Ihr Zimmer in Alghero mit sofortiger Bestätigung auf Booking.com. Oder senden Sie uns eine Nachricht — wir antworten innerhalb weniger Stunden.",
       "cta_book": "Auf Booking.com Buchen",
-      "cta_email": "E-Mail Schreiben"
+      "cta_email": "E-Mail Schreiben",
+      "address": "Adresse",
+      "email": "E-Mail",
+      "hours": "Geöffnet 7:00 — 23:00",
+      "info_label": "Information",
+      "page_desc": "Brauchen Sie eine Zimmerempfehlung? Fragen Sie sich, ob August zu voll ist? Oder möchten Sie wissen, wo Einheimische in Alghero Fisch essen? Rufen Sie an, schreiben Sie eine E-Mail oder eine WhatsApp-Nachricht. Ein echter Mensch — wahrscheinlich jemand namens Mistral — antwortet in Stunden, nicht Tagen.",
+      "page_label": "Kontakt",
+      "page_title": "Fragen?",
+      "phone": "Telefon",
+      "reception": "Rezeptionszeiten"
     },
     "footer": {
       "desc": "Ein familiengeführtes 3-Sterne-Hotel in Alghero, Sardinien. 25 Zimmer, ein Garten, und fünf Minuten zu Fuß vom Strand Maria Pia.",
@@ -1164,7 +1335,25 @@ const translations =
       "experience_desc": "Frühstück im Garten, Drinks bei Sonnenuntergang, Billard am Abend und der langsame Rhythmus von Alghero. Erleben Sie das Hotel Mistral.",
       "about_desc": "Das Hotel Mistral ist seit 1990 ein familiengeführtes Hotel in Alghero. 25 Zimmer, ein Garten, und die Überzeugung, dass echte Gastfreundschaft persönlich ist.",
       "location_desc": "Das Hotel Mistral befindet sich in der Via Liguria 41 in Alghero, Sardinien. 300 Meter vom Strand Maria Pia, nahe der Altstadt, mit kostenlosem Privatparkplatz.",
-      "contact_desc": "Kontaktieren Sie das Hotel Mistral in Alghero, Sardinien. Via Liguria 41. Telefon +39 079 792 028. E-Mail info@hotelmistral.it. Buchen auf Booking.com."
+      "contact_desc": "Kontaktieren Sie das Hotel Mistral in Alghero, Sardinien. Via Liguria 41. Telefon +39 079 792 028. E-Mail info@hotelmistral.it. Buchen auf Booking.com.",
+      "about_title": "Unsere Geschichte — Hotel Mistral Alghero",
+      "contact_title": "Kontakt — Hotel Mistral Alghero",
+      "experience_title": "Das Mistral-Erlebnis — Alghero",
+      "location_title": "Lage — Hotel Mistral Alghero",
+      "rooms_title": "Zimmer — Hotel Mistral Alghero"
+    },
+    "exp": {
+      "bar_label": "Nachmittag & Abend",
+      "bar_title": "Ein Drink im Mistral",
+      "bar_p1": "Unsere Bar öffnet um 7 Uhr, wenn die ersten Gäste für einen Espresso herunterkommen, und schließt um 23 Uhr, wenn das letzte Aperitif-Glas geleert ist. Dazwischen ist sie, was Sie brauchen — ein Refugium vor der Mittagssonne, eine Leseecke oder der Ausgangspunkt für einen Abend in Algheros Altstadt.",
+      "bar_p2": "Nehmen Sie Ihren Drink auf die Gartenterrasse unter die Sterne, oder fordern Sie jemanden zu einer Partie Billard in der Lounge heraus. Der Tisch ist immer bereit. Die Queues sind immer gerade. Und das Gespräch ist nach der zweiten Runde immer besser.",
+      "bf_label": "Morgen",
+      "bf_title": "Frühstück",
+      "bf_p1": "Frühstück ist hier keine Mahlzeit. Es ist eine langsame Zeremonie guter Entscheidungen. Frische Croissants aus der Bäckerei gegenüber. Sardischer Pecorino, dick genug geschnitten, um die Hügel zu schmecken. Feigen im August, Blutorangen im Winter. Und Espresso, gemacht von jemandem, der am dritten Tag Ihr Gesicht kennt.",
+      "bf_p2": "Essen Sie in der Glasveranda mit Blick auf den Garten oder nehmen Sie Ihren Teller nach draußen unter den Sonnenschirm. Es gibt keine Auscheckzeit für den Frühstückstisch. Die einzige Regel: Holen Sie sich Nachschlag, wenn Sie wollen.",
+      "page_desc": "Manche Hotels verkaufen Ihnen Aktivitäten. Wir verkaufen Ihnen die Erlaubnis, innezuhalten. Einen Garten, der sich nicht um Ihren Posteingang kümmert. Ein Frühstück, das sich weigert zu hetzen. Und eine Bar, die versteht, dass Aperitivo ein Geisteszustand ist, kein Zeitfenster.",
+      "page_label": "Das Erlebnis",
+      "page_title": "Die Kunst des Wenigtuns."
     }
   },
   "es": {
@@ -1234,7 +1423,7 @@ const translations =
       "cta_book": "Reservar en Booking.com",
       "cta_or_contact": "O <a href=\"contact.html\" class=\"underline underline-offset-4 hover:text-charcoal transition-colors\">contáctanos directamente</a> para cualquier consulta.",
       "hero_starting_from": "Desde",
-      "hero_price": "Desde €65 / noche",
+      "hero_price": "/ noche",
       "hero_beach_distance": "300m de la playa",
       "hero_wifi_parking": "WiFi y Aparcamiento Gratis",
       "room_view_garden": "Vista Jardín",
@@ -1287,7 +1476,16 @@ const translations =
       "room_badge_last": "Últimas habitaciones disponibles",
       "room_badge_good": "Buena elección",
       "room_view_all": "Ver todas las habitaciones",
-      "cta_desc": "Mantenemos nuestras mejores tarifas en Booking.com. Comprueba disponibilidad, lee más reseñas y reserva tu habitación en Alghero directamente."
+      "cta_desc": "Mantenemos nuestras mejores tarifas en Booking.com. Comprueba disponibilidad, lee más reseñas y reserva tu habitación en Alghero directamente.",
+      "hl_cleanliness": "Limpieza",
+      "hl_staff": "Personal",
+      "hl_value": "Calidad-Precio",
+      "rev1_author": "Marco y Giulia",
+      "rev1_quote": "\"Habitación impecable, personal amable, y una ubicación perfecta para quien quiere el mar sin renunciar al centro. Volveremos.\"",
+      "reviews_count": "412 reseñas",
+      "reviews_excellent": "Excelente",
+      "reviews_source": "Puntuación media basada en Booking.com, Tripadvisor y Google.",
+      "cta_whatsapp": "Reserva por WhatsApp"
     },
     "calendar": {
       "label": "Reservas",
@@ -1347,7 +1545,18 @@ const translations =
       "cta_final_label": "Reservas",
       "cta_final_title": "Encuentra tu habitación en Alghero",
       "cta_final_p": "Consulta disponibilidad en tiempo real, compara tipos de habitación, y asegura tu estancia con nuestras mejores tarifas en Booking.com.",
-      "cta_final_book": "Reservar Tu Estancia"
+      "cta_final_book": "Reservar Tu Estancia",
+      "am_ac": "Aire acondicionado",
+      "am_balcony": "Balcón privado",
+      "am_desk": "Escritorio",
+      "am_double_bed": "Una cama matrimonial",
+      "am_single_bed": "Una cama individual",
+      "am_twin_beds": "Dos camas individuales",
+      "am_wifi": "WiFi gratuito",
+      "book_btn": "Reservar esta habitación",
+      "page_desc": "Veinticinco habitaciones en tres plantas. Sin artificios. Sin \"conceptos\" sobrediseñados. Sólo suelos frescos de terracota, sábanas crujientes, balcones privados y baños realmente limpios. Porque tras un día bajo el sol sardo, mereces una habitación que trabaje tan duro como tú has jugado.",
+      "page_label": "Alojamiento",
+      "page_title": "Habitaciones a la altura."
     },
     "experience": {
       "header_label": "Experiencia",
@@ -1428,7 +1637,10 @@ const translations =
       "cta_label": "Visítanos",
       "cta_title": "Ven como huésped.\nVete como habitual.",
       "cta_p": "Muchos de nuestros huéspedes llevan años volviendo. Nos encantaría darte la bienvenida por primera vez.",
-      "cta_book": "Reservar Tu Estancia"
+      "cta_book": "Reservar Tu Estancia",
+      "page_label": "Nuestra Historia",
+      "page_title": "Una familia. Un hotel.",
+      "story_label": "Historia"
     },
     "location": {
       "header_label": "Ubicación",
@@ -1482,7 +1694,20 @@ const translations =
       "cta_label": "Reservas",
       "cta_title": "Somos fáciles de encontrar,\ndifíciles de dejar",
       "cta_p": "Reserva tu habitación y empieza a planificar tu itinerario por Alghero. Encantados de recomendarte nuestros lugares favoritos.",
-      "cta_book": "Reservar Tu Estancia"
+      "cta_book": "Reservar Tu Estancia",
+      "dist1_name": "Playa de Maria Pia",
+      "dist1_meta": "10 min a pie",
+      "dist2_name": "Centro Histórico",
+      "dist2_meta": "8 min en coche",
+      "dist3_name": "Aeropuerto de Alghero",
+      "dist3_meta": "12 min en coche",
+      "dist4_name": "Gruta de Neptuno",
+      "dist4_meta": "25 min en coche",
+      "email": "info@hotelmistral.it",
+      "phone": "+39 079 792 028",
+      "page_desc": "Estamos en un tranquilo bolsillo residencial de Alghero — lo bastante cerca de la playa de Maria Pia para un baño matutino, lo bastante lejos del bullicio turístico para escuchar tus pensamientos. El casco antiguo está a ocho minutos en coche. El aeropuerto a doce. La ubicación perfecta no es estar en el medio. Es estar exactamente donde quieres estar.",
+      "page_label": "Ubicación",
+      "page_title": "Cerca de todo."
     },
     "contact": {
       "header_label": "Contacto",
@@ -1534,7 +1759,16 @@ const translations =
       "cta_title": "¿Listo para reservar?",
       "cta_p": "Asegura tu habitación en Alghero con confirmación inmediata en Booking.com. O envíanos un mensaje — respondemos en pocas horas.",
       "cta_book": "Reservar en Booking.com",
-      "cta_email": "Escríbenos"
+      "cta_email": "Escríbenos",
+      "address": "Dirección",
+      "email": "Correo",
+      "hours": "Abierto 7:00 — 23:00",
+      "info_label": "Información",
+      "page_desc": "¿Necesitas una recomendación de habitación? ¿Te preguntas si agosto está muy lleno? ¿O sólo quieres saber dónde comen pescado los locales en Alghero? Llámanos, escríbenos un correo o un WhatsApp. Una persona real — probablemente alguien llamado Mistral — responderá en horas, no en días.",
+      "page_label": "Contacto",
+      "page_title": "¿Preguntas?",
+      "phone": "Teléfono",
+      "reception": "Horario Recepción"
     },
     "footer": {
       "desc": "Un hotel de 3 estrellas familiar en Alghero, Cerdeña. 25 habitaciones, un jardín, y cinco minutos a pie de la playa de Maria Pia.",
@@ -1553,9 +1787,25 @@ const translations =
       "experience_desc": "Desayuno en el jardín, drinks al atardecer, billar al anochecer y el ritmo lento de Alghero. Vive el Hotel Mistral.",
       "about_desc": "El Hotel Mistral es un hotel familiar en Alghero desde 1990. 25 habitaciones, un jardín, y la convicción de que la hospitalidad genuina es personal.",
       "location_desc": "El Hotel Mistral está en Via Liguria 41, Alghero, Cerdeña. A 300 metros de la playa de Maria Pia, cerca del centro histórico, con aparcamiento privado gratuito.",
-      "contact_desc": "Contacta el Hotel Mistral en Alghero, Cerdeña. Via Liguria 41. Teléfono +39 079 792 028. Email info@hotelmistral.it. Reserva en Booking.com."
+      "contact_desc": "Contacta el Hotel Mistral en Alghero, Cerdeña. Via Liguria 41. Teléfono +39 079 792 028. Email info@hotelmistral.it. Reserva en Booking.com.",
+      "about_title": "Nuestra Historia — Hotel Mistral Alghero",
+      "contact_title": "Contacto — Hotel Mistral Alghero",
+      "experience_title": "La Experiencia Mistral — Alghero",
+      "location_title": "Ubicación — Hotel Mistral Alghero",
+      "rooms_title": "Habitaciones — Hotel Mistral Alghero"
+    },
+    "exp": {
+      "bar_label": "Tarde & Noche",
+      "bar_title": "Una copa en Mistral",
+      "bar_p1": "Nuestro bar abre a las 7 cuando los primeros huéspedes bajan a por un espresso, y cierra a las 23 cuando se vacía la última copa de aperitivo. En medio, es lo que necesites — un refugio del sol de mediodía, un rincón de lectura o el punto de partida para una noche en el casco antiguo de Alghero.",
+      "bar_p2": "Lleva tu copa a la terraza del jardín bajo las estrellas, o reta a alguien a una partida lenta de billar en el lounge. La mesa siempre está lista. Los tacos siempre rectos. Y la conversación siempre mejora tras la segunda ronda.",
+      "bf_label": "Mañana",
+      "bf_title": "Desayuno",
+      "bf_p1": "El desayuno aquí no es una comida. Es una ceremonia lenta de buenas decisiones. Cruasanes recién hechos de la panadería de enfrente. Pecorino sardo cortado lo suficientemente grueso para saborear las colinas. Higos en agosto, naranjas sanguinas en invierno. Y un espresso preparado por alguien que ya conoce tu cara al tercer día.",
+      "bf_p2": "Come en la veranda acristalada con vistas al jardín, o lleva tu plato fuera bajo la sombrilla. No hay hora de cierre para la mesa del desayuno. La única regla: repite si te apetece.",
+      "page_desc": "Algunos hoteles te venden actividades. Nosotros te vendemos permiso para pausar. Un jardín que no se preocupa por tu bandeja de entrada. Un desayuno que se niega a apresurarse. Y un bar que entiende que el aperitivo es un estado mental, no una franja horaria.",
+      "page_label": "La Experiencia",
+      "page_title": "El arte de hacer poco."
     }
   }
 };
-
-window.translations = translations;

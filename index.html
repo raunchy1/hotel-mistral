@@ -8,8 +8,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30..100;1,9..144,300..700,30..100&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet"/>
   <link href="css/styles.css" rel="stylesheet"/>
 </head>
 <body data-page="home">
@@ -74,13 +73,20 @@
             not alarms — 300m from the sea.
           </h1>
           <div class="hero-meta">
-            <span><span class="price-from italic" data-i18n="home.hero_starting_from">From</span> <b style="font-family:'var(--serif)';font-size:22px;color:'var(--antracite)'">€65</b> <span data-i18n="home.hero_price">/ night</span></span>
+            <span class="price-line">
+              <span class="price-from" data-i18n="home.hero_starting_from">From</span>
+              <span class="price-num">€65</span>
+              <span class="price-night" data-i18n="home.hero_price">/ night</span>
+            </span>
             <span data-i18n="home.hero_beach_distance">300m from beach</span>
-            <span data-i18n="home.hero_parking">Free parking</span>
-            <span data-i18n="home.hero_wifi_parking">Free WiFi</span>
+            <span data-i18n="home.hero_wifi_parking">Free WiFi & Parking</span>
           </div>
-          <div style="margin-top:32px">
+          <div class="hero-ctas">
             <a class="btn btn-primary btn-arrow" href="https://www.booking.com/Share-Ju31eYQ" target="_blank" data-i18n="home.cta_availability">Check Availability</a>
+            <a class="btn-whatsapp" href="https://wa.me/393472479796?text=Salve,%20vorrei%20verificare%20la%20disponibilità%20presso%20Hotel%20Mistral." target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              <span data-i18n="home.cta_whatsapp">Book on WhatsApp</span>
+            </a>
           </div>
           <div style="margin-top:20px;font-size:12px;color:var(--grigio)">
             <span class="tag-good">● <span data-i18n="home.best_price">Best price guaranteed</span></span>
@@ -120,10 +126,10 @@
             <img src="images/554113139.jpg" alt="Hotel Mistral front patio" style="width:100%;height:380px;object-fit:cover" />
           </div>
 
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;padding-top:32px;border-top:1px solid var(--beige-scuro)">
-            <div><div class="serif" style="font-size:32px">25</div><div class="tiny muted" data-i18n="home.stats_rooms">Rooms</div></div>
-            <div><div class="serif" style="font-size:32px">3</div><div class="tiny muted" data-i18n="home.stats_stars">Stars</div></div>
-            <div><div class="serif" style="font-size:32px">40</div><div class="tiny muted" data-i18n="home.stats_years">Years</div></div>
+          <div class="stats-strip">
+            <div class="stat"><div class="stat-num">25</div><div class="stat-label" data-i18n="home.stats_rooms">Rooms</div></div>
+            <div class="stat"><div class="stat-num">3</div><div class="stat-label" data-i18n="home.stats_stars">Stars</div></div>
+            <div class="stat"><div class="stat-num">35<span class="stat-plus">+</span></div><div class="stat-label" data-i18n="home.stats_years">Years</div></div>
           </div>
         </div>
       </div>
@@ -145,7 +151,7 @@
 
       <div class="rooms-grid">
         <!-- Room 1 -->
-        <div class="room-card reveal" onclick="window.location.href='rooms.html#double'" style="cursor:pointer">
+        <a class="room-card reveal" href="rooms.html#double">
           <div class="img-wrap">
             <img src="images/861583205.jpg" alt="Double Room" style="width:100%;height:100%;object-fit:cover" />
           </div>
@@ -162,10 +168,10 @@
             <div class="from"><span data-i18n="home.room_from">From</span> <b>€85</b> <span style="font-size:13px;color:var(--grigio)" data-i18n="calendar.nights_singular">notte</span></div>
             <span class="btn-arrow" style="font-size:14px" data-i18n="home.room_view_cta">Details</span>
           </div>
-        </div>
+        </a>
 
         <!-- Room 2 -->
-        <div class="room-card reveal reveal-delay-1" onclick="window.location.href='rooms.html#single'" style="cursor:pointer">
+        <a class="room-card reveal reveal-delay-1" href="rooms.html#single">
           <div class="img-wrap">
             <img src="images/861584336.jpg" alt="Single Room" style="width:100%;height:100%;object-fit:cover" />
           </div>
@@ -179,10 +185,10 @@
             <div class="from"><span data-i18n="home.room_from">From</span> <b>€65</b> <span style="font-size:13px;color:var(--grigio)" data-i18n="calendar.nights_singular">notte</span></div>
             <span class="btn-arrow" style="font-size:14px" data-i18n="home.room_view_cta">Details</span>
           </div>
-        </div>
+        </a>
 
         <!-- Room 3 -->
-        <div class="room-card reveal reveal-delay-2" onclick="window.location.href='rooms.html#twin'" style="cursor:pointer">
+        <a class="room-card reveal reveal-delay-2" href="rooms.html#twin">
           <div class="img-wrap">
             <img src="images/861583258.jpg" alt="Twin Room" style="width:100%;height:100%;object-fit:cover" />
           </div>
@@ -199,7 +205,7 @@
             <div class="from"><span data-i18n="home.room_from">From</span> <b>€80</b> <span style="font-size:13px;color:var(--grigio)" data-i18n="calendar.nights_singular">notte</span></div>
             <span class="btn-arrow" style="font-size:14px" data-i18n="home.room_view_cta">Details</span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -251,7 +257,7 @@
   <section class="calendar-section" id="prenota">
     <div class="container">
       <div class="calendar-title reveal">
-        <div class="section-num">— 05 / <span data-i18n="calendar.label">Booking</span></div>
+        <div class="section-num">— 04 / <span data-i18n="calendar.label">Booking</span></div>
         <h2 class="h-medium serif" style="margin-top:16px" data-i18n="calendar.title">Select your stay dates</h2>
         <p class="calendar-hint" data-i18n="calendar.hint">Seleziona prima il check-in, poi il check-out</p>
       </div>
@@ -308,7 +314,7 @@
   <!-- CTA FINALE -->
   <section class="cta-final" style="background:var(--antracite);color:var(--bianco)">
     <div class="container" style="text-align:center">
-      <div class="section-num" style="color:var(--grigio);border-color:var(--grigio)">— 04</div>
+      <div class="section-num" style="color:var(--grigio);border-color:var(--grigio)">— 05</div>
       <h2 class="h-large serif" style="margin-top:24px" data-i18n="home.cta_title">
         Your room by the sea is waiting.
       </h2>
@@ -329,7 +335,7 @@
           Book on Booking.com
         </a>
       </div>
-      <div style="margin-top:24px;color:var(--grigio)">
+      <div style="margin-top:24px;color:var(--grigio-chiaro)">
         <span data-i18n="home.cta_or_contact" data-i18n-html="">Or <a href="contact.html" style="text-decoration:underline">contact us directly</a> for any questions.</span>
       </div>
     </div>
@@ -387,8 +393,8 @@
     <span class="whatsapp-float-num">+39 347 247 9796</span>
   </a>
 
-  <script src="js/translations.js?v=3"></script>
-  <script src="js/i18n.js?v=3"></script>
-  <script src="js/main.js?v=3"></script>
+  <script src="js/translations.js?v=5"></script>
+  <script src="js/i18n.js?v=5"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 </html>
